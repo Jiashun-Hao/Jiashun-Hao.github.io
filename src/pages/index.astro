@@ -54,8 +54,11 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
       <Section title='About'>
         <p class='text-muted-foreground'>Developer</p>
         <p class='text-muted-foreground'>
-          你好，我叫 Jiashun。
-          
+          你好，我叫 JohnieXu，具有 8 年前端开发经验（2017-至今）。
+          擅长 Vue、React、Angular 等前端框架，熟悉 Spring 等后端框架，熟悉 MySQL 等数据库。
+          熟练使用 Git、Github 等版本控制工具，熟悉 Linux 等操作系统。
+          熟悉 Docker 等容器化工具。
+          热爱开源，喜欢写博客。
         </p>
         <Button title='More about me' class='w-fit self-end' href='/about' style='ahead' />
       </Section>
@@ -103,33 +106,51 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
       />
     </Section> */
       }
-       <Section title='Education'>
-          <Card
-            as='a'
-            heading='Inner Mongolia Agricultural University'
-            subheading='Bachelor of Engineering in Computer Science and Technology'
-            date='September 2018 - July 2022'
-            href='https://www.imau.edu.cn/'
-          />
+      <Section title='Education'>
+        <Card
+          as='a'
+          heading='长江大学'
+          subheading='机械设计制造及自动化学士学位'
+          date='August 2012 - July 2016'
+          href='https://www.yangtzeu.edu.cn/'
+        >
+          {
+            /* <ul class='ms-4 list-disc text-muted-foreground'>
+          <li>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
+            molestiae laboriosam pariatur!
+          </li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
+        </ul> */
+          }
+        </Card>
+      </Section>
 
-          <Card
-            as='a'
-            heading='Kyungpook National University'
-            subheading='Master of Engineering in Computer Science and Technology'
-            date='March 2023 - February 2025'
-            href='https://www.knu.ac.kr/'
-          />
-        </Section>
-
-
-
-        <!-- <Section title='Website List'>
-          <div class='grid grid-cols-1 gap-3 sm:grid-cols-2'>
+      <!-- <Section title='Website List'>
+        <div class='grid grid-cols-1 gap-3 sm:grid-cols-2'>
           <ProjectCard
-            href='https://blog.csdn.net/HJS1453100406'
-            heading='CSDN'
-            subheading='记录编程经验、项目开发与学习笔记'
-            imagePath='/src/assets/projects/csdn-blog.jpg'
+            href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+            heading='Lorem ipsum'
+            subheading='dolor sit amet, oratio ornatus explicari pro ex'
+            imagePath='/src/assets/projects/alex-tyson-2BAXJ7ha74s-unsplash.jpg'
+          />
+          <ProjectCard
+            href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+            heading='Lorem ipsum'
+            subheading='dolor sit amet, oratio ornatus explicari pro ex'
+            imagePath='/src/assets/projects/angelica-teran-Bk9hpaXHK4o-unsplash.jpg'
+          />
+          <ProjectCard
+            href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+            heading='Lorem ipsum'
+            subheading='dolor sit amet, oratio ornatus explicari pro ex'
+            imagePath='/src/assets/projects/kseniia-zapiatkina-yATU3rg8tNI-unsplash.jpg'
+          />
+          <ProjectCard
+            href='/projects'
+            heading='More projects'
+            subheading='Check out more projects'
+            imagePath='/src/assets/projects/wen-qiao-g_w8I64FiO0-unsplash.jpg'
           />
         </div>
       </Section> -->
