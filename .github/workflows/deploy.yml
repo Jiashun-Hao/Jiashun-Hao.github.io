@@ -2,7 +2,7 @@ name: Deploy Astro to GitHub Pages
 
 on:
   push:
-    branches: ["main"]   # 如果默认分支是 main；若是 master 改成 master
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -21,21 +21,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          bun-version: 1.x
+          node-version: 20
+          cache: npm
 
-      - name: Install deps (bun)
-        run: bun install --frozen-lockfile
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Build (Astro)
-        run: bun run build
+      - name: Build
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist  # Astro 默认输出目录
+          path: dist
 
   deploy:
     needs: build
