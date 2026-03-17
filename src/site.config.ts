@@ -29,7 +29,7 @@ export const theme: ThemeUserConfig = {
   },
 
   // === Global configuration ===
-  titleDelimiter: 'â€?,
+  titleDelimiter: 'â€”',
   prerender: true,
   npmCDN: 'https://cdn.jsdelivr.net/npm',
 
@@ -67,15 +67,14 @@ export const theme: ThemeUserConfig = {
         pos: 2 // position set to 2 will be appended to copyright line
       }
     ],
-    /** Enable displaying a â€œAstro & Pure theme poweredâ€?link in your siteâ€™s footer. */
+   /** Enable displaying a "Astro & Pure theme powered" link in your site's footer. */
     credits: false,
     /** Optional details about the social media accounts for this site. */
     social: { github: 'https://github.com/JohnieXu' }
   },
 
   content: {
-    externalLinksContent: ' â†?,
-    /** Blog page size for pagination (optional) */
+    externalLinksContent: ' â†—',
     blogPageSize: 8,
     externalLinkArrow: true, // show external link arrow
     // Currently support weibo, x, bluesky
