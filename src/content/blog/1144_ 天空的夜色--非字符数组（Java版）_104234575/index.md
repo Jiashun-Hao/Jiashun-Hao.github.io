@@ -1,9 +1,9 @@
 ---
-title: 1144: 天空的夜色--非字符数组（Java版）"
-publishDate: 2020-02-09
-description: 'OJ题解'
+title: "1105: 18岁生日"
+publishDate: 2023-11-13
+description: '计算从出生到18岁生日所经过的天数'
 tags:
-  - Java
+  - c语言
 language: 'Chinese'
 ---
 
