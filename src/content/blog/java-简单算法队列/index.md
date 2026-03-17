@@ -5,7 +5,6 @@ publishDate: 2020-05-31
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/106444679
 ---
-
 ## 一.队列
 
 数据结构中程序基本可以分为两大类：**线性结构**和**非线性结构**；
@@ -65,7 +64,6 @@ public class Queue {
                     } catch (Exception e){
                         System.out.println(e.getMessage());
                     }break;
-
 
                 case 'h' :
                      try {
@@ -286,7 +284,6 @@ public class Queue {
                     } catch (Exception e){
                         System.out.println(e.getMessage());
                     }break;
-
 
                 case 'h' :
                      try {

@@ -5,7 +5,6 @@ publishDate: 2020-02-11
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/104262980
 ---
-
 匿名对象类：创建的类的对象没有名字；  
 作用：当只需要调用一次的时候可以使用；  
 代码：

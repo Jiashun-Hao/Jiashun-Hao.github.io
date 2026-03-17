@@ -5,7 +5,6 @@ publishDate: 2024-05-06
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/138467487
 ---
-
 PS：每每温故必而知新
 
 #### 什么是神经网络？
@@ -1556,9 +1555,7 @@ b
 B = \left[ \begin{array}{cc} b\_{11} &b\_{12} \\ b\_{21} &b\_{22} \\ b\_{31} &b\_{32} \\ \end{array} \right]
 B=
 
-
 ​b11​b21​b31​​b12​b22​b32​​
-
 
 ​  
  结果：  
@@ -1718,8 +1715,6 @@ c=np.exp(a)
 
 print(c)
 #20.085536923187668
-
-
 
 #矩阵里面的所有数
 b=np.random.rand(3,2)

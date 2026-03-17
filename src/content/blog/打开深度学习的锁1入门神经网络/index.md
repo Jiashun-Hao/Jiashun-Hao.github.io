@@ -5,7 +5,6 @@ publishDate: 2023-09-09
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/132766387
 ---
-
 #### 打开深度学习的锁
 
 - [导言](#_2)
@@ -1638,8 +1637,6 @@ def sigmoid(z):
     a=1/(1+np.exp(-z))
     return a
 
-
-
 #初始化函数
 #主要用于构建w和b，之前看到的方法是创建一个（dim，1）维度的0向量
 
@@ -1659,7 +1656,6 @@ def initialize_zeros(dim):
     assert(w.shape==(dim,1))
     assert(isinstance(b,float) or isinstance(b,int))
     return (w,b)
-
 
 #构建逻辑回归的前向传播和后向传播
     #神经网络或者深度学习模型单次的训练过程有四个阶段：
@@ -1697,7 +1693,6 @@ def propagate(w,b,X,Y):
     cost=np.squeeze(cost)
 
     
-
 
     #反向传播:（计算w和b需要改变多少）
     #为了计算w和b，我们需要使用梯度下降算法，它的公式是：
@@ -1865,9 +1860,6 @@ def predict(w,b,X):
 # plt.xlabel(('iterations (per hundreds)'))
 # plt.title("Learning rate =" + str(d1["learning_rate"])+str(d2["learning_rate"])+str(d3["learning_rate"]))
 # plt.show()
-
-
-
 
 def model(X_train , Y_train , X_test , Y_test , num_iterations = 2000 , learning_rate = 0.5 , print_cost = False):
  

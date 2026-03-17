@@ -5,7 +5,6 @@ publishDate: 2020-07-14
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/107122836
 ---
-
 #### 泛型
 
 - [1.什么是泛型？](#1_2)

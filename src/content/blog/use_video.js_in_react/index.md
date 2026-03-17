@@ -7,7 +7,6 @@ heroImage:
   src: './thumbnail.png'
   color: '#b14752'
 ---
-
 ## 0-Intro
 
 > 在 React 项目中使用 video.js，实现 HTML5 视频播放器的自定制。
@@ -19,7 +18,6 @@ heroImage:
 > video.js is a free and open source HTML5 video player.
 
 这是个免费且开源的 HTML5 视频播放器。
-
 
 ## 1-着手开发
 
@@ -175,7 +173,6 @@ export default Course
 
 [commit](https://github.com/BeijiYang/VideoJsCustomization/tree/897f3ca7ccce59cb9490011e19bad0a7112088c8)
 
-
 ## 4-用 options 控制功能
 
 本节，我们用 options 实现对基本功能的控制。
@@ -277,9 +274,6 @@ export default Course
 本节，我们用 video.js 的 options 机制，实现了播放器的倍速播放、添加 poster、样式控制等功能。
 
 以上都是对现有功能进行控制。下一节，我们来看看如何按照我们的想法，对播放器的功能进行扩展。
-
-
-
 
 ## 5-写插件(Plugin)扩展功能
 
@@ -535,7 +529,6 @@ render () {
 >
 >Defined in https://github.com/videojs/ video.js /blob/master/src/js/player.js line number: 2792
 
-
 只要在播放，就会持续监听到该事件。十分适合用来解决我们的问题。有了它，`this.on('play', cb)`的回调中也不需要进行焦点控制了。
 
 根据该插件的功能，将其命名为 `setStateandFocusPlugin`，完整代码如下
@@ -574,7 +567,6 @@ const setStateandFocusPlugin = function (options) {
 * 当视频播放的过程中，不论鼠标点哪里，都让焦点保持在播放器，以便通过空格键控制；
 * 看视频时也可能需要暂停下来做别的事情，那么当视频处于暂停状态，就可以通过鼠标点击等行为切换焦点。
 
-
 空格键控制播放/暂停的功能就比较完善了。
 
 ### 总结
@@ -595,8 +587,6 @@ const setStateandFocusPlugin = function (options) {
   * `onKeyDown`
   * 事件冒泡
   * 键码
-
-
 
 ## 6-实现样式的自定制
 
@@ -705,7 +695,6 @@ const setStateandFocusPlugin = function (options) {
 ```
 
 创建自定制皮肤文件成功！
-
 
 ## 7-总结
 

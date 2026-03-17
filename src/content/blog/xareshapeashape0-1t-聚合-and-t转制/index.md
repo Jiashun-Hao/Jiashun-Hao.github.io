@@ -5,7 +5,6 @@ publishDate: 2024-10-09
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/142793625
 ---
-
 **x=a.reshape(a.shape[0],-1).T**
 
 一般矩阵里面的.shape[0]是第一个元素，代表有多少样本。后面的则是每一个样本的详细参数。

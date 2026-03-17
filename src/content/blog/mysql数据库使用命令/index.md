@@ -5,7 +5,6 @@ publishDate: 2021-03-14
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/114731478
 ---
-
 #### Mysql使用命令
 
 - [DDL数据定义语言](#DDL_2)
@@ -422,7 +421,6 @@ name  varchar(70)   CHECK(name='男' or name='女')
 #6.设置外键约束：FOREIGN KEY
 name varchar(70) ,
 CONSTRAINT [约束名] FOREIGN KEY (name) REFERENCES 约束来源表(约束来源字段)
-
 
 #1.添加外键需要两个表的索引一致，如果一个是主键那么另外一个也是主键，目前不知道为什么字符不能做主键
 #2.设置外键的语句要放在表的最后

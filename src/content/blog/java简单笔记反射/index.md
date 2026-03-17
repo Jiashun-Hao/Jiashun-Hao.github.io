@@ -5,7 +5,6 @@ publishDate: 2020-11-02
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/109442091
 ---
-
 #### 反射
 
 - [一、概括](#_1)
@@ -219,7 +218,6 @@ public class TestString {
 
         Method m2 = clazz.getMethod("show", String.class);//形参必须是class类型的
         m2.invoke(p, "好好学习");//调用p对象的show方法
-
 
     }
 }
@@ -572,7 +570,6 @@ class MyInvocation implements InvocationHandler {
         return returnVal;
     }
 }
-
 
 public class Test {
     public static void main(String[] args) {

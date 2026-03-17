@@ -5,7 +5,6 @@ publishDate: 2020-07-30
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/107690914
 ---
-
 #### File类
 
 - [一、File类](#File_3)
@@ -130,7 +129,6 @@ public class Test {
         System.out.println(file1.getParentFile());
         System.out.println(file1.length());
         System.out.println(file1.isDirectory());
-
 
         System.out.println();
 

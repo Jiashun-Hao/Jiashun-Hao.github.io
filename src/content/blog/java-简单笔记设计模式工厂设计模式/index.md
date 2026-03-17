@@ -5,7 +5,6 @@ publishDate: 2020-04-02
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/105281619
 ---
-
 ## 工厂设计模式
 
 工厂设计模式基于接口的多态，是一种很方便的设计模式，其主要作用就是**接口和接口之间**进行交互操作，他们只进行对接，其它的任务交个实现类去完成但是他们不考虑实现类的操作。
@@ -41,8 +40,6 @@ class Transtorp implements C_Ministry{//执行运输指令
         System.out.println("运输物资");
     }
 }
-
-
 
 interface J_Ministry{ //接口J
     C_Ministry getmaterial(); //获取接口C

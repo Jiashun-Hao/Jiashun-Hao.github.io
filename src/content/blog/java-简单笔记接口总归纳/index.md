@@ -5,7 +5,6 @@ publishDate: 2020-05-13
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/106092315
 ---
-
 之前写过几篇关于接口的伪“博客”，今天又学习到了一点新的内容，索性，将他们集合到一篇并做补充，方便日后复习使用；
 
 ## 1.interface关键字（接口）
@@ -165,8 +164,6 @@ public class ceshi {
             }
         };
         a.show(p);
-
-
 
     }
     public void show(Product p){//3.造一个接口的实现方法

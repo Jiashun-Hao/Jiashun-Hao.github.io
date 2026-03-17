@@ -5,7 +5,6 @@ publishDate: 2020-02-05
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/104189365
 ---
-
 ## 初识面向对象
 
 面向对象的编程思路，目前理解为与c的结构体为同一性质；

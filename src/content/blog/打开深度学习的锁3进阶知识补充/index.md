@@ -5,7 +5,6 @@ publishDate: 2024-05-20
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/138943280
 ---
-
 #### 进阶知识补充
 
 - [零、深度学习的技巧](#_1)
@@ -888,7 +887,6 @@ i
 \sigma = \sqrt{\frac{1}{m} \sum\_{i=1}^{m} (x^{(i)} - \mu)^2}
 σ=m1​i=1∑m​(x(i)−μ)2
 
-
 ​
 
 第三步，最终的标准化数据：  
@@ -1067,15 +1065,11 @@ analytic
 \text{relative error} = \frac{\left\| dθ - \text{grad}\_{\text{analytic}} \right\|}{\left\| dθ \right\| + \left\| \text{grad}\_{\text{analytic}} \right\|}
 relative error=∥dθ∥+
 
-
 ​gradanalytic​
-
 
 ​
 
-
 ​dθ−gradanalytic​
-
 
 ​​
 
@@ -1544,7 +1538,6 @@ t
 \theta\_t = \theta\_{t-1} - \frac{\alpha}{\sqrt{S\_t }+ \epsilon} g\_t
 θt​=θt−1​−St​
 
-
 ​+ϵα​gt​
 
 #### 2. 代码公式
@@ -1605,7 +1598,6 @@ w
 W := W- \frac{\alpha}{\sqrt{S\_{dw}}+ \epsilon} dw
 W:=W−Sdw​
 
-
 ​+ϵα​dw  
  
 b
@@ -1623,7 +1615,6 @@ d
 b
 b := b- \frac{\alpha}{\sqrt{S\_{db}}+ \epsilon} db
 b:=b−Sdb​
-
 
 ​+ϵα​db
 
@@ -1761,7 +1752,6 @@ t
 ϵ
 \theta\_t = \theta\_{t-1} - \frac{\alpha \hat{m}\_t}{\sqrt{\hat{v}\_t} + \epsilon}
 θt​=θt−1​−v^t​
-
 
 ​+ϵαm^t​​
 
@@ -2060,7 +2050,6 @@ d
 W= W - \frac{\alpha V^{corrected}\_{dw}}{\sqrt{S^{corrected}\_{dw}} + \epsilon}
 W=W−Sdwcorrected​
 
-
 ​+ϵαVdwcorrected​​  
  
 b
@@ -2097,7 +2086,6 @@ d
 b= b - \frac{\alpha V^{corrected}\_{db}}{\sqrt{S^{corrected}\_{db}} + \epsilon}
 b=b−Sdbcorrected​
 
-
 ​+ϵαVdbcorrected​​
 
 #### 3. 实现代码
@@ -2110,8 +2098,6 @@ for l in range(1, L + 1): #神经网络层数
 	v["db" + str(l)] = np.zeros_like(parameters["b" + str(l)])
 	s["dW" + str(l)] = np.zeros_like(parameters["W" + str(l)])
 	s["db" + str(l)] = np.zeros_like(parameters["b" + str(l)])
-
-
 
 #2：动力和RMSprop计算
 L = len(parameters) // 2                 # number of layers in the neural networks
@@ -2396,7 +2382,6 @@ array=np.array([[1, 2, 3, 4, 5],
                 [100, 200, 300, 400, 500],
                 [1000,2000,3000,4000,5000]]
               )
-
 
 x=[0,3,1,4,2]
 ac=array[:,x]  # 每一行的数据按照指定的顺序重新排列

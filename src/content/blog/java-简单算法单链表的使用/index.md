@@ -5,7 +5,6 @@ publishDate: 2020-06-05
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/106543374
 ---
-
 原计划将这些内容写在单链表的后面，后想了想，它的篇幅已经很长了；  
  写博客最大的目的是为了以后方便回忆，既然如此，就再开一个新篇幅吧  
  毕竟我也不喜欢翻来翻去
@@ -165,7 +164,6 @@ public class List {
         list.ListReversal();
         list.show();
 
-
     }
 }
 class Singlelist {
@@ -201,7 +199,6 @@ class Singlelist {
             temp1=temp1.Next;
         } System.out.println(temp1);
 
-
     }
 
     //新建：反转链表
@@ -221,9 +218,7 @@ class Singlelist {
         }
         head.Next=Newhead.Next;
 
-
     }
-
 
 }
 class Node{
@@ -263,7 +258,6 @@ public class List {
     public static void main(String[] args){
         //创建链表
         Singlelist list =new Singlelist();
-
 
         //添加节点
        
@@ -313,7 +307,6 @@ class Singlelist {
             temp1=temp1.Next;
         } System.out.println(temp1);
 
-
     }
 
     //新建：逆序输出单链表
@@ -334,7 +327,6 @@ class Singlelist {
         }System.out.println(stack.pop());
 
     }
-
 
 }
 class Node{
@@ -619,7 +611,6 @@ class Singlelist {
         }
         System.out.println(temp1);
 
-
     }
 
     //合并链表(非递归)
@@ -665,7 +656,6 @@ class Node {
         this.no = no;
         this.name = name;
     }
-
 
     @Override
     public String toString() {

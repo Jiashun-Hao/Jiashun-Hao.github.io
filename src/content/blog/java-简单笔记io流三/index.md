@@ -5,7 +5,6 @@ publishDate: 2020-10-10
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/108951663
 ---
-
 为了后面这两个重要的流，再单独开一篇。
 
 #### IO流（三）
@@ -44,7 +43,6 @@ public class Main implements Serializable{
     @Test
     public void Object()  throws Exception {
 
-
         Preson p1=new Preson("小明",23);
         Preson p2=new Preson("小红",24);
 
@@ -65,7 +63,6 @@ public class Main implements Serializable{
         private static final long serialVersionUID = 1L;
         String name;
         Integer age;
-
 
         public Preson(String name, Integer age){
             this.name=name;

@@ -5,7 +5,6 @@ publishDate: 2020-01-29
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/104103089
 ---
-
 ## 初识Java总结
 
 接触Java有段时间了，但是奈何自己太笨，一直没什么进制，看视频做笔记大体了解了一下Java的概念，因为之前有些C的基础，所以写的思维方式也按照C的来~  

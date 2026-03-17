@@ -5,7 +5,6 @@ publishDate: 2020-03-31
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/105233799
 ---
-
 #### 稀疏矩阵：
 
 **如果想在计算机中保存一个棋盘（围棋）中各个棋子的位置，你会怎么做？**  
@@ -50,7 +49,6 @@ public class Main {
            System.out.println();
         }
 
-
        System.out.println("原数——>稀疏");
        int sum=0;
        for(int []sc:arry){
@@ -81,7 +79,6 @@ public class Main {
             System.out.printf("%d\t%d\t%d\n",sparseArr[i][0],sparseArr[i][1],sparseArr[i][2]);
 
         }
-
 
         System.out.println("稀疏——>原数");
         int[][] shu=new int[sparseArr[0][0]][sparseArr[0][1]];

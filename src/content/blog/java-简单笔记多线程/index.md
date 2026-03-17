@@ -5,7 +5,6 @@ publishDate: 2020-10-24
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/109246060
 ---
-
 #### 多线程
 
 - [一、实现多线程](#_1)
@@ -565,7 +564,6 @@ class Clerk{
     }
 }
 
-
 class Productor implements Runnable{
 
     Clerk clerk;//创建一个店员的变量;
@@ -573,7 +571,6 @@ class Productor implements Runnable{
     public Productor(Clerk clerk){
         this.clerk=clerk;
     }
-
 
     public void run() {
         System.out.println("生产者开始生产产品");

@@ -5,7 +5,6 @@ publishDate: 2022-12-03
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/128161006
 ---
-
 ## 1:入口函数
 
 虽然没有这样的东西，但是习惯要一个：

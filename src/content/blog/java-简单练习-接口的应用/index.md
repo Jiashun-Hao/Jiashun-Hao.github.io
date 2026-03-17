@@ -5,7 +5,6 @@ publishDate: 2020-04-21
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/105667373
 ---
-
 First ，这是一篇很水的博客，我写给自己，不推荐看；
 
 #### 题目
@@ -52,7 +51,6 @@ class Circle{
      public void setRadius(double radius){
          this.radius=radius;
      }
-
 
 }
 class ComparableCircle extends Circle implements CompareObject{

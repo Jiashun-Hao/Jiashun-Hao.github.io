@@ -5,7 +5,6 @@ publishDate: 2021-06-21
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/118091527
 ---
-
 写在前面的话：为什么突然要写一篇这个？因为明天考试要考这个
 
 #### Servlet
@@ -50,7 +49,6 @@ public class HelloServlet implements Servlet {
     public ServletConfig getServletConfig() {
         return null;
     }
-
 
 	
     @Override

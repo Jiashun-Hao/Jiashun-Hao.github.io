@@ -5,7 +5,6 @@ publishDate: 2023-09-22
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/132980690
 ---
-
 #### 打开深度学习的锁
 
 - [导言](#_1)
@@ -1657,7 +1656,6 @@ def layer_sizes(X,Y):
 
     return (Input_layer,Hidden_layer,Output_layer)
 
-
 #2.初始化函数
 def init_parameters(Input_layer,Hidden_layer,Output_layer):
     np.random.seed(2) 
@@ -1725,7 +1723,6 @@ def propagate(X,parameters):
 # A2, cache = propagate(X_assess, parameters)
 # print(np.mean(cache["Z1"]), np.mean(cache["A1"]), np.mean(cache["Z2"]), np.mean(cache["A2"]))
 
-
 #5.损失函数构建
 # 首先，A2是输出的结果，也就是预测，也就是Yhat，
 # 其次，我们需要真实的标签Y
@@ -1748,7 +1745,6 @@ def Cost_Func(A2,Y):
 # print("=========================测试compute_cost=========================") 
 # A2 , Y_assess , parameters = compute_cost_test_case()
 # print("cost = " + str(Cost_Func(A2,Y_assess)))
-
 
 #后向传播
 #首先，我们需要损失函数想相较于最后一层输出的导数
@@ -1823,7 +1819,6 @@ def update_parameter(parameters,back_con,learning_rate=1.2):
 # print("W2 = " + str(parameters["W2"]))
 # print("b2 = " + str(parameters["b2"]))
 
-
 def model(X,Y,num_iterations,print_cost=False):
     np.random.seed(3)
 
@@ -1874,7 +1869,6 @@ def predict(parameters,X):
 # parameters, X_assess = predict_test_case()
 # predictions = predict(parameters, X_assess)
 # print("预测的平均值 = " + str(np.mean(predictions)))
-
 
 def main():
     X,Y=load_planar_dataset()

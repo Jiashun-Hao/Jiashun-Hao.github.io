@@ -5,7 +5,6 @@ publishDate: 2020-04-01
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/105252853
 ---
-
 ## 模板设计模式
 
 由“抽象”派生出来的一种设计模式

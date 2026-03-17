@@ -5,7 +5,6 @@ publishDate: 2021-12-15
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/121950499
 ---
-
 #### Spring笔记
 
 - [Spring使用步骤文字说明](#Spring_1)
@@ -520,7 +519,6 @@ public class student {
         this.list = list;
     }
 
-
 }
 ```
 
@@ -829,7 +827,6 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
        xsi:schemaLocation
                ="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
                 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-
 
 	//引入外部文件
 	<context:property-placeholder location="classpath:jdbc.properties"/>

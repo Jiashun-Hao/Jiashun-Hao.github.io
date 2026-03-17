@@ -5,7 +5,6 @@ publishDate: 2020-06-02
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/106458718
 ---
-
 ## 一、单链表
 
 链表是线性结构中非常重要的一块内容，核心内容是将存在于存储空间中多个零碎的不相干的空间利用“**指针**”将其“**链**”到一起，形成一个理论上的线性结构；
@@ -76,7 +75,6 @@ cclass Singlelist {
             temp1=temp1.Next;
         } System.out.println(temp1);
 
-
     }
 }
 ```
@@ -127,7 +125,6 @@ class Singlelist {
             System.out.print(temp1+" --> ");//为了输出结果好看，这里做了一些处理
             temp1=temp1.Next;
         } System.out.println(temp1);
-
 
     }
 }
@@ -227,7 +224,6 @@ public class List {
         //添加节点
         Scanner sc =new Scanner(System.in);
 
-
         list.addByorder(new Node(sc.nextInt(),sc.next()));
         list.addByorder(new Node(sc.nextInt(),sc.next()));
         list.addByorder(new Node(sc.nextInt(),sc.next()));
@@ -280,7 +276,6 @@ class Singlelist {
             System.out.print(temp1+" --> ");//为了输出结果好看，这里做了一些处理
             temp1=temp1.Next;
         } System.out.println(temp1);
-
 
     }
 }
@@ -391,7 +386,6 @@ public class List {
         //添加节点
         Scanner sc =new Scanner(System.in);
 
-
         list.addByorder(new Node(sc.nextInt(),sc.next()));
         list.addByorder(new Node(sc.nextInt(),sc.next()));
         list.addByorder(new Node(sc.nextInt(),sc.next()));
@@ -448,7 +442,6 @@ class Singlelist {
             System.out.print(temp1+" --> ");//为了输出结果好看，这里做了一些处理
             temp1=temp1.Next;
         } System.out.println(temp1);
-
 
     }
 
@@ -557,7 +550,6 @@ public class List {
         //添加节点
         Scanner sc =new Scanner(System.in);
 
-
         list.addByorder(new Node(sc.nextInt(),sc.next()));
         list.addByorder(new Node(sc.nextInt(),sc.next()));
         list.addByorder(new Node(sc.nextInt(),sc.next()));
@@ -618,7 +610,6 @@ class Singlelist {
             System.out.print(temp1+" --> ");//为了输出结果好看，这里做了一些处理
             temp1=temp1.Next;
         } System.out.println(temp1);
-
 
     }
 

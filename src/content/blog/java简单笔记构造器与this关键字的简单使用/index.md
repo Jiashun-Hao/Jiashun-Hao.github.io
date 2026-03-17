@@ -5,7 +5,6 @@ publishDate: 2020-02-14
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/104318638
 ---
-
 ## 1.构造器
 
 Java面向对象的三要素：封装，继承，多态；  

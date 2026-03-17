@@ -6,7 +6,6 @@ updatedDate: 2020-08-16 16:20:56
 tags: ['开发工具', 'git']
 heroImage: { src: './thumbnail.png', color: '#9698C1' }
 ---
-
 ## 一、配置命令
 
 ### 配置用户名和邮箱
@@ -40,7 +39,6 @@ git init
 
 ### 克隆项目
 
-
 ```bash
 git clone https://github.com/JohnieXu/eleme-web-vue.git
 or
@@ -64,7 +62,6 @@ git log --graph --pretty=oneline --abbrev-commit // 以图形的形式显示comm
 ### 推送更新
 
 `git add .` => `git commit` => `git push`
-
 
 ```bash
 git add . // 添加所有修改修改过的文件,仅添加**当前目录下**的所有修改过的文件,主要运行git命令的路径
@@ -158,7 +155,6 @@ git push -u origin master // 将master分支推送到远程的origin关联的仓
 ```
 
 `-u`: 第一次推送时候加上`-u`的话, 将第一次的推送源和分支保存为默认设置, 下次`git push`就相当于`git push origin master`
-
 
 - 删除分支
 
@@ -639,7 +635,6 @@ git pull origin dev // 将远程仓库dev分支更新拉取到本地并尝试快
 
 对应的说明在下图的标注中，冲突指的是对应的`<<<<<<< HEAD`和`=======`之间的内容与`=======`和`>>>>>>> 46e233a7b4b601b896c13a6e2c577d12c87f3c17`之间的内容不一致，需要删除你不需要的部分，最后**确保代码中不再有上面的任何一个特殊标记**。
 
-
 ![image](./39633bfe-48f6-4b37-96b2-af9d834259e8.png)
 
 :::tip 注意
@@ -655,7 +650,6 @@ git add . // 添加本次修复冲突更改的文件
 git commit -m "fix conflict" // 提交更新
 git push origin dev // 推送更新到远程仓库的dev分支
 ```
-
 
 ### 场景二：仅本地使用
 
