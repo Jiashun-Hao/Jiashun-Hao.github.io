@@ -3,7 +3,7 @@ title: "1105: 18岁生日"
 publishDate: 2019-03-22
 description: '计算从出生到18岁生日所经过的天数'
 tags:
-  - c语言
+  - C 
 language: 'Chinese'
 ---
 
