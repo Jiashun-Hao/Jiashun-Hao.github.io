@@ -29,7 +29,7 @@ export const theme: ThemeUserConfig = {
   },
 
   // === Global configuration ===
-  titleDelimiter: '•',
+  titleDelimiter: '�?,
   prerender: true,
   npmCDN: 'https://cdn.jsdelivr.net/npm',
 
@@ -49,7 +49,8 @@ export const theme: ThemeUserConfig = {
     menu: [
       { title: 'Blog', link: '/blog' },
       { title: 'Projects', link: '/projects' },
-      { title: 'About', link: '/about' }
+      { title: 'About', link: '/about' },
+      { title: 'CSDN', link: 'https://blog.csdn.net/HJS1453100406' }
     ]
   },
 
@@ -66,14 +67,14 @@ export const theme: ThemeUserConfig = {
         pos: 2 // position set to 2 will be appended to copyright line
       }
     ],
-    /** Enable displaying a “Astro & Pure theme powered” link in your site’s footer. */
+    /** Enable displaying a “Astro & Pure theme powered�?link in your site’s footer. */
     credits: false,
     /** Optional details about the social media accounts for this site. */
     social: { github: 'https://github.com/JohnieXu' }
   },
 
   content: {
-    externalLinksContent: ' ↗',
+    externalLinksContent: ' �?,
     /** Blog page size for pagination (optional) */
     blogPageSize: 8,
     externalLinkArrow: true, // show external link arrow
