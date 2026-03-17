@@ -1,6 +1,7 @@
 ---
 title: "1105: 18岁生日"
-date: 2023-11-13
+description: "题目描述   Gardon的18岁生日就要到了，他当然很开心，可是他突然想到一个问题，是不是每个人从出生开始，到达18岁生日时所经过的天数都是一样的呢？似乎并不"
+publishDate: 2019-03-22
 tags: []
 # 原文链接: https://blog.csdn.net/HJS1453100406/article/details/88750738
 ---
