@@ -1,9 +1,11 @@
 ---
 title: "Java 简单笔记——代码块"
-date: "最新推荐文章于 2024-12-03 08:26:03 发布"
+publishDate: 2024-12-03
 source: "https://blog.csdn.net/HJS1453100406/article/details/104606029"
 tags:
-
+  - '未分类'
+description: '代码块是一个比较简单的概念，因为这里涉及到static所修饰，所以在这里写一篇为了以后的说明；'
+language: 'Chinese'
 ---
 
 ## 代码块

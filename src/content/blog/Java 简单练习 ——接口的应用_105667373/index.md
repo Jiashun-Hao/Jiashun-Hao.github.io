@@ -1,9 +1,11 @@
 ---
 title: "Java 简单练习 ——接口的应用"
-date: "最新推荐文章于 2021-06-11 15:22:03 发布"
+publishDate: 2021-06-11
 source: "https://blog.csdn.net/HJS1453100406/article/details/105667373"
 tags:
-
+  - '未分类'
+description: 'First ，这是一篇很水的博客，我写给自己，不推荐看；'
+language: 'English'
 ---
 
 First ，这是一篇很水的博客，我写给自己，不推荐看；

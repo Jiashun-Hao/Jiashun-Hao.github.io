@@ -1,9 +1,11 @@
 ---
 title: "杭电1002——A + B Problem II（大数问题）（Java实现）"
-date: "最新推荐文章于 2024-08-03 14:51:53 发布"
+publishDate: 2024-08-03
 source: "https://blog.csdn.net/HJS1453100406/article/details/106677188"
 tags:
-
+  - '未分类'
+description: 'A + B Problem II'
+language: 'Chinese'
 ---
 
 A + B Problem II

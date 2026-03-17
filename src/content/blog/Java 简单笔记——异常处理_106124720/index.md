@@ -1,9 +1,11 @@
 ---
 title: "Java 简单笔记——异常处理"
-date: "最新推荐文章于 2025-07-31 22:23:47 发布"
+publishDate: 2025-07-31
 source: "https://blog.csdn.net/HJS1453100406/article/details/106124720"
 tags:
-
+  - '未分类'
+description: '“异常”是在程序开发过程中一定会遇到的一个点，无论一个程序写的多么完善，总会有意想不到的异常出现，可能来源于程序开发中忽略的点，也可能来自用户的不得当操作。'
+language: 'Chinese'
 ---
 
 ## 一、异常

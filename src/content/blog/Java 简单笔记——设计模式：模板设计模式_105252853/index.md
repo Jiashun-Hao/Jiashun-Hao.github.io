@@ -1,9 +1,11 @@
 ---
 title: "Java 简单笔记——设计模式：模板设计模式"
-date: "最新推荐文章于 2024-11-10 00:44:54 发布"
+publishDate: 2024-11-10
 source: "https://blog.csdn.net/HJS1453100406/article/details/105252853"
 tags:
-
+  - '未分类'
+description: '由“抽象”派生出来的一种设计模式'
+language: 'Chinese'
 ---
 
 ## 模板设计模式

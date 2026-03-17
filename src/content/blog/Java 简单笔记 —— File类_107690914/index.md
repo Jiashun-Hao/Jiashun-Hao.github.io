@@ -1,9 +1,11 @@
 ---
 title: "Java 简单笔记 —— File类"
-date: "最新推荐文章于 2026-01-22 17:15:56 发布"
+publishDate: 2026-01-22
 source: "https://blog.csdn.net/HJS1453100406/article/details/107690914"
 tags:
-
+  - '未分类'
+description: '- - 1.File(String pathname)'
+language: 'Chinese'
 ---
 
 #### File类

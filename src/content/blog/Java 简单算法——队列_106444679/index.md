@@ -1,9 +1,11 @@
 ---
 title: "Java 简单算法——队列"
-date: "最新推荐文章于 2025-02-18 23:58:56 发布"
+publishDate: 2025-02-18
 source: "https://blog.csdn.net/HJS1453100406/article/details/106444679"
 tags:
-
+  - '未分类'
+description: '数据结构中程序基本可以分为两大类：线性结构和非线性结构；'
+language: 'Chinese'
 ---
 
 ## 一.队列

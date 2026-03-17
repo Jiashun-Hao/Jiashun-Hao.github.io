@@ -1,9 +1,11 @@
 ---
 title: "我的创作纪念日"
-date: "最新推荐文章于 2025-03-16 17:13:50 发布"
+publishDate: 2025-03-16
 source: "https://blog.csdn.net/HJS1453100406/article/details/143021757"
 tags:
-  - #其他
+  - '其他'
+description: '提示：可以和大家分享最初成为创作者的初心'
+language: 'Chinese'
 ---
 
 ### 机缘

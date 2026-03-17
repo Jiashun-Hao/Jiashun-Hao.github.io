@@ -1,9 +1,11 @@
 ---
 title: "Java简单练习(写给自己)——排序（纯代码）；"
-date: "最新推荐文章于 2022-07-06 14:32:58 发布"
+publishDate: 2022-07-06
 source: "https://blog.csdn.net/HJS1453100406/article/details/105130224"
 tags:
-
+  - '未分类'
+description: '前言：有不止一个人告诉过我，基础很重要，所以今天将一些模糊的东西写在这里；'
+language: 'Chinese'
 ---
 
 前言：有不止一个人告诉过我，基础很重要，所以今天将一些模糊的东西写在这里；

@@ -1,9 +1,11 @@
 ---
 title: "Java简单笔记——继承、重写与重构、this和super的使用，及子类实例化的全过程"
-date: "最新推荐文章于 2022-01-12 13:13:56 发布"
+publishDate: 2022-01-12
 source: "https://blog.csdn.net/HJS1453100406/article/details/104390755"
 tags:
-
+  - '未分类'
+description: '序言：最近有几天没写博客了，原因有两方面：'
+language: 'Chinese'
 ---
 
 序言：最近有几天没写博客了，原因有两方面：  

@@ -1,9 +1,11 @@
 ---
 title: "分布式计算，云计算与大数据概论（一）--分布式计算概述"
-date: "最新推荐文章于 2024-01-11 15:58:00 发布"
+publishDate: 2024-01-11
 source: "https://blog.csdn.net/HJS1453100406/article/details/103369444"
 tags:
-
+  - '未分类'
+description: '“分布式计算是计算机科学的重要研究内容”'
+language: 'Chinese'
 ---
 
 ## 分布式计算的概念

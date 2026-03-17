@@ -1,9 +1,11 @@
 ---
 title: "Java 简单笔记——IO流（二）"
-date: "最新推荐文章于 2026-03-15 22:37:24 发布"
+publishDate: 2026-03-15
 source: "https://blog.csdn.net/HJS1453100406/article/details/108619063"
 tags:
-
+  - '未分类'
+description: '- - - 1.字节缓冲流的使用'
+language: 'Chinese'
 ---
 
 #### IO流（二）

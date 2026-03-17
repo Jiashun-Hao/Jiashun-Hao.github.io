@@ -1,9 +1,11 @@
 ---
 title: "Java 简单练习——多态"
-date: "最新推荐文章于 2024-06-18 00:23:10 发布"
+publishDate: 2024-06-18
 source: "https://blog.csdn.net/HJS1453100406/article/details/104441396"
 tags:
-
+  - '未分类'
+description: '1.写两个类，一个输入长方形的信息，一个输入圆的信息'
+language: 'Chinese'
 ---
 
 题目要求：  

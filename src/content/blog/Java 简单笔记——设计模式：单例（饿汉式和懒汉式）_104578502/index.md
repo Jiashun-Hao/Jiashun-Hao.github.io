@@ -1,9 +1,11 @@
 ---
 title: "Java 简单笔记——设计模式：单例（饿汉式和懒汉式）"
-date: "最新推荐文章于 2025-04-21 16:22:05 发布"
+publishDate: 2025-04-21
 source: "https://blog.csdn.net/HJS1453100406/article/details/104578502"
 tags:
-
+  - '未分类'
+description: '设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。 也可以使得编程变得更...'
+language: 'Chinese'
 ---
 
 #### 什么是设计模式？

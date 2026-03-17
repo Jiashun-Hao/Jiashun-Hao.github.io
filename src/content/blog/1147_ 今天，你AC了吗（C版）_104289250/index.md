@@ -1,9 +1,11 @@
 ---
 title: "1147: 今天，你AC了吗（C版）"
-date: "最新推荐文章于 2026-03-02 15:06:51 发布"
+publishDate: 2026-03-02
 source: "https://blog.csdn.net/HJS1453100406/article/details/104289250"
 tags:
-
+  - '未分类'
+description: '假设一个字符串中连续的若干数字字符可以认为是一个整数，现在给定一个字符串，请从中找出所有的正整数并求和输出。'
+language: 'Chinese'
 ---
 
 题目描述  

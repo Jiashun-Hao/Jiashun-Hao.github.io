@@ -1,9 +1,11 @@
 ---
 title: "Python小技巧"
-date: "已于 2023-11-08 17:17:25 修改"
+publishDate: 2023-11-08
 source: "https://blog.csdn.net/HJS1453100406/article/details/128161006"
 tags:
-  - #python
+  - 'python'
+description: '虽然没有这样的东西，但是习惯要一个：'
+language: 'Chinese'
 ---
 
 ## 1:入口函数

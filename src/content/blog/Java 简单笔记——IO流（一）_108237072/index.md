@@ -1,9 +1,11 @@
 ---
 title: "Java 简单笔记——IO流（一）"
-date: "于 2020-09-10 10:07:36 发布"
+publishDate: 2020-09-10
 source: "https://blog.csdn.net/HJS1453100406/article/details/108237072"
 tags:
-
+  - '未分类'
+description: '我曾在大二下学期刚刚开始的时候听过一位学长给我的忠告：在我们这个学校考研是不受支持的（虽然我还是想考），就业一直占比很大的趋势比例，而如果想找到一份体面的工作，Java是敲门砖，很重要 应该尽早的去学...'
+language: 'Chinese'
 ---
 
 ```

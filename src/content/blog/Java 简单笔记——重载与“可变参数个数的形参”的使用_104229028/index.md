@@ -1,9 +1,11 @@
 ---
 title: "Java 简单笔记——重载与“可变参数个数的形参”的使用"
-date: "最新推荐文章于 2023-10-12 13:17:54 发布"
+publishDate: 2023-10-12
 source: "https://blog.csdn.net/HJS1453100406/article/details/104229028"
 tags:
-
+  - '未分类'
+description: '1.重载的方法必须在同一个类中；'
+language: 'Chinese'
 ---
 
 ### 重载

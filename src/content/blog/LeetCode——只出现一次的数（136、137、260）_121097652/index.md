@@ -1,11 +1,13 @@
 ---
 title: "LeetCode——只出现一次的数（136、137、260）"
-date: "最新推荐文章于 2026-03-16 19:00:00 发布"
+publishDate: 2026-03-16
 source: "https://blog.csdn.net/HJS1453100406/article/details/121097652"
 tags:
-  - #leetcode
-  - #算法
-  - #职场和发展
+  - 'leetcode'
+  - '算法'
+  - '职场和发展'
+description: '给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。'
+language: 'Chinese'
 ---
 
 ## 136

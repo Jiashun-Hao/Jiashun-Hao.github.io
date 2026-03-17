@@ -1,9 +1,11 @@
 ---
 title: "1148: 考试晋级（java版）"
-date: "最新推荐文章于 2025-05-26 10:00:00 发布"
+publishDate: 2025-05-26
 source: "https://blog.csdn.net/HJS1453100406/article/details/104310882"
 tags:
-
+  - '未分类'
+description: '有n个人参加了期末考试,为了检测大家真正的学习成绩老师决定对于成绩好的同学进行第二轮测试,当然不是每个人都有进入第二轮的机会，这里有个根据期末考试分数制定的晋级规则：'
+language: 'Chinese'
 ---
 
 题目描述  

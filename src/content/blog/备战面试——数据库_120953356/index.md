@@ -1,11 +1,13 @@
 ---
 title: "备战面试——数据库"
-date: "最新推荐文章于 2026-03-16 21:23:30 发布"
+publishDate: 2026-03-16
 source: "https://blog.csdn.net/HJS1453100406/article/details/120953356"
 tags:
-  - #面试
-  - #数据库
-  - #java
+  - '面试'
+  - '数据库'
+  - 'java'
+description: '- 3.Mysql 什么情况会造成脏读、不可重复读、幻读？如何解决'
+language: 'Chinese'
 ---
 
 [参考文档](https://blog.csdn.net/w139074301/article/details/112004430#_44)

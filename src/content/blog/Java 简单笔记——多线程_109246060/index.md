@@ -1,9 +1,11 @@
 ---
 title: "Java 简单笔记——多线程"
-date: "最新推荐文章于 2026-03-16 21:49:03 发布"
+publishDate: 2026-03-16
 source: "https://blog.csdn.net/HJS1453100406/article/details/109246060"
 tags:
-  - #1024程序员节
+  - '1024程序员节'
+description: '- 1.2.继承Thread类'
+language: 'Chinese'
 ---
 
 #### 多线程

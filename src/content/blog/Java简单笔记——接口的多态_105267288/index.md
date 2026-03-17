@@ -1,9 +1,11 @@
 ---
 title: "Java简单笔记——接口的多态"
-date: "最新推荐文章于 2022-11-05 00:21:18 发布"
+publishDate: 2022-11-05
 source: "https://blog.csdn.net/HJS1453100406/article/details/105267288"
 tags:
-
+  - '未分类'
+description: '同继承的父、子类一样，接口与实现类之间也有多态的性质，也存在着虚拟方法调用（虚拟方法调用：通过父类的引用指向子类的实体，从而调用在子类中被子类所重写的父类的方法）'
+language: 'Chinese'
 ---
 
 ## 多态

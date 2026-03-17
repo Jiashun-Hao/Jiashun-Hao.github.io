@@ -1,9 +1,11 @@
 ---
 title: "Java简单练习——this的互相调用"
-date: "最新推荐文章于 2022-09-13 11:42:20 发布"
+publishDate: 2022-09-13
 source: "https://blog.csdn.net/HJS1453100406/article/details/104339766"
 tags:
-
+  - '未分类'
+description: '这里写一条关于this很重要的概念：'
+language: 'Chinese'
 ---
 
 ### 用三个类不同的类来练习this

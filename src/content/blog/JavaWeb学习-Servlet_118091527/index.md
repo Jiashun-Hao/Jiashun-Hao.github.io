@@ -1,9 +1,11 @@
 ---
 title: "JavaWeb学习-Servlet"
-date: "最新推荐文章于 2022-10-10 17:56:49 发布"
+publishDate: 2022-10-10
 source: "https://blog.csdn.net/HJS1453100406/article/details/118091527"
 tags:
-
+  - '未分类'
+description: '写在前面的话：为什么突然要写一篇这个？因为明天考试要考这个'
+language: 'Chinese'
 ---
 
 写在前面的话：为什么突然要写一篇这个？因为明天考试要考这个

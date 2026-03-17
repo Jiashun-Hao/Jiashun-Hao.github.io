@@ -1,9 +1,11 @@
 ---
 title: "第一个SpringBoot项目——HelloWord"
-date: "最新推荐文章于 2026-02-01 19:03:23 发布"
+publishDate: 2026-02-01
 source: "https://blog.csdn.net/HJS1453100406/article/details/112464569"
 tags:
-
+  - '未分类'
+description: '- - 一.创建一个Mave项目'
+language: 'Chinese'
 ---
 
 #### SpringBoot

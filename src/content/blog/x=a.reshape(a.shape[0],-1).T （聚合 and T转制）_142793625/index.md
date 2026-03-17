@@ -1,9 +1,11 @@
 ---
 title: "x=a.reshape(a.shape[0],-1).T （聚合 and T转制）"
-date: "最新推荐文章于 2025-04-14 19:30:48 发布"
+publishDate: 2025-04-14
 source: "https://blog.csdn.net/HJS1453100406/article/details/142793625"
 tags:
-  - #numpy
+  - 'numpy'
+description: 'x=a.reshape(a.shape[0],-1).T'
+language: 'Chinese'
 ---
 
 **x=a.reshape(a.shape[0],-1).T**

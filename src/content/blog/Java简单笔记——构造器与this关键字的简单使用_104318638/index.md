@@ -1,9 +1,11 @@
 ---
 title: "Java简单笔记——构造器与this关键字的简单使用"
-date: "最新推荐文章于 2021-10-03 10:40:10 发布"
+publishDate: 2021-10-03
 source: "https://blog.csdn.net/HJS1453100406/article/details/104318638"
 tags:
-
+  - '未分类'
+description: 'Java面向对象的三要素：封装，继承，多态；'
+language: 'Chinese'
 ---
 
 ## 1.构造器

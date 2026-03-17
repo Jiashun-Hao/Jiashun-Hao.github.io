@@ -1,9 +1,11 @@
 ---
 title: "若依框架前后端项目分离部署（jar包+Nginx部署）"
-date: "最新推荐文章于 2026-02-17 02:29:15 发布"
+publishDate: 2026-02-17
 source: "https://blog.csdn.net/HJS1453100406/article/details/117469217"
 tags:
-
+  - '未分类'
+description: '最近用偌依的前后端分离框架做了一个小项目，想要部署到另外一台windows电脑（服务器）上的时候出了一点问题，最后解决，写一篇文档总结一下。'
+language: 'Chinese'
 ---
 
 ## 若依框架前后端项目分离部署（jar包+Nginx部署）

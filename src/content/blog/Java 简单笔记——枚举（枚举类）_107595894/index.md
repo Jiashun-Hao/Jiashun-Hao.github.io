@@ -1,9 +1,11 @@
 ---
 title: "Java 简单笔记——枚举（枚举类）"
-date: "最新推荐文章于 2026-01-27 19:57:54 发布"
+publishDate: 2026-01-27
 source: "https://blog.csdn.net/HJS1453100406/article/details/107595894"
 tags:
-
+  - '未分类'
+description: '- 二、如何自定义枚举类'
+language: 'Chinese'
 ---
 
 #### 枚举（枚举类）

@@ -1,9 +1,11 @@
 ---
 title: "Java 简单笔记——注解"
-date: "最新推荐文章于 2025-04-01 08:00:00 发布"
+publishDate: 2025-04-01
 source: "https://blog.csdn.net/HJS1453100406/article/details/107641823"
 tags:
-
+  - '未分类'
+description: '- 二、三个基本的Annotation'
+language: 'Chinese'
 ---
 
 #### 注解

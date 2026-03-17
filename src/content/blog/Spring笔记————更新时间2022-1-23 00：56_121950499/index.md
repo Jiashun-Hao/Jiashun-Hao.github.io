@@ -1,11 +1,13 @@
 ---
 title: "Spring笔记————更新时间2022-1-23 00：56"
-date: "已于 2022-03-17 17:26:04 修改"
+publishDate: 2022-03-17
 source: "https://blog.csdn.net/HJS1453100406/article/details/121950499"
 tags:
-  - #spring
-  - #java
-  - #后端
+  - 'spring'
+  - 'java'
+  - '后端'
+description: '- Spring使用步骤文字说明'
+language: 'Chinese'
 ---
 
 #### Spring笔记

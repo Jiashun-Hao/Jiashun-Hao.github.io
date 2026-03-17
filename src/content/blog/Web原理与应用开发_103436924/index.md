@@ -1,9 +1,11 @@
 ---
 title: "Web原理与应用开发"
-date: "于 2019-12-07 16:57:43 发布"
+publishDate: 2019-12-07
 source: "https://blog.csdn.net/HJS1453100406/article/details/103436924"
 tags:
-
+  - '未分类'
+description: '这个很熟悉了吧？不然你怎么看到这篇博客的。。。。。。'
+language: 'Chinese'
 ---
 
 ### 首先，先介绍几个协议。

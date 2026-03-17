@@ -1,9 +1,11 @@
 ---
 title: "Java进制转换练习"
-date: "最新推荐文章于 2023-07-05 08:00:00 发布"
+publishDate: 2023-07-05
 source: "https://blog.csdn.net/HJS1453100406/article/details/109387332"
 tags:
-
+  - '未分类'
+description: 'import java.math.BigInteger;'
+language: 'English'
 ---
 
 ## 二进制转十六进制

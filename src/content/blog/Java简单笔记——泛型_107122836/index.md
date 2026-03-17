@@ -1,9 +1,11 @@
 ---
 title: "Java简单笔记——泛型"
-date: "最新推荐文章于 2025-04-01 22:15:36 发布"
+publishDate: 2025-04-01
 source: "https://blog.csdn.net/HJS1453100406/article/details/107122836"
 tags:
-
+  - '未分类'
+description: '- 2.为什么要有泛型？'
+language: 'Chinese'
 ---
 
 #### 泛型

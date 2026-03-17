@@ -1,9 +1,11 @@
 ---
 title: "Java 匿名对象类"
-date: "最新推荐文章于 2024-10-15 11:14:32 发布"
+publishDate: 2024-10-15
 source: "https://blog.csdn.net/HJS1453100406/article/details/104262980"
 tags:
-
+  - '未分类'
+description: '匿名对象类：创建的类的对象没有名字；'
+language: 'Chinese'
 ---
 
 匿名对象类：创建的类的对象没有名字；  

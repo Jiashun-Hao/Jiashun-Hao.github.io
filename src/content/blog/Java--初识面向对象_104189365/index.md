@@ -1,9 +1,11 @@
 ---
 title: "Java--初识面向对象"
-date: "最新推荐文章于 2022-04-24 17:00:28 发布"
+publishDate: 2022-04-24
 source: "https://blog.csdn.net/HJS1453100406/article/details/104189365"
 tags:
-
+  - '未分类'
+description: '面向对象的编程思路，目前理解为与c的结构体为同一性质；'
+language: 'Chinese'
 ---
 
 ## 初识面向对象

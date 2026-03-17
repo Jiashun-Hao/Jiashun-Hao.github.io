@@ -1,9 +1,11 @@
 ---
 title: "JS常用事件"
-date: "最新推荐文章于 2025-04-01 16:53:48 发布"
+publishDate: 2025-04-01
 source: "https://blog.csdn.net/HJS1453100406/article/details/118681708"
 tags:
-
+  - '未分类'
+description: '> 事件：电脑输入设备与页面的交互，如获得焦点、鼠标点击等'
+language: 'Chinese'
 ---
 
 > **事件**：电脑输入设备与页面的交互，如获得焦点、鼠标点击等  

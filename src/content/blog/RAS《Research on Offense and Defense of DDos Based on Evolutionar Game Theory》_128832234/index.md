@@ -1,9 +1,11 @@
 ---
 title: "RAS《Research on Offense and Defense of DDos Based on Evolutionar Game Theory》"
-date: "最新推荐文章于 2024-07-15 22:52:10 发布"
+publishDate: 2024-07-15
 source: "https://blog.csdn.net/HJS1453100406/article/details/128832234"
 tags:
-  - #DDos防御
+  - 'DDos防御'
+description: '- Ⅰ：Read abstract(阅读摘要)'
+language: 'Chinese'
 ---
 
 #### Read abstract and personal Summary of《Research on Offense and Defense of DDos Based on Evolutionar Game Theory》

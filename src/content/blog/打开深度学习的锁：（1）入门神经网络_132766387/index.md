@@ -1,10 +1,12 @@
 ---
 title: "打开深度学习的锁：（1）入门神经网络"
-date: "已于 2024-05-23 11:41:46 修改"
+publishDate: 2024-05-23
 source: "https://blog.csdn.net/HJS1453100406/article/details/132766387"
 tags:
-  - #深度学习
-  - #人工智能
+  - '深度学习'
+  - '人工智能'
+description: '- 前置1：神经网络的训练过程'
+language: 'Chinese'
 ---
 
 #### 打开深度学习的锁

@@ -1,9 +1,11 @@
 ---
 title: "Java 简单笔记——Java 参数传递机制"
-date: "最新推荐文章于 2025-07-31 22:23:47 发布"
+publishDate: 2025-07-31
 source: "https://blog.csdn.net/HJS1453100406/article/details/104293872"
 tags:
-
+  - '未分类'
+description: '1.形参：方法声明的时候，方法小括号里面的参数；'
+language: 'Chinese'
 ---
 
 ## Java 参数传递机制

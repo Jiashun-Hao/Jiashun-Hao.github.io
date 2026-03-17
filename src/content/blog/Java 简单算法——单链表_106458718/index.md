@@ -1,9 +1,11 @@
 ---
 title: "Java 简单算法——单链表"
-date: "最新推荐文章于 2026-02-02 23:39:26 发布"
+publishDate: 2026-02-02
 source: "https://blog.csdn.net/HJS1453100406/article/details/106458718"
 tags:
-
+  - '未分类'
+description: '链表是线性结构中非常重要的一块内容，核心内容是将存在于存储空间中多个零碎的不相干的空间利用“指针”将其“链”到一起，形成一个理论上的线性结构；'
+language: 'Chinese'
 ---
 
 ## 一、单链表

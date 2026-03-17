@@ -1,11 +1,13 @@
 ---
 title: "打开深度学习的锁：（0）什么是神经网络？有哪些必备的知识点准备？"
-date: "已于 2024-12-06 14:06:35 修改"
+publishDate: 2024-12-06
 source: "https://blog.csdn.net/HJS1453100406/article/details/138467487"
 tags:
-  - #深度学习
-  - #神经网络
-  - #人工智能
+  - '深度学习'
+  - '神经网络'
+  - '人工智能'
+description: 'PS：每每温故必而知新'
+language: 'Chinese'
 ---
 
 PS：每每温故必而知新

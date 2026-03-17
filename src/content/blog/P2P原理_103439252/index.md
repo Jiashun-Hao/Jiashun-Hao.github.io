@@ -1,9 +1,11 @@
 ---
 title: "P2P原理"
-date: "最新推荐文章于 2024-03-17 16:58:15 发布"
+publishDate: 2024-03-17
 source: "https://blog.csdn.net/HJS1453100406/article/details/103439252"
 tags:
-
+  - '未分类'
+description: '这次我们来学习P2P的原理。有个好玩的地方，P2P在国外还有另外一种意思'
+language: 'Chinese'
 ---
 
 ## P2P原理

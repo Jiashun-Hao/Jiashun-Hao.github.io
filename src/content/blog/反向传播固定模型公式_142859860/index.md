@@ -1,11 +1,13 @@
 ---
 title: "反向传播固定模型公式"
-date: "最新推荐文章于 2026-03-16 21:50:31 发布"
+publishDate: 2026-03-16
 source: "https://blog.csdn.net/HJS1453100406/article/details/142859860"
 tags:
-  - #python
-  - #机器学习
-  - #开发语言
+  - 'python'
+  - '机器学习'
+  - '开发语言'
+description: '1： 初始化前向传播结果'
+language: 'Chinese'
 ---
 
 **1： 初始化前向传播结果**

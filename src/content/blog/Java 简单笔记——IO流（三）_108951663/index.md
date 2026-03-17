@@ -1,9 +1,11 @@
 ---
 title: "Java 简单笔记——IO流（三）"
-date: "最新推荐文章于 2025-12-03 15:33:33 发布"
+publishDate: 2025-12-03
 source: "https://blog.csdn.net/HJS1453100406/article/details/108951663"
 tags:
-
+  - '未分类'
+description: '为了后面这两个重要的流，再单独开一篇。'
+language: 'Chinese'
 ---
 
 为了后面这两个重要的流，再单独开一篇。

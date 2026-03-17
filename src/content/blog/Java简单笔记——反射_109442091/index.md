@@ -1,9 +1,11 @@
 ---
 title: "Java简单笔记——反射"
-date: "于 2020-11-02 09:23:26 发布"
+publishDate: 2020-11-02
 source: "https://blog.csdn.net/HJS1453100406/article/details/109442091"
 tags:
-
+  - '未分类'
+description: '- - - 1. java.lang.Class:是反射的源头；'
+language: 'Chinese'
 ---
 
 #### 反射

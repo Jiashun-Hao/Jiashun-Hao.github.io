@@ -1,9 +1,11 @@
 ---
 title: "Java简单笔记 ——关键字"
-date: "最新推荐文章于 2022-09-14 18:41:20 发布"
+publishDate: 2022-09-14
 source: "https://blog.csdn.net/HJS1453100406/article/details/104204139"
 tags:
-
+  - '未分类'
+description: '前一篇写了一些基本的理解。后来发现有些不足，改进了一些，另外最近又初步了解了一些，现在将这些总结到第二篇。'
+language: 'Chinese'
 ---
 
 ## 初识Java总结2.

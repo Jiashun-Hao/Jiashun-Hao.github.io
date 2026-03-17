@@ -1,9 +1,11 @@
 ---
 title: "Java —面向对象总结"
-date: "最新推荐文章于 2024-05-26 14:12:19 发布"
+publishDate: 2024-05-26
 source: "https://blog.csdn.net/HJS1453100406/article/details/106095709"
 tags:
-
+  - '未分类'
+description: '2.面向对象的三大特性'
+language: 'Chinese'
 ---
 
 ## 面向对象

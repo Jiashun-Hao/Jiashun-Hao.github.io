@@ -1,10 +1,12 @@
 ---
 title: "打开深度学习的锁：（3）进阶知识补充"
-date: "已于 2024-10-16 14:13:48 修改"
+publishDate: 2024-10-16
 source: "https://blog.csdn.net/HJS1453100406/article/details/138943280"
 tags:
-  - #深度学习
-  - #人工智能
+  - '深度学习'
+  - '人工智能'
+description: '- 零、深度学习的技巧'
+language: 'Chinese'
 ---
 
 #### 进阶知识补充

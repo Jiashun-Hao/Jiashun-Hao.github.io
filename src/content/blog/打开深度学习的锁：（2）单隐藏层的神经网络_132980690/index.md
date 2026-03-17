@@ -1,11 +1,13 @@
 ---
 title: "打开深度学习的锁：（2）单隐藏层的神经网络"
-date: "已于 2024-05-23 11:42:07 修改"
+publishDate: 2024-05-23
 source: "https://blog.csdn.net/HJS1453100406/article/details/132980690"
 tags:
-  - #深度学习
-  - #神经网络
-  - #人工智能
+  - '深度学习'
+  - '神经网络'
+  - '人工智能'
+description: '- PS：神经网络的训练过程'
+language: 'Chinese'
 ---
 
 #### 打开深度学习的锁

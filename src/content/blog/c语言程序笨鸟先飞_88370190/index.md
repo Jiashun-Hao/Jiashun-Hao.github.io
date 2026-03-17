@@ -1,9 +1,11 @@
 ---
 title: "c语言程序笨鸟先飞"
-date: "最新推荐文章于 2023-05-13 18:25:46 发布"
+publishDate: 2023-05-13
 source: "https://blog.csdn.net/HJS1453100406/article/details/88370190"
 tags:
-
+  - '未分类'
+description: 'lin2144是一只小菜鸟，都是笨鸟先飞，lin2144想来个菜鸟先飞，他从0点出发'
+language: 'Chinese'
 ---
 
 题目描述  

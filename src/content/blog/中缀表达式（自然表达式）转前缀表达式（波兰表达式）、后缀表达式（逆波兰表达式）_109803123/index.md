@@ -1,9 +1,11 @@
 ---
 title: "中缀表达式（自然表达式）转前缀表达式（波兰表达式）、后缀表达式（逆波兰表达式）"
-date: "最新推荐文章于 2025-08-16 13:46:50 发布"
+publishDate: 2025-08-16
 source: "https://blog.csdn.net/HJS1453100406/article/details/109803123"
 tags:
-
+  - '未分类'
+description: '- - - 1.中缀表达式：'
+language: 'Chinese'
 ---
 
 #### 表达式

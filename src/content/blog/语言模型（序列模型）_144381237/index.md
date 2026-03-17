@@ -1,11 +1,13 @@
 ---
 title: "语言模型（序列模型）"
-date: "最新推荐文章于 2026-03-15 16:06:59 发布"
+publishDate: 2026-03-15
 source: "https://blog.csdn.net/HJS1453100406/article/details/144381237"
 tags:
-  - #语言模型
-  - #人工智能
-  - #自然语言处理
+  - '语言模型'
+  - '人工智能'
+  - '自然语言处理'
+description: '终于快要毕业了，乘着还在还在研究室，把最后一章sequence模型也学完吧。'
+language: 'Chinese'
 ---
 
 终于快要毕业了，乘着还在还在研究室，把最后一章sequence模型也学完吧。

@@ -1,11 +1,13 @@
 ---
 title: "LeetCode--无重复字符的最长子串（详细解析）"
-date: "最新推荐文章于 2026-02-03 10:41:26 发布"
+publishDate: 2026-02-03
 source: "https://blog.csdn.net/HJS1453100406/article/details/120966102"
 tags:
-  - #leetcode
-  - #算法
-  - #职场和发展
+  - 'leetcode'
+  - '算法'
+  - '职场和发展'
+description: '1.桶排序的思想，用字符对应的数组来确定字符第一次出现和第二次出现的位置，相差之和便是字串的长度'
+language: 'Chinese'
 ---
 
 ![在这里插入图片描述](images/blog_migrate_974556d3dbe9943389a1015ab0338408_png.png)  

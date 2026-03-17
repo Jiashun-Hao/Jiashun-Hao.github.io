@@ -1,9 +1,11 @@
 ---
 title: "Java 简单笔记——Object下的方法：equals（）和toString（）；"
-date: "最新推荐文章于 2024-08-17 13:42:54 发布"
+publishDate: 2024-08-17
 source: "https://blog.csdn.net/HJS1453100406/article/details/104569847"
 tags:
-
+  - '未分类'
+description: '以下均为java.lang.object下的方法；'
+language: 'Chinese'
 ---
 
 前言：略；

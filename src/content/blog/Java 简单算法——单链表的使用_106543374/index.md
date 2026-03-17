@@ -1,9 +1,11 @@
 ---
 title: "Java 简单算法——单链表的使用"
-date: "最新推荐文章于 2024-06-24 15:41:28 发布"
+publishDate: 2024-06-24
 source: "https://blog.csdn.net/HJS1453100406/article/details/106543374"
 tags:
-
+  - '未分类'
+description: '原计划将这些内容写在单链表的后面，后想了想，它的篇幅已经很长了；'
+language: 'Chinese'
 ---
 
 原计划将这些内容写在单链表的后面，后想了想，它的篇幅已经很长了；  
