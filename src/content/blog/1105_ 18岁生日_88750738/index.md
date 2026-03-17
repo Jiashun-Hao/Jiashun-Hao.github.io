@@ -1,9 +1,10 @@
 ---
 title: "1105: 18岁生日"
-date: "最新推荐文章于 2023-11-13 20:39:55 发布"
-source: "https://blog.csdn.net/HJS1453100406/article/details/88750738"
+publishDate: 2019-03-22
+description: '计算从出生到18岁生日所经过的天数'
 tags:
-  - #c语言
+  - c语言
+language: 'Chinese'
 ---
 
 题目描述
