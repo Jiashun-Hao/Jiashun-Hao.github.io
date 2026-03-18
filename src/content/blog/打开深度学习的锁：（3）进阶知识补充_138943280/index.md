@@ -66,10 +66,7 @@ $$\frac{d \sigma(z^{[l]})}{dz^{[l]}} = a^{[l]} (1 - a^{[l]})$$
 #### ReLU 函数：
 $$\text{ReLU}(x) = \max(0, x)$$
 导数公式：
-$$\frac{d \text{ReLU}(z^{[l]})}{dz^{[l]}} = \begin{cases}
-1 & \text{if } z^{[l]} > 0 \\
-0 & \text{if } z^{[l]} \leq 0
-\end{cases}$$
+$$\frac{d \text{ReLU}(z^{[l]})}{dz^{[l]}} = \begin{cases} 1 & \text{if } z^{[l]} > 0 \\ 0 & \text{if } z^{[l]} \leq 0 \end{cases}$$
 
 #### Tanh 函数：
 $$\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$$
