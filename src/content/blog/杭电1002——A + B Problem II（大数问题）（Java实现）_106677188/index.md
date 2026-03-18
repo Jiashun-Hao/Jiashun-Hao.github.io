@@ -46,7 +46,7 @@ Case 2:
  **解析：**
  这道题主要考察的是对大数基本的处理，如果使用Java来实现，思路有两种；
  
-#### 第一种：**使用数组处理**；
+## 第一种：**使用数组处理**；
 思路：
 
 	1.用两个String类的对象接收数据；
@@ -122,7 +122,7 @@ public class Main {
  [原文出自这里](https://www.cnblogs.com/yuyixingkong/p/3919899.html)
 <br>
 
-#### 第二种：使用Java中自带的BigInteger；
+### 第二种：使用Java中自带的BigInteger；
 思路：Java中自带的类**BigInteger**就是用来处理大数的，所以直接用就行，好玩不烫手~~
 ```java
 import java.util.Scanner;
