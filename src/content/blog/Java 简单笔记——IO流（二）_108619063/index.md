@@ -1,36 +1,21 @@
 ---
-title: "Java 简单笔记——IO流（二）"
-publishDate: 2026-03-15
-source: "https://blog.csdn.net/HJS1453100406/article/details/108619063"
+title: "Java 简单笔记 -- IO流(二)"
+publishDate: 2020-10-03
+description: '笔记'
 tags:
-  - '未分类'
-description: '- - - 1.字节缓冲流的使用'
+  - Java
 language: 'Chinese'
 ---
 
-#### IO流（二）
+# IO流（二）
 
-- [一、缓冲流](#_1)
-- - - [1.字节缓冲流的使用](#1_6)
-    - [2.补充](#2_47)
-    - [3.字符缓冲流（BufferedReader和BufferedWriter）的特殊方法](#3BufferedReaderBufferedWriter_64)
-- [二、转换流](#_116)
-- - - [1.解码使用](#1_137)
-    - [2.编码使用](#2_176)
-    - [3.补充](#3_235)
-- [三、标准输入/输出流](#_242)
-- [四.打印流](#_300)
-- [五.Data流（数据流）](#Data_325)
-
-## 一、缓冲流
-
-**作用：** 直接作用于在节点流之上，缓冲流属于处理流的一种，其目的是为了加快流的处理速度；  
- **原理：** 是在创建流对象的时候，会创建一个内置默认大小的缓冲区数组（大小为：8192（8kb）），等缓冲区满了以后在写入文件，减少系统IO次数，从而提高读写效率；  
- **详细图解：**[图解缓冲流](https://www.cnblogs.com/pjhaymy/p/13339501.html).
-
-#### 1.字节缓冲流的使用
-
-```
+# 一、缓冲流
+**作用：** 直接作用于在==节点流==之上，缓冲流属于处理流的一种，其目的是为了加快流的处理速度；
+**原理：** 是在创建流对象的时候，会创建一个内置默认大小的缓冲区数组（大小为：8192（8kb）），等缓冲区满了以后在写入文件，减少系统IO次数，从而提高读写效率；
+**详细图解：**[图解缓冲流](https://www.cnblogs.com/pjhaymy/p/13339501.html).
+<br>
+### 1.字节缓冲流的使用
+```java
 import org.junit.jupiter.api.Test;
 import java.io.*;
 public class Buffered {
@@ -70,32 +55,26 @@ public class Buffered {
     }
 }
 ```
-
-#### 2.补充
-
-1.由于缓冲流起到是是一种包装的作用，所以直接关闭缓冲流的对象即可；  
- 2.先关闭输入，再关闭输出；  
- ![在这里插入图片描述](images/blog_migrate_27b88fead7f4993c4829fbd715888805_png.png)  
- 3.需要在try-catch以外先声明缓冲流，并赋值为null；  
- ![在这里插入图片描述](images/blog_migrate_6ff7c1745c5fd36458be2dcf21853232_png.png)  
- 4.在使用缓冲流 ***完成写入*** 以后，最好使用`.flush()`方法清空一下缓存区；其原因在于当输入、输出流被关闭时候仍然有可能有一部分数据在缓冲区，我们需要强制输出一下；  
- ![在这里插入图片描述](images/blog_migrate_66839caae2ab88f6596ebdee01407229_png.png)
+### 2.补充
+1.由于缓冲流起到是是一种包装的作用，所以直接关闭缓冲流的对象即可；
+2.先关闭输入，再关闭输出；
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/27b88fead7f4993c4829fbd715888805.png#pic_center)
+3.需要在try-catch以外先声明缓冲流，并赋值为null；
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6ff7c1745c5fd36458be2dcf21853232.png#pic_center)
+4.==在使用缓冲流 ***完成写入*** 以后，最好使用`.flush()`方法清空一下缓存区；其原因在于当输入、输出流被关闭时候仍然有可能有一部分数据在缓冲区，我们需要强制输出一下；==
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/66839caae2ab88f6596ebdee01407229.png#pic_center)
 
 5.测试程序执行时间语句：
-
-```
+```java
  		long start=System.currentTimeMillis();
         long end=System.currentTimeMillis();
         System.out.println("执行时间为"+(end-start)+"毫秒");
 ```
+<br>
 
-  
-
-#### 3.字符缓冲流（BufferedReader和BufferedWriter）的特殊方法
-
+### 3.字符缓冲流（BufferedReader和BufferedWriter）的特殊方法
 字符缓冲流用法和字节缓冲流基本一样；
-
-```
+```java
 public void BufferedFileReader(){
         File in=new File("Text2.txt");//读取位置
         File out=new File("Text3.txt");//写入位置
@@ -132,46 +111,42 @@ public void BufferedFileReader(){
         }
     }
 ```
-
 需要特殊说明`FileReader`的一个特殊方法——`readLine()`
 
-该方法可以一次读取一行的字符
+==该方法可以一次读取一行的字符==
 
-![在这里插入图片描述](images/blog_migrate_8cab88adf933d9d024f60a20cb922d42_png.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8cab88adf933d9d024f60a20cb922d42.png#pic_center)
 
 使用的时候需要注意以下几点；
+* 读入的数据要注意有/r或/n或/r/n
+* 没有数据时会阻塞，在数据流异常或断开时才会返回null
+* 使用socket之类的数据流时，要避免使用readLine()，以免为了等待一个换行/回车符而一直阻塞
 
-- 读入的数据要注意有/r或/n或/r/n
-- 没有数据时会阻塞，在数据流异常或断开时才会返回null
-- 使用socket之类的数据流时，要避免使用readLine()，以免为了等待一个换行/回车符而一直阻塞
+<br>
 
-  
-
-## 二、转换流
-
+# 二、转换流
 **作用**：直接作用在**节点流**之上，完成流的转换；
 
-- 输入型字节流转换为字符流：`InputStreamReader`;
-- 输出型字节流转换为字符流：`OutputStreamWriter`;
+* 输入型字节流转换为字符流：`InputStreamReader`;
+* 输出型字节流转换为字符流：`OutputStreamWriter`;
 
-同时，字节流可以视为字节数组，字符流可以视为字符串，转换流也可以视为 **字节数组**和**字符串** 的转换，这也衍生出了两个概念：
+同时，==字节流可以视为字节数组，字符流可以视为字符串==，转换流也可以视为 ==**字节数组**和**字符串**== 的转换，这也衍生出了两个概念：
 
-- **编码**：字符串 ——》字节数组
-- **解码**：字符串《——字节数组
+* **编码**：字符串 ——》字节数组
+* **解码**：字符串《——字节数组
 
-![在这里插入图片描述](images/blog_migrate_76376137072c411ea3e0949b3bdb67f8_png.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/76376137072c411ea3e0949b3bdb67f8.png#pic_center)
 
 在这两个流的构造器中需要传递两个参数：**要进行编/解码的文件**和**编码集（charstName）**；
 
 所谓编码集就是进行编码/解码的格式集合，常用的有以下几种；
 
-![在这里插入图片描述](images/blog_migrate_58b003222f33278bca93f4ccd81db84e_png.png)  
- 并且，**编码集按照字符串的格式输入：**  
- ![在这里插入图片描述](images/blog_migrate_d2c475dc5a9573c966085e4ce61f63e4_png.png)
-
-#### 1.解码使用
-
-```
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/58b003222f33278bca93f4ccd81db84e.png#pic_center)
+并且，**编码集按照字符串的格式输入：**
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d2c475dc5a9573c966085e4ce61f63e4.png#pic_center)
+<br>
+### 1.解码使用
+```java
 import org.junit.jupiter.api.Test;
 import java.io.*;
 
@@ -203,15 +178,14 @@ public class Text {
     }
 }
 ```
+源文件：
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fdd0a57f4c946202bc3a0c9a2f13bfb9.png#pic_center)
+解码后：
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/75a1e6f68627f8574b6e7bd84494c8b3.png#pic_center)
+<br>
 
-源文件：  
- ![在这里插入图片描述](images/blog_migrate_fdd0a57f4c946202bc3a0c9a2f13bfb9_png.png)  
- 解码后：  
- ![在这里插入图片描述](images/blog_migrate_75a1e6f68627f8574b6e7bd84494c8b3_png.png)
-
-#### 2.编码使用
-
-```
+### 2.编码使用
+```java
 import org.junit.jupiter.api.Test;
 import java.io.*;
 
@@ -265,26 +239,24 @@ public class Text {
     }
 }
 ```
+编码后写入：
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/726a99e2b8e46244d50f8a31de5ccb1f.png#pic_center)
+<br>
 
-编码后写入：  
- ![在这里插入图片描述](images/blog_migrate_726a99e2b8e46244d50f8a31de5ccb1f_png.png)
+### 3.补充
+* `System.out.println()`的作用是将内容打印到控制台同时消耗该流；也就是说如果显示的打印了则无法在写入到文件内部；
+* 编码和解码中的 **“码”** 就是指计算机中的字节；
+**其它东西变成字节，就是编码；
+字节变成其他东西，就是解码；**
+<br>
 
-#### 3.补充
-
-- `System.out.println()`的作用是将内容打印到控制台同时消耗该流；也就是说如果显示的打印了则无法在写入到文件内部；
-- 编码和解码中的 **“码”** 就是指计算机中的字节；  
-   **其它东西变成字节，就是编码；  
-   字节变成其他东西，就是解码；**
-
-## 三、标准输入/输出流
-
-**作用：**  
- `System.out` :从显示器输出数据；  
- `System.in`：从键盘输入数据；
+# 三、标准输入/输出流
+**作用：**
+`System.out` :从显示器输出数据；
+`System.in`：从键盘输入数据；
 
 **使用：**
-
-```
+```java
 import org.junit.jupiter.api.Test;
 import java.io.*;
 
@@ -327,26 +299,20 @@ public class IO {
     }*/
 }
 ```
+**补充：** 
+* 在`@Test`中无法使用标准输入流；
+* 在做题过程中一般使用`Scanner`,`Scanner`的构造器支持多种方式，可以从字符串（Readable）、输入流、文件等等来直接构建Scanner对象，有了Scanner了，就可以逐段（根据正则分隔式）来扫描整个文本，并对扫描后的结果做想要的处理。
+	```java
+	//Scanner(扫描器)
+	Scanner sc=new Scanner (System.in);
+	```
+<br>
 
-**补充：**
-
-- 在`@Test`中无法使用标准输入流；
-- 在做题过程中一般使用`Scanner`,`Scanner`的构造器支持多种方式，可以从字符串（Readable）、输入流、文件等等来直接构建Scanner对象，有了Scanner了，就可以逐段（根据正则分隔式）来扫描整个文本，并对扫描后的结果做想要的处理。
-
-  ```
-  //Scanner(扫描器)
-  Scanner sc=new Scanner (System.in);
-  ```
-
-  
-
-## 四.打印流
-
-**作用：** 打印（输出内容）到控制台或者文件中；  
- **分类：** 字节打印流（`PrintStream`）和字符打印流（`PrintWriter`）  
- **特点：** 打印流是IO中最方便的输出类，并且打印流只能是输出流（废话）
-
-```
+# 四.打印流
+**作用：** 打印（输出内容）到控制台或者文件中；
+**分类：** 字节打印流（`PrintStream`）和字符打印流（`PrintWriter`）
+**特点：** 打印流是IO中最方便的输出类，并且打印流只能是输出流（废话）
+```java
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
@@ -364,19 +330,17 @@ public class Main {
     }
 }
 ```
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5e1ec499f3e9918ae189560eddc19d87.png#pic_center)
+<br>
 
-![在这里插入图片描述](images/blog_migrate_5e1ec499f3e9918ae189560eddc19d87_png.png)
-
-## 五.Data流（数据流）
-
-**作用：** 为了更好的处理基本数据类型；  
- **分类：** 读取基本数据类型（`DataInputStream`）和写出基本数据类型（`DataOutputStream`）  
- **特点：** 专针对于Java的基本数据类型所衍生出的处理流；  
- **配图：**  
- ![在这里插入图片描述](images/blog_migrate_04efad6449f97a385d659f782a1c44e8_png.png)  
- 使用：
-
-```
+# 五.Data流（数据流）
+**作用：** 为了更好的处理基本数据类型；
+**分类：** 读取基本数据类型（`DataInputStream`）和写出基本数据类型（`DataOutputStream`）
+**特点：** 专针对于Java的基本数据类型所衍生出的处理流；
+**配图：**
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/04efad6449f97a385d659f782a1c44e8.png#pic_center)
+使用：
+```java
 import org.junit.jupiter.api.Test;
 
 import java.io.*;
@@ -399,6 +363,5 @@ public class Main {
     }
 }
 ```
-
-![在这里插入图片描述](images/blog_migrate_3e41487d333f4285a3ed000db4856f73_png.png)  
- ![在这里插入图片描述](images/blog_migrate_fdeec0d6accf5edeee65abc6a6d7e886_png.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3e41487d333f4285a3ed000db4856f73.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fdeec0d6accf5edeee65abc6a6d7e886.png#pic_center)
