@@ -1,18 +1,15 @@
 ---
-title: "Java--初识面向对象"
-publishDate: 2022-04-24
-source: "https://blog.csdn.net/HJS1453100406/article/details/104189365"
+title: "Java 简单笔记 --初识面向对象"
+publishDate: 2020-02-05
+description: '笔记'
 tags:
-  - '未分类'
-description: '面向对象的编程思路，目前理解为与c的结构体为同一性质；'
+  - Java
 language: 'Chinese'
 ---
 
-## 初识面向对象
-
+# 初识面向对象
 面向对象的编程思路，目前理解为与c的结构体为同一性质；
-
-```
+```java
 public class Main {
     public static void main(String[] args) {
          student a=new student();//定义student型的变量a，则a就具备类（student）所有的属性和方法。
@@ -42,7 +39,7 @@ class student{ //给对象student 封装他的‘属性’和‘方法’
       }
 }
 ```
+总结：将一件事物抽象成一个**对象**（万物皆对象），每个**对象**有他的**属性**，用一个个的**类**来表示对象的**属性**，这些**类**可以被**对象**调用，通过 ``对象.属性``的方式。
 
-总结：将一件事物抽象成一个**对象**（万物皆对象），每个**对象**有他的**属性**，用一个个的**类**来表示对象的**属性**，这些**类**可以被**对象**调用，通过 `对象.属性`的方式。
 
 2020年2月5日初写；
