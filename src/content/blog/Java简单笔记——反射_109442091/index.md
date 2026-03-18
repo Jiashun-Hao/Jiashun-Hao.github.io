@@ -1,105 +1,68 @@
 ---
-title: "Java简单笔记——反射"
+title: "Java简单笔记 -- 反射"
 publishDate: 2020-11-02
-source: "https://blog.csdn.net/HJS1453100406/article/details/109442091"
+description: '笔记'
 tags:
-  - '未分类'
-description: '- - - 1. java.lang.Class:是反射的源头；'
+  - Java
 language: 'Chinese'
 ---
 
-#### 反射
+# 反射
 
-- [一、概括](#_1)
-- - - [1. java.lang.Class:是反射的源头；](#1_javalangClass_5)
-    - [2.如何获取Class的实例（4种）](#2Class4_18)
-    - [3.关于类加载器](#3_50)
-    - [4.需要掌握](#4_82)
-- [二、通过Class获得实例以后可以做的事情](#Class_120)
-- - - [1.创建运行时类的对象](#1_122)
-    - [2.通过反射获取类的完整结构](#2_209)
-    - - [1.获取当前类和父类声明为public的属性](#1public_210)
-      - [2.获取当前类本身的所有属性](#2_221)
-      - [3.获取当前类本身的所有属性详细信息](#3_233)
-      - [4.获取当前类和父类声明为public的方法](#4public_258)
-      - [5.获取当前类本身所有的方法](#5_269)
-      - [6.获取当前类本身所有方法的详细信息](#6_280)
-      - [7.获取当前类所有的构造器](#7_322)
-      - [8.获取当前类运行时类的父类](#8_331)
-      - [9.获取带泛型的父类](#9_338)
-      - [10.获取父类的泛型](#10_345)
-      - [11.获取实现的接口](#11_357)
-      - [12.获取所在的包](#12_366)
-      - [13.获取类的注解](#13_373)
-- [三、动态代理](#_384)
-- - - [1.代理](#1_385)
-    - [2.静态代理](#2_393)
-    - [3.动态代理](#3_440)
-    - [4.动态代理与AOP](#4AOP_520)
+# 一、概括
+正常方法：引入“包类”的名称 ——> 通过new实例化对象 ——> 取得实例化对象
+  反射方式：实例化对象 ——> getClass()方法 -->得到完整的“包类”的名称
+  
+ ### 1. java.lang.Class:是反射的源头；
+  
+ * 1.每次创建一个类，通过编译（java.exe），生成对应的.class文件。
+  *  2.之后我们使用java.exe加载程序（JVM的类加载器完成的）
+  *  3.此.class文件加载到内存以后就是一个“运行时类”，存放在缓存区，其本身就是一个Class的实例
+    例如：Class clazz =String.class;实例化一个Class的对象指向String的实体
+  *  4.每一个运行时类只加载一次（第二次直接调用缓存中的实例）
+  *  5.有了Class的实例以后，我们才可以进行如下的操作：
+     1)创建运行时类的对象
+     2)获取对应的运行时类的完整结构（属性、方法、构造器、内部类、父类、所在的包、异常、注解等...）
+     3)调用对应的运行时类的指定结构（属性、方法、构造器）
+     4)反射的应用：动态代理
 
-## 一、概括
-
-正常方法：引入“包类”的名称 ——> 通过new实例化对象 ——> 取得实例化对象  
- 反射方式：实例化对象 ——> getClass()方法 -->得到完整的“包类”的名称
-
-#### 1. java.lang.Class:是反射的源头；
-
-- 1.每次创建一个类，通过编译（java.exe），生成对应的.class文件。
-- 2.之后我们使用java.exe加载程序（JVM的类加载器完成的）
-- 3.此.class文件加载到内存以后就是一个“运行时类”，存放在缓存区，其本身就是一个Class的实例  
-   例如：Class clazz =String.class;实例化一个Class的对象指向String的实体
-- 4.每一个运行时类只加载一次（第二次直接调用缓存中的实例）
-- 5.有了Class的实例以后，我们才可以进行如下的操作：  
-   1)创建运行时类的对象  
-   2)获取对应的运行时类的完整结构（属性、方法、构造器、内部类、父类、所在的包、异常、注解等…）  
-   3)调用对应的运行时类的指定结构（属性、方法、构造器）  
-   4)反射的应用：动态代理
-
-#### 2.如何获取Class的实例（4种）
-
-- 1)调用运行时类本身的.class属性  
-   例：
-
-  ```
-  Class clazz=Person.class;
-  System.out.println(clazz.getName());
-  ```
-- 2)通过运行时类的对象获取  
-   例：
-
-  ```
-  Person p=new Person();
-  Class clazz=p.getClass();
-  System.out.println(clazz.getName());
-  ```
-- 3)通过Class的静态方法（具有动态性）  
-   例：
-
-  ```
-  String className="Main.Person";//路径Main包下的Person类
-  Class clazz=Class.forName(className);//存在异常，有可能路径不存在
-  System.out.println(clazz.getName());
-  ```
-- 4)通过类的加载器  
-   例：
-
-  ```
-  String className="Main.Person";
-  //获取当前运行时类的类加载器
-  ClassLoader classLoader=this.getClass().getClassLoader();
-  //使用获取到的类加载器加载指定的类(Person)
-  Class clazz=classLoader.loadClass(className);
-  System.out.println(clazz.getName());
-  ```
-
-#### 3.关于类加载器
-
+### 2.如何获取Class的实例（4种）
+* 1)调用运行时类本身的.class属性
+       例：
+    ```java
+    Class clazz=Person.class;
+    System.out.println(clazz.getName());
+    ```
+ * 2)通过运行时类的对象获取
+       例：
+    ```java
+    Person p=new Person();
+    Class clazz=p.getClass();
+    System.out.println(clazz.getName());
+    ```
+  * 3)通过Class的静态方法（具有动态性）
+       例：
+    ```java
+    String className="Main.Person";//路径Main包下的Person类
+    Class clazz=Class.forName(className);//存在异常，有可能路径不存在
+    System.out.println(clazz.getName());
+    ```
+  *  4)通过类的加载器
+       例：
+       ```java
+       String className="Main.Person";
+       //获取当前运行时类的类加载器
+       ClassLoader classLoader=this.getClass().getClassLoader();
+       //使用获取到的类加载器加载指定的类(Person)
+       Class clazz=classLoader.loadClass(className);
+       System.out.println(clazz.getName());
+       ```
+       
+### 3.关于类加载器
 关于类的加载器：**`ClassLoader`**
-
-- 系统类加载器——>拓展类加载器——>引导类加载器 ：检查是否将类装载到内存
-- 引导类加载器——>拓展类加载器——>系统类加载器 ：尝试加载类
-
-```
+ * 系统类加载器——>拓展类加载器——>引导类加载器 ：检查是否将类装载到内存
+* 引导类加载器——>拓展类加载器——>系统类加载器 ：尝试加载类
+```java
 1) ClassLoader loader1=ClassLoader.getSystemClassLoader();//获取系统类加载器
    System.out.println(loader1);//sun.misc.Launcher$AppClassLoader@18b4aac2
 
@@ -109,32 +72,27 @@ language: 'Chinese'
 3) ClassLoader loader3=loader2.getParent();////获取父类的加载器(引导类加载器)
    System.out.println(loader3);//null(引导类加载器无法被直接获取)
 ```
-
-  
+<br>
 
 自定义类由系统类加载器加载
+  ```java
+ Class clazz=Person.class;
+  ClassLoader loader1=clazz.getClassLoader();
+  System.out.println(loader1);//sun.misc.Launcher$AppClassLoader@18b4aac2
+   ```
 
-```
-Class clazz=Person.class;
-ClassLoader loader1=clazz.getClassLoader();
-System.out.println(loader1);//sun.misc.Launcher$AppClassLoader@18b4aac2
-```
 
 核心类由引导类加载器加载
-
-```
+```java
 Class clazz=String.class;
 ClassLoader loader1=clazz.getClassLoader();
 System.out.println(loader1);//null
 ```
+<br>
 
-  
-
-#### 4.需要掌握
-
+### 4.需要掌握
 类加载器使用：获取具体包下的配置文件
-
-```
+```java
       @Test
        public void Test1() throws IOException {
         //1.获取当前运行时类的类加载器
@@ -157,7 +115,7 @@ System.out.println(loader1);//null
 
 对比：获取当前工程下的配置文件
 
-```
+```java
     @Test
     public void Test2() throws IOException {
         FileInputStream fil=new FileInputStream(new File("jdbc1.Properties"));
@@ -167,14 +125,13 @@ System.out.println(loader1);//null
         System.out.println(pro.getProperty("password"));//111111
     }
 ```
+<br>
 
-  
 
-## 二、通过Class获得实例以后可以做的事情
+# 二、通过Class获得实例以后可以做的事情
 
-#### 1.创建运行时类的对象
-
-```
+### 1.创建运行时类的对象
+```java
 @Test
     public void Test() throws ClassNotFoundException, IllegalAccessException, InstantiationException {
         String str="Main.Person";//包名.类名
@@ -189,8 +146,7 @@ System.out.println(loader1);//null
         System.out.println(p);
     }
 ```
-
-```
+```java
 public class TestString {
    
     public static void main(String[] args) throws Exception {
@@ -221,6 +177,7 @@ public class TestString {
 
         Method m2 = clazz.getMethod("show", String.class);//形参必须是class类型的
         m2.invoke(p, "好好学习");//调用p对象的show方法
+
 
     }
 }
@@ -260,11 +217,9 @@ class Person {
 }
 ```
 
-#### 2.通过反射获取类的完整结构
-
-##### 1.获取当前类和父类声明为public的属性
-
-```
+### 2.通过反射获取类的完整结构
+#### 1.获取当前类和父类声明为public的属性
+```java
      //import java.lang.reflect.Field;
      
 	 Class clazz=Person.class;
@@ -274,10 +229,8 @@ class Person {
    	 System.out.println(fields[i]);//public java.lang.String Main.Person.name
 	}
 ```
-
-##### 2.获取当前类本身的所有属性
-
-```
+#### 2.获取当前类本身的所有属性
+```java
 		//import java.lang.reflect.Field;
 		
 		Class clazz=Person.class;
@@ -288,10 +241,8 @@ class Person {
             System.out.println(f);
         }
 ```
-
-##### 3.获取当前类本身的所有属性详细信息
-
-```
+#### 3.获取当前类本身的所有属性详细信息
+```java
 		   //import java.lang.reflect.Field;
 		   
            Class clazz=Person.class;
@@ -315,10 +266,8 @@ class Person {
             System.out.println();
           }
 ```
-
-##### 4.获取当前类和父类声明为public的方法
-
-```
+#### 4.获取当前类和父类声明为public的方法
+```java
 		//import java.lang.reflect.Method;
 		
         Class clazz=Person.class;
@@ -328,10 +277,8 @@ class Person {
             System.out.println(m);
         }
 ```
-
-##### 5.获取当前类本身所有的方法
-
-```
+#### 5.获取当前类本身所有的方法
+```java
 		//import java.lang.reflect.Method;
 		
         Class clazz=Person.class;
@@ -341,10 +288,8 @@ class Person {
             System.out.println(m);
         }
 ```
-
-##### 6.获取当前类本身所有方法的详细信息
-
-```
+#### 6.获取当前类本身所有方法的详细信息
+```java
           //import java.lang.reflect.Method;
 
            Class clazz = Person.class;
@@ -385,10 +330,8 @@ class Person {
             }
         }
 ```
-
-##### 7.获取当前类所有的构造器
-
-```
+#### 7.获取当前类所有的构造器
+```java
         String str="Main.Person";
         Class clazz=Class.forName(str);
         Constructor[]constructors=clazz.getDeclaredConstructors();
@@ -396,28 +339,22 @@ class Person {
             System.out.println(a);
         }
 ```
-
-##### 8.获取当前类运行时类的父类
-
-```
+#### 8.获取当前类运行时类的父类
+```java
 		String str="Main.Person";
         Class clazz=Class.forName(str);
         Class superclass=clazz.getSuperclass();
         System.out.println(superclass);
 ```
-
-##### 9.获取带泛型的父类
-
-```
+#### 9.获取带泛型的父类
+```java
        String str="Main.Person";
         Class clazz=Class.forName(str);
         Type t=clazz.getGenericSuperclass();
         System.out.println(t);
 ```
-
-##### 10.获取父类的泛型
-
-```
+#### 10.获取父类的泛型
+```java
         String str="Main.Person";
         Class clazz=Class.forName(str);
         Type t1=clazz.getGenericSuperclass();
@@ -426,11 +363,10 @@ class Person {
         for (Type a:args) {
             System.out.println(a.getTypeName());
         }
-```
-
-##### 11.获取实现的接口
 
 ```
+#### 11.获取实现的接口
+```java
 		String str="Main.Person";
         Class clazz=Class.forName(str);
         Class[] interfacrs=clazz.getInterfaces();
@@ -438,19 +374,15 @@ class Person {
             System.out.println(c.getName());
         }
 ```
-
-##### 12.获取所在的包
-
-```
+#### 12.获取所在的包
+```java
         String str="Main.Person";
         Class clazz=Class.forName(str);
         Package packae=clazz.getPackage();
         System.out.println(packae.getName());
 ```
-
-##### 13.获取类的注解
-
-```
+#### 13.获取类的注解
+```java
         String str="Main.Person";
         Class clazz=Class.forName(str);
         Annotation[] annotations=clazz.getAnnotations();
@@ -458,23 +390,20 @@ class Person {
             System.out.println(a);
         }
 ```
+<br>
 
-  
+# 三、动态代理
+### 1.代理
 
-## 三、动态代理
-
-#### 1.代理
-
-代理模式设计原理：  
+代理模式设计原理：
  使用一个代理将对象包装起来，然后该代理对象取代原始对象，任何原始代理的对象都通过代理,代理对象决定是否以及何时将方法转移到原始对象上。
+ 
+ **被代理对象 ——> 代理对象 ——> 实现**
+ <br>
 
-**被代理对象 ——> 代理对象 ——> 实现**
-
-#### 2.静态代理
-
+### 2.静态代理
 **特征**：代理类和目标代理的对象都是在编译期间确定的，不利于程序的拓展， 同时每一个代理类只能为一个接口服务,如果存在多种任务就需要多个代理对象。
-
-```
+```java
 //要实现的接口
 interface realization{
     void produce();
@@ -517,12 +446,10 @@ public class Main {
 
 }
 ```
+<br>
 
-  
-
-#### 3.动态代理
-
-```
+### 3.动态代理
+```java
 //动态代理的使用
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -574,6 +501,7 @@ class MyInvocation implements InvocationHandler {
     }
 }
 
+
 public class Test {
     public static void main(String[] args) {
         //1.创建被代理类的对象
@@ -597,17 +525,15 @@ public class Test {
     }
 }
 ```
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b8cbf1bbb5d272baf753821520b44e20.png#pic_center)
+<br>
 
-![在这里插入图片描述](images/blog_migrate_b8cbf1bbb5d272baf753821520b44e20_png.png)
-
-#### 4.动态代理与AOP
-
-**概念：**  
- ![在这里插入图片描述](images/blog_migrate_884b0a789c29ad63d264644a3db89357_png.png)
+### 4.动态代理与AOP
+**概念：**
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/884b0a789c29ad63d264644a3db89357.png#pic_center)
 
 **练习：**
-
-```
+```java
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -688,5 +614,10 @@ public class TestAOP {
     }
 }
 ```
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6e302371fe5c9118585f38155fb67819.png#pic_center)
 
-![在这里插入图片描述](images/blog_migrate_6e302371fe5c9118585f38155fb67819_png.png)
+
+
+
+
+
