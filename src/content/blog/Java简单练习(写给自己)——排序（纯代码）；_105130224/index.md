@@ -1,18 +1,16 @@
 ---
-title: "Java简单练习(写给自己)——排序（纯代码）；"
-publishDate: 2022-07-06
-source: "https://blog.csdn.net/HJS1453100406/article/details/105130224"
+title: Java简单练习(写给自己)——排序（纯代码）"
+publishDate: 2020-03-31
+description: '笔记'
 tags:
-  - '未分类'
-description: '前言：有不止一个人告诉过我，基础很重要，所以今天将一些模糊的东西写在这里；'
+  - Java
 language: 'Chinese'
 ---
 
 前言：有不止一个人告诉过我，基础很重要，所以今天将一些模糊的东西写在这里；
 
-### 1.插入排序
-
-```
+## 1.插入排序
+```java
   public class Main {
     public static void main(String[] args){
         int [] a=new int[]{1,3,4,5,7,6,2,1};
@@ -34,9 +32,8 @@ language: 'Chinese'
 }
 ```
 
-### 2. 冒泡排序
-
-```
+## 2. 冒泡排序
+```java
 public class Main {
     public static void main(String[] args){
         int [] a=new int[]{1,6,2,5,3,4};
@@ -56,10 +53,8 @@ public class Main {
     }
 }
 ```
-
-### 3. 伪·冒泡排序
-
-```
+## 3. 伪·冒泡排序
+```java
 public class Main {
     public static void main(String[] args){
         int [] a=new int[]{1,6,2,5,3,4};
@@ -80,10 +75,8 @@ public class Main {
     }
 }
 ```
-
-### 4. 快速排序
-
-```
+## 4. 快速排序
+```java
 public class Main {
     public static void main(String[] args){
         int [] array=new int[]{1,6,2,5,3,4};
