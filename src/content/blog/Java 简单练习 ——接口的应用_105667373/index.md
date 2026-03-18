@@ -1,22 +1,18 @@
 ---
-title: "Java 简单练习 ——接口的应用"
-publishDate: 2021-06-11
-source: "https://blog.csdn.net/HJS1453100406/article/details/105667373"
+title: "Java 简单笔记 -- 队列"
+publishDate: 2020-04-21
+description: '笔记'
 tags:
-  - '未分类'
-description: 'First ，这是一篇很水的博客，我写给自己，不推荐看；'
-language: 'English'
+  - Java
+language: 'Chinese'
 ---
 
 First ，这是一篇很水的博客，我写给自己，不推荐看；
-
-#### 题目
-
+### 题目
 输入圆，比大小；
 
-#### 代码
-
-```
+### 代码
+```java
 public class Main {
     public static void main(String[] args) {
       ComparableCircle c1=new ComparableCircle(2.1);
@@ -54,6 +50,7 @@ class Circle{
      public void setRadius(double radius){
          this.radius=radius;
      }
+
 
 }
 class ComparableCircle extends Circle implements CompareObject{
