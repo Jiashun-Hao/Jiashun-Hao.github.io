@@ -6,7 +6,7 @@ tags:
   - 'CSS'
   - 'HTML'
   - 'JS'
-description: '- - 2.1 CSS语法规则'
+description: '笔记'
 language: 'Chinese'
 ---
 
