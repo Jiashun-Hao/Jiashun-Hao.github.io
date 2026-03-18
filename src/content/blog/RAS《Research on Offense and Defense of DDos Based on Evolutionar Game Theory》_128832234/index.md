@@ -9,9 +9,9 @@ language: 'Chinese/English'
 
 # Read abstract and personal Summary of《Research on Offense and Defense of DDos Based on Evolutionar Game Theory》
 
-# Ⅰ：Read abstract(阅读摘要)
+# I: Read abstract (阅读摘要)
 ## 0：Proper noun interpretation（专有名词解释）
-**①：Tradition Game Theory（传统博弈）：**
+**：Tradition Game Theory（传统博弈）：**
 	&emsp;Under certain conditions ad following certain rules, one or several people or teams whit **absolute rational thinking**, from their allowed choice of behavior or strategy to choose and implement， and from the corresponding results or benefits.
 
 &emsp;在一定条件下，遵循一定的规则，一个或几个拥有**绝对理性**思维的人或者团队，从各自允许的选择的行为或策略进行选择并加以实施，并从中各自取得相应结果或收益的过程。
