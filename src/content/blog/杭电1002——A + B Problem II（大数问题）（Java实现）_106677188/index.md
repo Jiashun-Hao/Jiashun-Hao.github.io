@@ -12,7 +12,7 @@ language: 'English\Chinese'
 Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)
 Total Submission(s): 525800    Accepted Submission(s): 100530
 
----
+***
 Problem Description
 I have a very simple problem for you. Given two integers A and B, your job is to calculate the Sum of A + B.
  
@@ -40,7 +40,7 @@ Case 1:
 Case 2:
 112233445566778899 + 998877665544332211 = 1111111111111111110
 
----
+***
 ![](https://i-blog.csdnimg.cn/blog_migrate/d4ff20b38068ad023c8ce926d7636370.png)
 
  **解析：**
