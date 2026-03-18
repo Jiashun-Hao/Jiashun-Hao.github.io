@@ -58,10 +58,15 @@ public class Buffered {
 ### 2.补充
 1.由于缓冲流起到是是一种包装的作用，所以直接关闭缓冲流的对象即可；
 2.先关闭输入，再关闭输出；
+
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/27b88fead7f4993c4829fbd715888805.png#pic_center)
+
 3.需要在try-catch以外先声明缓冲流，并赋值为null；
+
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6ff7c1745c5fd36458be2dcf21853232.png#pic_center)
+
 4.==在使用缓冲流 ***完成写入*** 以后，最好使用`.flush()`方法清空一下缓存区；其原因在于当输入、输出流被关闭时候仍然有可能有一部分数据在缓冲区，我们需要强制输出一下；==
+
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/66839caae2ab88f6596ebdee01407229.png#pic_center)
 
 5.测试程序执行时间语句：
@@ -142,7 +147,9 @@ public void BufferedFileReader(){
 所谓编码集就是进行编码/解码的格式集合，常用的有以下几种；
 
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/58b003222f33278bca93f4ccd81db84e.png#pic_center)
+
 并且，**编码集按照字符串的格式输入：**
+
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d2c475dc5a9573c966085e4ce61f63e4.png#pic_center)
 <br>
 ### 1.解码使用
@@ -179,8 +186,11 @@ public class Text {
 }
 ```
 源文件：
+
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fdd0a57f4c946202bc3a0c9a2f13bfb9.png#pic_center)
+
 解码后：
+
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/75a1e6f68627f8574b6e7bd84494c8b3.png#pic_center)
 <br>
 
@@ -240,6 +250,7 @@ public class Text {
 }
 ```
 编码后写入：
+
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/726a99e2b8e46244d50f8a31de5ccb1f.png#pic_center)
 <br>
 
@@ -337,8 +348,11 @@ public class Main {
 **作用：** 为了更好的处理基本数据类型；
 **分类：** 读取基本数据类型（`DataInputStream`）和写出基本数据类型（`DataOutputStream`）
 **特点：** 专针对于Java的基本数据类型所衍生出的处理流；
+
 **配图：**
+
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/04efad6449f97a385d659f782a1c44e8.png#pic_center)
+
 使用：
 ```java
 import org.junit.jupiter.api.Test;
