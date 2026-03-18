@@ -1,10 +1,10 @@
 ---
 title: "Web原理与应用开发"
 publishDate: 2019-12-07
-source: "https://blog.csdn.net/HJS1453100406/article/details/103436924"
+
 tags:
-  - '未分类'
-description: '这个很熟悉了吧？不然你怎么看到这篇博客的。。。。。。'
+  - '笔记'
+description: '基本学习笔记'
 language: 'Chinese'
 ---
 
