@@ -1,42 +1,43 @@
 ---
-title: "Java简单算法——稀疏矩阵（SparseArray）"
-publishDate: 2024-09-16
-source: "https://blog.csdn.net/HJS1453100406/article/details/105233799"
+title: "Java简单笔记 -- 稀疏矩阵(SparseArray)"
+publishDate: 2020-03-31
+description: '笔记'
 tags:
-  - '未分类'
-description: '如果想在计算机中保存一个棋盘（围棋）中各个棋子的位置，你会怎么做？'
+  - Java
 language: 'Chinese'
 ---
 
-#### 稀疏矩阵：
-
-**如果想在计算机中保存一个棋盘（围棋）中各个棋子的位置，你会怎么做？**  
+### 稀疏矩阵：
+**如果想在计算机中保存一个棋盘（围棋）中各个棋子的位置，你会怎么做？**
 很简单，用数组
 
-比如下面这张图，用一个很简单的二维数组（11\*11）就可以保存上面所有的棋子，虽然棋子没有多少；  
-用1代表黑色棋子，用2代表蓝色，用0代表没有棋子的空缺。  
-![在这里插入图片描述](images/blog_migrate_5f6e158a452042eb09e6bb92b4bbf82a_png.png)  
-ok存好了！  
+比如下面这张图，用一个很简单的二维数组（11*11）就可以保存上面所有的棋子，虽然棋子没有多少；
+用1代表黑色棋子，用2代表蓝色，用0代表没有棋子的空缺。
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5f6e158a452042eb09e6bb92b4bbf82a.png)
+
+ok存好了！
 但是有一个问题，刚刚也说了，棋子没有多少，这样做是不是太浪费内存了？废话。。。。
 
-于是乎，引入了这样一个比较简单的算法：**稀疏数组**  
+于是乎，引入了这样一个比较简单的算法：**稀疏数组**
 作用很简单：**压缩数组，除去不必要的空间浪费**
 
-这里说的“不必要”不是真的不必要，而是在一个数组中过多出现的重复的元素（这里的0），我们不必保存它们，因为在建立数组的时候我们大可以将所有的数组置成 **“过多出现的重复的元素”** ，我们只需要修改在一些特定的位置上那些 **“与众不同的值”** 就好。
+  这里说的“不必要”不是真的不必要，而是在一个数组中过多出现的重复的元素（这里的0），我们不必保存它们，因为在建立数组的时候我们大可以将所有的数组置成 **“过多出现的重复的元素”** ，我们只需要修改在一些特定的位置上那些 **“与众不同的值”** 就好。
+  
+  那怎么保存与众不同的值？也很简单，
+  新建一个大小合适的二维数组；
+  “三项定一点”；行、列、值确定了
+  
+  如上图所得下图
+  
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/53ff3835fa5e98fc66da76084d7dcd85.png)
 
-那怎么保存与众不同的值？也很简单，  
-新建一个大小合适的二维数组；  
-“三项定一点”；行、列、值确定了
-
-如上图所得下图  
-![在这里插入图片描述](images/blog_migrate_53ff3835fa5e98fc66da76084d7dcd85_png.png)  
-PS：有效值的个数（这里指非0元素）==count  
-首先，创建一个行值为count、列值为3的数组，将第0行保存原二维数组的行、列、count的个数。  
-这样就可以了；
+ PS：有效值的个数（这里指非0元素）==count
+ 首先，创建一个行值为count、列值为3的数组，将第0行保存原二维数组的行、列、count的个数。
+ 这样就可以了；
 
 代码：
-
-```
+```java
 public class Main {
     public static void main(String[] args){
         System.out.println("原数组");
@@ -51,6 +52,7 @@ public class Main {
            }
            System.out.println();
         }
+
 
        System.out.println("原数——>稀疏");
        int sum=0;
@@ -83,6 +85,7 @@ public class Main {
 
         }
 
+
         System.out.println("稀疏——>原数");
         int[][] shu=new int[sparseArr[0][0]][sparseArr[0][1]];
         for (int i = 1; i <sparseArr.length ; i++) {
@@ -94,7 +97,8 @@ public class Main {
             System.out.println();
         }
     }
-```
 
-运行结果:  
-![在这里插入图片描述](images/blog_migrate_aaa2a5f1c7b111940e6de6e45f4fc703_png.png)
+```
+运行结果:
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/aaa2a5f1c7b111940e6de6e45f4fc703.png)
