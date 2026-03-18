@@ -1,15 +1,14 @@
 ---
-title: "Java简单笔记——接口的多态"
-publishDate: 2022-11-05
-source: "https://blog.csdn.net/HJS1453100406/article/details/105267288"
+title: "Java简单笔记 -- 接口的多态"
+publishDate: 2020-04-02
+description: '笔记'
+toc: true
 tags:
-  - '未分类'
-description: '同继承的父、子类一样，接口与实现类之间也有多态的性质，也存在着虚拟方法调用（虚拟方法调用：通过父类的引用指向子类的实体，从而调用在子类中被子类所重写的父类的方法）'
+  - Java
 language: 'Chinese'
 ---
 
-## 多态
-
+# 多态
 同继承的父、子类一样，接口与实现类之间也有多态的性质，也存在着虚拟方法调用（虚拟方法调用：通过父类的引用指向子类的实体，从而调用在子类中被子类所重写的父类的方法）
 
 简单来说，就是可以通过接口本身来调用“实现”该接口的类；
@@ -19,8 +18,7 @@ language: 'Chinese'
 这样调用
 
 代码：
-
-```
+```java
 public class Main {
    public static void main(String [] args){
       Duck d=new Duck();//实例化一个Duck 型的d；
@@ -61,4 +59,5 @@ class Duck implements Runner,Swimmer,Filer{//Duck 实现了以上三个接口
         System.out.println("我会飞");
     }
 }
+
 ```
