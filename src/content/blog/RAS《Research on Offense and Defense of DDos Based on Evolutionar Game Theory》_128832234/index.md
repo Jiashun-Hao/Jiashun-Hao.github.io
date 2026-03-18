@@ -45,7 +45,7 @@ language: 'Chinese/English'
 &emsp;假设4:攻击者有两种策略:“攻击”和“不攻击”。“攻击”和“不攻击”的概率分别为y(0≤y≤1)和1−y。
 根据这些假设，作者生成了决策描述图。
 
-![]([https://i-blog.csdnimg.cn/blog_migrate/fefad4e0bcefe57d6a36b815755b23bf.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/fefad4e0bcefe57d6a36b815755b23bf.png)
 
 将防御者和攻击者的所有可能情况做如下分析：
 
