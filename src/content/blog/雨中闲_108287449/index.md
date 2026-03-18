@@ -1,10 +1,9 @@
 ---
 title: "雨中闲"
-publishDate: 2025-08-17
-source: "https://blog.csdn.net/HJS1453100406/article/details/108287449"
+publishDate: 2020-08-28
 tags:
-  - '未分类'
-description: '假期就快结束啦，却感觉什么都没有做，要开学的崽并没有想象中的那么期待。不过，这段既长大后在家呆过的最长时段，也并没有那样百无寥寂，相反，当我带着一个不算太幼稚的心去再面对成长的环境，那些人，那些事，原...'
+  - '随笔'
+description: '随笔.'
 language: 'Chinese'
 ---
 
