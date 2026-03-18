@@ -13,7 +13,7 @@ language: 'Chinese'
 正常方法：引入“包类”的名称 ——> 通过new实例化对象 ——> 取得实例化对象
   反射方式：实例化对象 ——> getClass()方法 -->得到完整的“包类”的名称
   
- ### 1. java.lang.Class:是反射的源头；
+ ## 1. java.lang.Class:是反射的源头；
   
  * 1.每次创建一个类，通过编译（java.exe），生成对应的.class文件。
   *  2.之后我们使用java.exe加载程序（JVM的类加载器完成的）
@@ -26,7 +26,7 @@ language: 'Chinese'
      3)调用对应的运行时类的指定结构（属性、方法、构造器）
      4)反射的应用：动态代理
 
-### 2.如何获取Class的实例（4种）
+## 2.如何获取Class的实例（4种）
 * 1)调用运行时类本身的.class属性
        例：
     ```java
@@ -58,7 +58,7 @@ language: 'Chinese'
        System.out.println(clazz.getName());
        ```
        
-### 3.关于类加载器
+## 3.关于类加载器
 关于类的加载器：**`ClassLoader`**
  * 系统类加载器——>拓展类加载器——>引导类加载器 ：检查是否将类装载到内存
 * 引导类加载器——>拓展类加载器——>系统类加载器 ：尝试加载类
@@ -90,7 +90,7 @@ System.out.println(loader1);//null
 ```
 <br>
 
-### 4.需要掌握
+## 4.需要掌握
 类加载器使用：获取具体包下的配置文件
 ```java
       @Test
@@ -130,7 +130,7 @@ System.out.println(loader1);//null
 
 # 二、通过Class获得实例以后可以做的事情
 
-### 1.创建运行时类的对象
+## 1.创建运行时类的对象
 ```java
 @Test
     public void Test() throws ClassNotFoundException, IllegalAccessException, InstantiationException {
@@ -217,8 +217,8 @@ class Person {
 }
 ```
 
-### 2.通过反射获取类的完整结构
-#### 1.获取当前类和父类声明为public的属性
+## 2.通过反射获取类的完整结构
+### 1.获取当前类和父类声明为public的属性
 ```java
      //import java.lang.reflect.Field;
      
@@ -229,7 +229,7 @@ class Person {
    	 System.out.println(fields[i]);//public java.lang.String Main.Person.name
 	}
 ```
-#### 2.获取当前类本身的所有属性
+### 2.获取当前类本身的所有属性
 ```java
 		//import java.lang.reflect.Field;
 		
@@ -241,7 +241,7 @@ class Person {
             System.out.println(f);
         }
 ```
-#### 3.获取当前类本身的所有属性详细信息
+### 3.获取当前类本身的所有属性详细信息
 ```java
 		   //import java.lang.reflect.Field;
 		   
@@ -266,7 +266,7 @@ class Person {
             System.out.println();
           }
 ```
-#### 4.获取当前类和父类声明为public的方法
+### 4.获取当前类和父类声明为public的方法
 ```java
 		//import java.lang.reflect.Method;
 		
@@ -277,7 +277,7 @@ class Person {
             System.out.println(m);
         }
 ```
-#### 5.获取当前类本身所有的方法
+### 5.获取当前类本身所有的方法
 ```java
 		//import java.lang.reflect.Method;
 		
@@ -288,7 +288,7 @@ class Person {
             System.out.println(m);
         }
 ```
-#### 6.获取当前类本身所有方法的详细信息
+### 6.获取当前类本身所有方法的详细信息
 ```java
           //import java.lang.reflect.Method;
 
@@ -330,7 +330,7 @@ class Person {
             }
         }
 ```
-#### 7.获取当前类所有的构造器
+### 7.获取当前类所有的构造器
 ```java
         String str="Main.Person";
         Class clazz=Class.forName(str);
@@ -339,21 +339,21 @@ class Person {
             System.out.println(a);
         }
 ```
-#### 8.获取当前类运行时类的父类
+### 8.获取当前类运行时类的父类
 ```java
 		String str="Main.Person";
         Class clazz=Class.forName(str);
         Class superclass=clazz.getSuperclass();
         System.out.println(superclass);
 ```
-#### 9.获取带泛型的父类
+### 9.获取带泛型的父类
 ```java
        String str="Main.Person";
         Class clazz=Class.forName(str);
         Type t=clazz.getGenericSuperclass();
         System.out.println(t);
 ```
-#### 10.获取父类的泛型
+### 10.获取父类的泛型
 ```java
         String str="Main.Person";
         Class clazz=Class.forName(str);
@@ -365,7 +365,7 @@ class Person {
         }
 
 ```
-#### 11.获取实现的接口
+### 11.获取实现的接口
 ```java
 		String str="Main.Person";
         Class clazz=Class.forName(str);
@@ -374,14 +374,14 @@ class Person {
             System.out.println(c.getName());
         }
 ```
-#### 12.获取所在的包
+### 12.获取所在的包
 ```java
         String str="Main.Person";
         Class clazz=Class.forName(str);
         Package packae=clazz.getPackage();
         System.out.println(packae.getName());
 ```
-#### 13.获取类的注解
+### 13.获取类的注解
 ```java
         String str="Main.Person";
         Class clazz=Class.forName(str);
@@ -393,7 +393,7 @@ class Person {
 <br>
 
 # 三、动态代理
-### 1.代理
+## 1.代理
 
 代理模式设计原理：
  使用一个代理将对象包装起来，然后该代理对象取代原始对象，任何原始代理的对象都通过代理,代理对象决定是否以及何时将方法转移到原始对象上。
@@ -401,7 +401,7 @@ class Person {
  **被代理对象 ——> 代理对象 ——> 实现**
  <br>
 
-### 2.静态代理
+## 2.静态代理
 **特征**：代理类和目标代理的对象都是在编译期间确定的，不利于程序的拓展， 同时每一个代理类只能为一个接口服务,如果存在多种任务就需要多个代理对象。
 ```java
 //要实现的接口
@@ -448,7 +448,7 @@ public class Main {
 ```
 <br>
 
-### 3.动态代理
+## 3.动态代理
 ```java
 //动态代理的使用
 import java.lang.reflect.InvocationHandler;
@@ -528,7 +528,7 @@ public class Test {
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b8cbf1bbb5d272baf753821520b44e20.png#pic_center)
 <br>
 
-### 4.动态代理与AOP
+## 4.动态代理与AOP
 **概念：**
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/884b0a789c29ad63d264644a3db89357.png#pic_center)
 
