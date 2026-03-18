@@ -121,8 +121,11 @@ public class Main implements Serializable{
 **特点：** RandomAccessFile类有两个特殊的方法：
 * long getFilePointer()：获取文件记录指针的当前位置
 * void seek(long pos)：将文件记录指针定位到 pos 位置
+  
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ef5153abf1d78ab57ae6ebb966afeb8a.png#pic_center)
+
 * 如果想使用该类，必须先使用该类的构造器创建对象
+  
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/45393f6e97cc5695dff3a31c8e6b5aea.png#pic_center)
 
 **方法和作用：**
@@ -136,6 +139,7 @@ public class Main implements Serializable{
 **使用：**
 
 1.实现覆盖效果：
+
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8e032ad3cccf7cb6876038c3a0a208b6.png#pic_center)
 ```java
  @Test
@@ -169,6 +173,7 @@ public class Main implements Serializable{
 <br>
 
 3.多行文本插入效果（保留换行符）
+
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0c60906208057057efdbecd4e6b4bc0a.png#pic_center)
 ```java
 	@Test
