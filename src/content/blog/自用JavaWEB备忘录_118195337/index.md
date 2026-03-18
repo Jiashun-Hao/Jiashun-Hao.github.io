@@ -30,7 +30,7 @@ language: 'Chinese'
 # 二、CSS
 ## 2.1 CSS语法规则
 
-![](https://i-blog.csdnimg.cn/blog_migrate/eba7400979a636b4af6345355f32997a.png)
+![](./images/blog_migrate_eba7400979a636b4af6345355f32997a_png.png)
 
 **选择器：** 决定那些属性受影响；
 **属性：** 要改变的样式，属性和参数间用`:`隔开

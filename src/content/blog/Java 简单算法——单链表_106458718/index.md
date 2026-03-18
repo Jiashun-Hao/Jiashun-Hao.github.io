@@ -19,7 +19,7 @@ language: 'Chinese'
 
 用一个简单的图便可说明其存储原理
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2b42b12fff36331857a9a309a9a52393.png)
+![](./images/blog_migrate_2b42b12fff36331857a9a309a9a52393_png.png)
 
 链表的实现在C/C++中一般使用结构体，在Java中则使用类；
 
@@ -147,7 +147,7 @@ class Node{
 ```
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/427beea7c8838ed523c1c68cc9cb76b2.png)
+![](./images/blog_migrate_427beea7c8838ed523c1c68cc9cb76b2_png.png)
 
 可以看到，**此时的单链表顺序就是我们添加元素时的顺序**；
 
@@ -171,7 +171,7 @@ class Node{
 
 对于**增**和**删**，数组做的是先找到要修改的元素的位置（这一点比链表快），如果是增，则先在数组的末尾新加一个空间，再将该处之后的数据全部向**后**移动一个单位，新数据存放于空出的这个单位；同样删也是这个道理，找到元素，将其后面的全部数据向**前**移动一个单位（将要删除的数据覆盖），最后释放末尾的空间；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/39b47ec174e6944338296774bcf68ff4.png)
+![](./images/blog_migrate_39b47ec174e6944338296774bcf68ff4_png.png)
 
 可以看出，无论是增还是删，单是 **“移动后面的元素”** 就已经是灾难，数据小了还好说，但如果数据很多呢？要修改的位置靠后还好说，但如果是第一个呢？好吧，cpu什么都别做了，就处理这个数组吧~~
 
@@ -182,7 +182,7 @@ class Node{
 增：插入位置的前驱节点的Next域指向自己；自己的Next域指向下一个节点；
 删：被删除节点的前一个节点的Next域之后被删节点的后一个节点，释放被删除节点；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9857db38a70a0700ac320cc564b4c262.png)
+![](./images/blog_migrate_9857db38a70a0700ac320cc564b4c262_png.png)
 
 好了，说这样，其实也不都是废话；知道这些以后，我们基本已经实现了 **“顺序排列”**，为什么这么说？<br>
 Because:==有序链表的核心就是按照用户定义的属性的顺序将结点**插入**到合适的位置，而不再是添加在链表最后==
@@ -304,7 +304,7 @@ class Node{
 ```
 测试结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1a52fa7f9e9d6dbc4f704283a522a5a0.png)<br>
+![](./images/blog_migrate_1a52fa7f9e9d6dbc4f704283a522a5a0_png.png)<br>
 
 
 ## 第三操作：链表的查、改、删
@@ -499,9 +499,9 @@ class Node{
 ```
 测试结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4c8c54cd3bcb24471704efc4f5072282.png)
+![](./images/blog_migrate_4c8c54cd3bcb24471704efc4f5072282_png.png)
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/46b1ab8849c9f0d55c17549072c4f64c.png)
+![](./images/blog_migrate_46b1ab8849c9f0d55c17549072c4f64c_png.png)
 
 ok，趁热，我们继续谈**删除**
 <br>
@@ -512,7 +512,7 @@ ok，趁热，我们继续谈**删除**
 	2.使该节点的前一个结点指向该节点的后一个节点
 	3.销毁这个节点
   
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bdf4743d1d3be473042cbbbd256a836a.png)
+![](./images/blog_migrate_bdf4743d1d3be473042cbbbd256a836a_png.png)
 
 有一个提醒，当前使用的链表的单向的链表（只有一个头节点，没有尾节点），所有我们要找到的其实是**欲被删除节点的前一个节点**，而后用该节点的`.next`来表示欲被删除的节点;
 
@@ -543,7 +543,7 @@ public void Remover(int a){//序号删除不必用节点类型;
 
 测试一下：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/908712952925f5ed0e52a2ab3af73e67.png)
+![](./images/blog_migrate_908712952925f5ed0e52a2ab3af73e67_png.png)
 
 好了，到此位置，链表的基础知识就差不多了，附带一份完整的程序代码：
 ```java

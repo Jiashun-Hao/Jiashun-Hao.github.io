@@ -37,12 +37,12 @@ class Person{
 
 嗯，按理说这时候`xiaoming`	这个对象被实例化了，可以使用`对象.属性/方法`使用，但是，真的是这样吗？
 
-![](https://i-blog.csdnimg.cn/blog_migrate/6257e6a4a710bd3acb33321d5b6f0ff5.png)
+![](./images/blog_migrate_6257e6a4a710bd3acb33321d5b6f0ff5_png.png)
 
 可以看到，此时的`xiaoming`并不能直接调用该类中的属性，为什么？
 原因在于age和name前面的修饰符，public：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/702ed457b2403cb90ebc040112c859b9.png)
+![](./images/blog_migrate_702ed457b2403cb90ebc040112c859b9_png.png)
 
 被public所修饰了以后，别的类中的对象自然是调用不了。可以说，此时的这个类就以经被**封装**；
 
@@ -82,7 +82,7 @@ class Person{
 
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3e0a11930b49e6a28629fbdd764b10f3.png)
+![](./images/blog_migrate_3e0a11930b49e6a28629fbdd764b10f3_png.png)
 
 over~~
 
@@ -136,7 +136,7 @@ class Student extends Class{//子类
 我们试着调出`xiao`的属性和方法，看看它到底具有那些属性和方法；
 如图：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/56a8857dbb167a9b5b331c2313b1bd5c.png)
+![](./images/blog_migrate_56a8857dbb167a9b5b331c2313b1bd5c_png.png)
 
 可以看出，`xiao`不具备子类Student特有的“id属性”
 
@@ -155,7 +155,7 @@ public static void main(String[] args){
 ```
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ffc79fb850aac33bcc95c6372b0ae74e.png)
+![](./images/blog_migrate_ffc79fb850aac33bcc95c6372b0ae74e_png.png)
 
 很明显，所使用的方法是子类student中的方法，因为输出结果相较于父类都加了1；到这里，我们就可以理解这句话：“通过父类的引用指向子类的实体，从而调用在子类中被子类所重写的父类的方法” ；也大概了解了“多态”；
 
@@ -173,7 +173,7 @@ public static void main(String[] args){
 ```
 使用第二行代码以后。我们可以看到，对象`hua`具有了子类的全部属性，包括'id';
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/51f46b18350db3595a3c698086a07fa7.png)
+![](./images/blog_migrate_51f46b18350db3595a3c698086a07fa7_png.png)
 
 **2.必要的几点说明：**
 1.同为一个父类多个子类，不能相互转换；
@@ -193,7 +193,7 @@ if (对象（a） instanceof 类（b）) {}
 
 结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/93f61edb85a7fab223a7428bec9f94d9.png)
+![](./images/blog_migrate_93f61edb85a7fab223a7428bec9f94d9_png.png)
 
 判断实例还有一种情况：如果对象a是类b的实例，那么a也一定是**b的父类**的实例；
 测试：
@@ -204,7 +204,7 @@ if (对象（a） instanceof 类（b）) {}
 ```
 结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/70a338a71be59dd0bb4567e1e481b471.png)
+![](./images/blog_migrate_70a338a71be59dd0bb4567e1e481b471_png.png)
 over~~
 
 2020年2月20日初写

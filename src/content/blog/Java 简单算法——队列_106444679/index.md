@@ -22,7 +22,7 @@ language: 'Chinese'
 * ①MaxSize为数组的长度，MaxSize-1为最大可存储的单元；
 * ②front为队列的头元素所在的**前一个位置**，rear表示尾元素所在的**当前位置**；
 * ③当front = = rear表示队空；当MaxSize-1 = = rear为队满；
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8e548b370ed49b2c2b2a21521ff96abd.png)
+![](./images/blog_migrate_8e548b370ed49b2c2b2a21521ff96abd_png.png)
 好了，接下来可以写代码了；
 ```java
 import java.util.Scanner;
@@ -147,9 +147,9 @@ class ArrayQueue{//1.创建一个实现队列的类
 ```
 运行过程来起来也很正常
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6a5d1e3ea99263f6734ccaa398a6ad48.png)
+![](./images/blog_migrate_6a5d1e3ea99263f6734ccaa398a6ad48_png.png)
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0bcc3e856e2590b9e5d3f2e958ec303c.png)
+![](./images/blog_migrate_0bcc3e856e2590b9e5d3f2e958ec303c_png.png)
 
 
 **但！**
@@ -159,7 +159,7 @@ class ArrayQueue{//1.创建一个实现队列的类
 
 出现了一个问题，继添加和取出后如果继续操作添加，则会出现这样的效果
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/11bda2f661b8968121629ff540abcb75.png)
+![](./images/blog_migrate_11bda2f661b8968121629ff540abcb75_png.png)
 
 很明显，上面的代码并没有将存入的值真正的取走，即使指向它的指针rear移动了，但数据还是在那里；
 
@@ -167,9 +167,9 @@ class ArrayQueue{//1.创建一个实现队列的类
 
 可以这么做，但是没用；即使这样做了，已经被使用的空间依旧不能再次被利用
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/96ddd445c181aba00f75451131b30aae.png)
+![](./images/blog_migrate_96ddd445c181aba00f75451131b30aae_png.png)
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0c5c8a5545fc5d9628405d0913380300.png)
+![](./images/blog_migrate_0c5c8a5545fc5d9628405d0913380300_png.png)
 
 所以，为了解决这样的“空间浪费问题”，科学家在原有的基础上想到了改进的方法，这也有了下面的结果—— ——**循环队列**
 <br>
@@ -181,13 +181,13 @@ class ArrayQueue{//1.创建一个实现队列的类
 在此之前，先修改一下之前的设定（当然不修改也可以，算法有很多）
 * **front:** 指向队列的第一个元素；
 * **rear：** 指向队列最后一个**元素的后一个位置**；
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/384b7665d20cb4cc32113596f6c8e425.png)
+![](./images/blog_migrate_384b7665d20cb4cc32113596f6c8e425_png.png)
 * **队满的条件：（rear+1）%maxsize == front**；
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/11b8b7d3de0ff551bd0fea8579a7f7dd.png)
+![](./images/blog_migrate_11b8b7d3de0ff551bd0fea8579a7f7dd_png.png)
 
 * 新建方法：
 **当前队列中已经使用的空间个数：(rear+maxsize-front)%maxsize;**
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bd8108864e77bf1beccc4c61e7d87c8c.png)
+![](./images/blog_migrate_bd8108864e77bf1beccc4c61e7d87c8c_png.png)
 
 当然，随着front和rear的设定更改，有些细节的地方也要随着对应更改；
 
@@ -378,5 +378,5 @@ class ArrayQueue{//1.创建一个实现队列的类
 
 ```
 好了，这样一来一个队列就写好了，测试一下，可以随便玩啦！
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c4d2e88a4a1719e3aae654d40f952e4d.png)
+![](./images/blog_migrate_c4d2e88a4a1719e3aae654d40f952e4d_png.png)
 over~

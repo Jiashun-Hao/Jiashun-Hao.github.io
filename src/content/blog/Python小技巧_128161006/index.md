@@ -20,7 +20,7 @@ if __name__=="__main__":
 最近在学习python，只有一种感觉....
 竟然还存在这样的语言！！！
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/487a33cbf0c59eefb2e4a38a3b6e7db3.png)
+![](./images/blog_migrate_487a33cbf0c59eefb2e4a38a3b6e7db3_png.png)
 
 这个<class 'function'>看的我久久不能释然。。
 一个函数！一个带有参数的函数！！可以作为一个变量！！？？？封装使用？？？（结合5和7行）

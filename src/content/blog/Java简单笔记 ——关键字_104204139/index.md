@@ -24,7 +24,7 @@ language: 'Chinese'
 
 #### 区别
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2d31d498e4176d8790552f821ada2a3e.png)
+![](./images/blog_migrate_2d31d498e4176d8790552f821ada2a3e_png.png)
 
 ## (！*2.)class、public class、public static的区别
 在搞清楚它们的区别之前，有一个困扰我很久的问题：怎么判别一个Java程序中的主类？这个问题先放下，稍后再谈；
@@ -51,7 +51,7 @@ class Main3{
 ```
 以上都可以运行。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4b545fd741cb9c0ef28418fb346b28fb.png)
+![](./images/blog_migrate_4b545fd741cb9c0ef28418fb346b28fb_png.png)
 
 #### 2.public class
 1.一个public class前的public是可有可无的；
@@ -59,25 +59,25 @@ class Main3{
 2.如果在class前面加了public：
 （1）文件中不止一个类，则public class类，文件名必须与public类名一致；
 
-  ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/95d2251a5ef689dae16495ae4bd2dbdc.png)
+  ![](./images/blog_migrate_95d2251a5ef689dae16495ae4bd2dbdc_png.png)
   
   结果：
   
-  ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0e0cd7f24657636208a27699c870d972.png)
+  ![](./images/blog_migrate_0e0cd7f24657636208a27699c870d972_png.png)
   
 （2）如果文件中不止一个类，而且没有public类，文件名可与任一类名一致。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7d5cc24c990d85ee51a56f3d3cab99b7.png)
+![](./images/blog_migrate_7d5cc24c990d85ee51a56f3d3cab99b7_png.png)
 
 ==在这里解决一下一开始的问题，怎么区别Java的主类？==
 
 有很多人说因为public class类的类名是唯一的，所以public class的类就是主类，其实是这样吗？如果是，那为什么这段代码可以正常编译运行？两个class前面我都没有加 public呀！
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/92aca2772632cb01fab7deab80f49dbc.png)
+![](./images/blog_migrate_92aca2772632cb01fab7deab80f49dbc_png.png)
 
 并不是这样，其实判断Java的主类并不是去寻找public class，而是去寻找**和文件名一样的类名**它所对应的类，就是Java的主类
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3e00ab668110372f7ca92b928aa78a56.png)
+![](./images/blog_migrate_3e00ab668110372f7ca92b928aa78a56_png.png)
 
 然而大部分的程序中，主类的名的唯一性和public class类名的唯一性相互重叠，所以才有了``public class Main(与文件名同名){}``作为主类,但是主类不一定要被public修饰；
 顺便说一下，主类、要运行的类中必须加入口：
@@ -139,7 +139,7 @@ class SZ{
 ```
 输出结果：
 
-![](https://i-blog.csdnimg.cn/blog_migrate/c0b0d89858ca3fa227d8bcf789044299.png)
+![](./images/blog_migrate_c0b0d89858ca3fa227d8bcf789044299_png.png)
 
 可以看到，a1与a2的name值互补影响，但是a值却是一样的，其值取了最后改变的“8”。
 2.public static 特性：
@@ -157,7 +157,7 @@ class SZ{
 ```
 输出结果：
 
-![](https://i-blog.csdnimg.cn/blog_migrate/03ba1bf964174a0cf53f941859268667.png)
+![](./images/blog_migrate_03ba1bf964174a0cf53f941859268667_png.png)
 
 #### （2）continue、break与标签
 ```java

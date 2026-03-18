@@ -14,7 +14,7 @@ language: 'Chinese'
 比如下面这张图，用一个很简单的二维数组（11*11）就可以保存上面所有的棋子，虽然棋子没有多少；
 用1代表黑色棋子，用2代表蓝色，用0代表没有棋子的空缺。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5f6e158a452042eb09e6bb92b4bbf82a.png)
+![](./images/blog_migrate_5f6e158a452042eb09e6bb92b4bbf82a_png.png)
 
 ok存好了！
 但是有一个问题，刚刚也说了，棋子没有多少，这样做是不是太浪费内存了？废话。。。。
@@ -30,7 +30,7 @@ ok存好了！
   
   如上图所得下图
   
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/53ff3835fa5e98fc66da76084d7dcd85.png)
+![](./images/blog_migrate_53ff3835fa5e98fc66da76084d7dcd85_png.png)
 
  PS：有效值的个数（这里指非0元素）==count
  首先，创建一个行值为count、列值为3的数组，将第0行保存原二维数组的行、列、count的个数。
@@ -101,4 +101,4 @@ public class Main {
 ```
 运行结果:
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/aaa2a5f1c7b111940e6de6e45f4fc703.png)
+![](./images/blog_migrate_aaa2a5f1c7b111940e6de6e45f4fc703_png.png)

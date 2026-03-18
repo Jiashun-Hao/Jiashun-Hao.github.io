@@ -55,4 +55,4 @@ class Person extends Time{//子类自己的“无论什么操作”
 
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f974ab58f7715faf5576ed8a7d586b7a.png)
+![](./images/blog_migrate_f974ab58f7715faf5576ed8a7d586b7a_png.png)

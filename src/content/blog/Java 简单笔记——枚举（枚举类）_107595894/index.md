@@ -88,7 +88,7 @@ public static final Season WITER =new Season("Witer","冬天");
 
 综上步骤，自定义枚举类就算是创建完了，我们实验一下；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b58abbd888aecd1a6454bb53c8fc9ee2.png)
+![](./images/blog_migrate_b58abbd888aecd1a6454bb53c8fc9ee2_png.png)
 
 附上完整代码：
 ```java
@@ -184,7 +184,7 @@ enum Season1{//2.使用enum 代替 class
 ```
 同样的，我们再来测试一下，
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5011bc1c21b24eaf389b14097bc97d63.png)
+![](./images/blog_migrate_5011bc1c21b24eaf389b14097bc97d63_png.png)
 
 完整代码：
 ```java
@@ -237,7 +237,7 @@ enum Season1{//2.使用enum 代替 class
 参照的格式为``对象（属性1，属性2）``,有时候括号里面的属性也可以没有，仅仅保留前面的对象；
 比如像这样：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d0a3f6e65d7e0aedbf24fd1c362104a8.png)
+![](./images/blog_migrate_d0a3f6e65d7e0aedbf24fd1c362104a8_png.png)
 
 不过必要的方法还是要另外写
 <br>
@@ -247,7 +247,7 @@ enum Season1{//2.使用enum 代替 class
 ## 1.values（数组转换）
 `values`的作用是将枚举类中的对象按照数组的形式返回；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dacd707741f066a29d11cb28ffbdc07d.png)
+![](./images/blog_migrate_dacd707741f066a29d11cb28ffbdc07d_png.png)
 
 完整代码：
 ```java
@@ -283,7 +283,7 @@ enum Season1{
 ### 2.valueOf（属性查找）
 `valueOf`的作用是根据对象的名字查找对应的属性；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/17ce6806c962bbdd7b1ce94b51f34db4.png)
+![](./images/blog_migrate_17ce6806c962bbdd7b1ce94b51f34db4_png.png)
 
 完整代码：
 ```java
@@ -317,7 +317,7 @@ enum Season1{
 ```
 要注意的是，`valueOf（）`括号中的字符串必须是已有对象的名字，如果出错，返回的不是NULL而是直接报错；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ab031a644e05397648f06304e3e4e9a2.png)
+![](./images/blog_migrate_ab031a644e05397648f06304e3e4e9a2_png.png)
 
 <br>
 
@@ -356,7 +356,7 @@ enum Season1 implements Info{//实现接口
 ```
 测试一下：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8b69a1c50e9e5df5426305eb20b741ac.png)
+![](./images/blog_migrate_8b69a1c50e9e5df5426305eb20b741ac_png.png)
 
 可以看到，枚举类可以正常的实现接口，
 
@@ -392,7 +392,7 @@ SPRING("Spring","春天"){
 ```
 同样的，测试一下（之前的show方法已经被注解）
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/06cb2db0825e6fa6ba82bf0f61b688a3.png)
+![](./images/blog_migrate_06cb2db0825e6fa6ba82bf0f61b688a3_png.png)
 
 完整代码：
 ```java

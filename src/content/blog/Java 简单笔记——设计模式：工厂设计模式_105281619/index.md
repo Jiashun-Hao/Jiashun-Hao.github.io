@@ -64,4 +64,4 @@ class Arrive implements J_Ministry{
 
 运行结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/53c31ec567550fac3f5933614569c736.png)
+![](./images/blog_migrate_53c31ec567550fac3f5933614569c736_png.png)

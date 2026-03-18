@@ -73,7 +73,7 @@ public class Main {
 
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7864b14996f19e937e185f472a6e88d6.png)
+![](./images/blog_migrate_7864b14996f19e937e185f472a6e88d6_png.png)
 
 小总结：可变个数的形参的传递是在5.0版本之后新加的，是建立在方法的重载上的。在某些时候，如计算多个数的和，就不需要一个个去根据参数的个数去写重载方法，可以直接使用“可变”
 

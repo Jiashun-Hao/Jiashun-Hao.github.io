@@ -136,7 +136,7 @@ class Person1{
 ②堆：存放实例化（new出来的东西）；
 ③方法区：（字符串常量池）
 ④静态域：存放类中的静态变量
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/41a3abfe8f13d667bf7ea907023864ec.png)
+![](./images/blog_migrate_41a3abfe8f13d667bf7ea907023864ec_png.png)
 #### 3.3子类对象实例化全过程
 [详细的博客链接](https://blog.csdn.net/HJS1453100406/article/details/104390755?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158943831419725211922951%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=158943831419725211922951&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v25-1-104390755.nonecase&utm_term=%E5%AD%90%E7%B1%BB)
 <br/>

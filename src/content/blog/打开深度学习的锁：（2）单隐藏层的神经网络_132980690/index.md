@@ -30,7 +30,7 @@ language: 'Chinese'
 # PS：神经网络的训练过程
 放此图在这里为了快速认识，也为了需要的时候快速查找。初次看的时候看不懂没关系，可以先看下面的内容。
 
-![](https://i-blog.csdnimg.cn/blog_migrate/b347bff8dcae19e9ebef1b28279ceb28.png)
+![](./images/blog_migrate_b347bff8dcae19e9ebef1b28279ceb28_png.png)
 
 # 一、数据集和包的说明
 ## 1.1准备文件
@@ -273,13 +273,13 @@ import sklearn.linear_model #它包含了许多线性模型，这些模型可以
 让我们先不考虑损失的计算，也就是现忽略标签$Y$数据集合，单单来讨论$X$和$\hat Y$的关系
 那么我们现在知道的神经网络结构这样的：
 
-![](https://i-blog.csdnimg.cn/blog_migrate/afd05889f0fb91aa9b50144ade6cf477.png)
+![](./images/blog_migrate_afd05889f0fb91aa9b50144ade6cf477_png.png)
 
 总的来说，就是将特征输入到**线性回归+激活函数**函数中，得到预测，然后计算损失，然后调整模型参数，然后重复这一过程。
 
 现在，我们添加一个东西，顺便完善一下这个结构
 
-![](https://i-blog.csdnimg.cn/blog_migrate/5173de024230545ac55896096165f42d.png)
+![](./images/blog_migrate_5173de024230545ac55896096165f42d_png.png)
 
 现在，在中间添加了一个层，名字叫**隐藏层**。
 
@@ -329,7 +329,7 @@ def layer_sizes(X,Y):#传入数据集和标签
 但是第二个，为什么要构建$W$和$b$的个数呢？因为这个时候的$W$和$b$的不止一个。
 我们再看一下这张图：
 
-![](https://i-blog.csdnimg.cn/blog_migrate/8d118a943e8a61b2debde8fecbe04744.png)
+![](./images/blog_migrate_8d118a943e8a61b2debde8fecbe04744_png.png)
 
 在神经网络中，每一层对应需要$W$和$b$都不一样。
 
@@ -375,7 +375,7 @@ def init_parameters(Input_layer,Hidden_layer,Output_layer):
 ## 4.1 tanh（双曲正切函数）函数
 关于tanh函数，它的图像是这样的：上趋近于1,下趋近于-1
 
-![](https://i-blog.csdnimg.cn/blog_migrate/935742495ccb13d6507e807ccdccdfa0.png)
+![](./images/blog_migrate_935742495ccb13d6507e807ccdccdfa0_png.png)
 
 由于$tanh$函数的输出值位于-1到1之间。这意味着它会将输入值归一化到这个范围内，所以如果我们想==控制和规范神经元==的输出值，我们可以选择这个函数。
 
@@ -462,7 +462,7 @@ def propagate(X,parameters):
 ```
 测试结果：
 
-![](https://i-blog.csdnimg.cn/blog_migrate/7d0026d2bec6ae1f8669a26a302a3066.png)
+![](./images/blog_migrate_7d0026d2bec6ae1f8669a26a302a3066_png.png)
 
 
 # 六、损失函数
@@ -513,7 +513,7 @@ def Cost_Func(A2,Y):
 ```
 测试结果：
 
-![](https://i-blog.csdnimg.cn/blog_migrate/6e692db90c496088aab7527131f5f611.png)
+![](./images/blog_migrate_6e692db90c496088aab7527131f5f611_png.png)
 
 
 # 七、后向传播
@@ -614,7 +614,7 @@ def back_propagtion(parameters,cache,X,Y):
 ```
 测试结果：
 
-![](https://i-blog.csdnimg.cn/blog_migrate/45044c560ebbf24cbfb9566eedeaa065.png)
+![](./images/blog_migrate_45044c560ebbf24cbfb9566eedeaa065_png.png)
 
 补充说明：
 **axis=1:** 这个参数指定了求和应该沿着哪个轴进行。axis=1 意味着对每一行的元素进行求和。
@@ -665,7 +665,7 @@ def update_parameter(parameters,back_con,learning_rate=1.2):
 ```
 测试结果：
 
-![](https://i-blog.csdnimg.cn/blog_migrate/028506b3cdd5be2c1ae96b71d3682520.png)
+![](./images/blog_migrate_028506b3cdd5be2c1ae96b71d3682520_png.png)
 
 # 九、构建预测
 这一步很关键，我们要使用$X$来生成预测，与它们的标签$Y$来进行拟合。
@@ -690,7 +690,7 @@ def predict(parameters,X):
 ```
 测试结果：
 
-![](https://i-blog.csdnimg.cn/blog_migrate/83ad2a71b7a4c0cda9486f2258164f2f.png)
+![](./images/blog_migrate_83ad2a71b7a4c0cda9486f2258164f2f_png.png)
 
 # 十、聚合和主函数
 好了，所有的功能都写完了。接下来写一个聚合它们的函数就可以了。
@@ -1022,9 +1022,9 @@ if __name__ =="__main__":
 ```
 输出结果：
 
-![](https://i-blog.csdnimg.cn/blog_migrate/8f90e2e3f9a27b7a48e5d42ced2891c3.png)
+![](./images/blog_migrate_8f90e2e3f9a27b7a48e5d42ced2891c3_png.png)
 
-![](https://i-blog.csdnimg.cn/blog_migrate/8557c7abef95e531730375bc16fb0b68.png)
+![](./images/blog_migrate_8557c7abef95e531730375bc16fb0b68_png.png)
 
 # 总结
 这个人太懒了，什么都没有写～～

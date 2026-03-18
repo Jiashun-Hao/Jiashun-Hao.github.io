@@ -44,7 +44,7 @@ language: 'Chinese'
 ## 前置1：神经网络的训练过程
 放此图在这里为了快速认识，也为了需要的时候快速查找。初次看的时候看不懂没关系，可以先看下面的内容。
 
-![](https://i-blog.csdnimg.cn/blog_migrate/1ee86f1a2efdff2c36e7e48c935b76b2.png)
+![](./images/blog_migrate_1ee86f1a2efdff2c36e7e48c935b76b2_png.png)
 
 ## 前置2：代码编写过程
 >1：导入包和工具类，提取工具类
@@ -129,13 +129,13 @@ print(train_set_y_orig.shape) #(1, 209) 标签,1维度的209个标签
 
 **举个例子：**
 
-![](https://i-blog.csdnimg.cn/blog_migrate/0f570d28852474ad1e590a7e0f2f83e6.png)
+![](./images/blog_migrate_0f570d28852474ad1e590a7e0f2f83e6_png.png)
 
 这里有一**条**可爱的猫猫的图片,假设它的大小是 5*5 个像素。(图片来源：[图片](https://blog.csdn.net/JACKSONMHLK/article/details/107043672))
 
 我们知道，每一个图片在计算机中存储的形式都是由<font color="Red">红色（R）</font>、<font color="Green">绿色（G）</font>、<font color="Blue">蓝色（B）</font>三个底色图片构成
 
-![](https://i-blog.csdnimg.cn/blog_migrate/10629ef708e6da9268d8aba0deb13c3b.png)
+![](./images/blog_migrate_10629ef708e6da9268d8aba0deb13c3b_png.png)
 
 这三个底色图片的参数都不一样，因为不一样，所以才可以构成千颜万色。
 
@@ -143,11 +143,11 @@ print(train_set_y_orig.shape) #(1, 209) 标签,1维度的209个标签
 
 我们只需要知道，一个图片，在计算机中完整的**像素的个数**是：==高像素 X 宽像素 X 3==
 
-![](https://i-blog.csdnimg.cn/blog_migrate/23dabf6793e16a3f3076ad70d1827afb.png)
+![](./images/blog_migrate_23dabf6793e16a3f3076ad70d1827afb_png.png)
 
 所以，一个图片的矩阵向量的表现形式就是 **==[ 高像素 , 宽像素 , 3 ]==** ，这条猫猫的矩阵向量的表现形式是[5,5,3]
 
-![](https://i-blog.csdnimg.cn/blog_migrate/8a693d140c07b3a06a663f17045700d3.png)
+![](./images/blog_migrate_8a693d140c07b3a06a663f17045700d3_png.png)
 
 而在本题中，作为数据集，自然要有样本的个数，所以我们的`train_set_x_orig`矩阵多了一个`209`,代表样本的个数。
 ```python
@@ -164,7 +164,7 @@ plt.imshow(train_set_x_orig[index])
 plt.show()
 # print("label:"+str(train_set_y_orig[:,index]))
 ```
-![](https://i-blog.csdnimg.cn/blog_migrate/1cbd39e759001444240063c9267c3da9.png)
+![](./images/blog_migrate_1cbd39e759001444240063c9267c3da9_png.png)
 
 第二个：非猫
 
@@ -175,7 +175,7 @@ plt.imshow(train_set_x_orig[index])
 plt.show()
 # # print("label:"+str(train_set_y_orig[:,index]))
 ```
-![](https://i-blog.csdnimg.cn/blog_migrate/4329a5543ba4d75d29fb62ee6c502c37.png)
+![](./images/blog_migrate_4329a5543ba4d75d29fb62ee6c502c37_png.png)
 
 ### 2.2 数据集降维度并且转置
 
@@ -183,7 +183,7 @@ plt.show()
 或者换句话说，我们希望聚合每一个对象（此题为每一张图片）的多维度的特征（此题为图片的三原色特征）
 这样的做法可以让数据的输入变得容易一点。
 
-![](https://i-blog.csdnimg.cn/blog_migrate/ec9298ba9c88e8836bfa6b24de76ad66.png)
+![](./images/blog_migrate_ec9298ba9c88e8836bfa6b24de76ad66_png.png)
 
 
 
@@ -263,11 +263,11 @@ test_set_x=test_set_x_flatten/255
 
 就是说，找一条线，将数据划分为两个部分。
 
-![](https://i-blog.csdnimg.cn/blog_migrate/fb94aafe78d02b602bc71492505bcbaf.png)
+![](./images/blog_migrate_fb94aafe78d02b602bc71492505bcbaf_png.png)
 
 如果维度高的话，是找一个面来划分
 
-![](https://i-blog.csdnimg.cn/blog_migrate/a225e8725234cf464766bd92c5d40493.png)
+![](./images/blog_migrate_a225e8725234cf464766bd92c5d40493_png.png)
 
 对于逻辑回归的函数，我们可以理解为：
 
@@ -305,7 +305,7 @@ $$
  2. 它的输出范围：[0,1]
  3. 它的图像是这样：
  
-![](https://i-blog.csdnimg.cn/blog_migrate/a7795b3e148e1c24ad9eb78ae74d2a8c.png)
+![](./images/blog_migrate_a7795b3e148e1c24ad9eb78ae74d2a8c_png.png)
 
 当我们将一个$x^i$输入到sigmoid函数中，会得到一个 ==$\hat{y}$或者 $\hat{y}^i$==  ,它是由 $x^i$生成的和当前标签 $y^i$同类型的值（这也是为什么用hat/y表示而不是用别的字母）
 
@@ -1152,7 +1152,7 @@ plt.show()
 ```
 
 最后，我们得到了这样的结果和图片
-![](https://i-blog.csdnimg.cn/blog_migrate/31f5a618d6880635ede84824b1901306.png)
+![](./images/blog_migrate_31f5a618d6880635ede84824b1901306_png.png)
 
 ## 再玩一下？好的！
 让我们最后修改一下学习率，看看会有什么样的变化
@@ -1181,7 +1181,7 @@ plt.show()
 
 得到的结果是这样滴！
 
-![](https://i-blog.csdnimg.cn/blog_migrate/1164ea1a92a6ce9e84d78b069b8f489a.png)
+![](./images/blog_migrate_1164ea1a92a6ce9e84d78b069b8f489a_png.png)
 
 为什么呢？
 学习率会有影响

@@ -59,15 +59,15 @@ public class Buffered {
 1.由于缓冲流起到是是一种包装的作用，所以直接关闭缓冲流的对象即可；
 2.先关闭输入，再关闭输出；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/27b88fead7f4993c4829fbd715888805.png#pic_center)
+![](./images/blog_migrate_27b88fead7f4993c4829fbd715888805_png.png)
 
 3.需要在try-catch以外先声明缓冲流，并赋值为null；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6ff7c1745c5fd36458be2dcf21853232.png#pic_center)
+![](./images/blog_migrate_6ff7c1745c5fd36458be2dcf21853232_png.png)
 
 4.==在使用缓冲流 ***完成写入*** 以后，最好使用`.flush()`方法清空一下缓存区；其原因在于当输入、输出流被关闭时候仍然有可能有一部分数据在缓冲区，我们需要强制输出一下；==
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/66839caae2ab88f6596ebdee01407229.png#pic_center)
+![](./images/blog_migrate_66839caae2ab88f6596ebdee01407229_png.png)
 
 5.测试程序执行时间语句：
 ```java
@@ -120,7 +120,7 @@ public void BufferedFileReader(){
 
 ==该方法可以一次读取一行的字符==
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8cab88adf933d9d024f60a20cb922d42.png#pic_center)
+![](./images/blog_migrate_8cab88adf933d9d024f60a20cb922d42_png.png)
 
 使用的时候需要注意以下几点；
 * 读入的数据要注意有/r或/n或/r/n
@@ -140,17 +140,17 @@ public void BufferedFileReader(){
 * **编码**：字符串 ——》字节数组
 * **解码**：字符串《——字节数组
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/76376137072c411ea3e0949b3bdb67f8.png#pic_center)
+![](./images/blog_migrate_76376137072c411ea3e0949b3bdb67f8_png.png)
 
 在这两个流的构造器中需要传递两个参数：**要进行编/解码的文件**和**编码集（charstName）**；
 
 所谓编码集就是进行编码/解码的格式集合，常用的有以下几种；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/58b003222f33278bca93f4ccd81db84e.png#pic_center)
+![](./images/blog_migrate_58b003222f33278bca93f4ccd81db84e_png.png)
 
 并且，**编码集按照字符串的格式输入：**
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d2c475dc5a9573c966085e4ce61f63e4.png#pic_center)
+![](./images/blog_migrate_d2c475dc5a9573c966085e4ce61f63e4_png.png)
 <br>
 ## 1.解码使用
 ```java
@@ -187,11 +187,11 @@ public class Text {
 ```
 源文件：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fdd0a57f4c946202bc3a0c9a2f13bfb9.png#pic_center)
+![](./images/blog_migrate_fdd0a57f4c946202bc3a0c9a2f13bfb9_png.png)
 
 解码后：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/75a1e6f68627f8574b6e7bd84494c8b3.png#pic_center)
+![](./images/blog_migrate_75a1e6f68627f8574b6e7bd84494c8b3_png.png)
 <br>
 
 ### 2.编码使用
@@ -251,7 +251,7 @@ public class Text {
 ```
 编码后写入：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/726a99e2b8e46244d50f8a31de5ccb1f.png#pic_center)
+![](./images/blog_migrate_726a99e2b8e46244d50f8a31de5ccb1f_png.png)
 <br>
 
 ### 3.补充
@@ -341,7 +341,7 @@ public class Main {
     }
 }
 ```
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5e1ec499f3e9918ae189560eddc19d87.png#pic_center)
+![](./images/blog_migrate_5e1ec499f3e9918ae189560eddc19d87_png.png)
 <br>
 
 # 五.Data流（数据流）
@@ -351,7 +351,7 @@ public class Main {
 
 **配图：**
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/04efad6449f97a385d659f782a1c44e8.png#pic_center)
+![](./images/blog_migrate_04efad6449f97a385d659f782a1c44e8_png.png)
 
 使用：
 ```java
@@ -377,5 +377,5 @@ public class Main {
     }
 }
 ```
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3e41487d333f4285a3ed000db4856f73.png#pic_center)
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fdeec0d6accf5edeee65abc6a6d7e886.png#pic_center)
+![](./images/blog_migrate_3e41487d333f4285a3ed000db4856f73_png.png)
+![](./images/blog_migrate_fdeec0d6accf5edeee65abc6a6d7e886_png.png)

@@ -45,7 +45,7 @@ language: 'Chinese/English'
 &emsp;假设4:攻击者有两种策略:“攻击”和“不攻击”。“攻击”和“不攻击”的概率分别为y(0≤y≤1)和1−y。
 根据这些假设，作者生成了决策描述图。
 
-![](https://i-blog.csdnimg.cn/blog_migrate/fefad4e0bcefe57d6a36b815755b23bf.png)
+![](./images/blog_migrate_fefad4e0bcefe57d6a36b815755b23bf_png.png)
 
 将防御者和攻击者的所有可能情况做如下分析：
 
@@ -69,9 +69,9 @@ language: 'Chinese/English'
 
 攻击者和防御者的参数和利益矩阵分别如表1和表2所示
 
-![](https://i-blog.csdnimg.cn/blog_migrate/beee76a36f39d9033618b4fb646faf92.png)
+![](./images/blog_migrate_beee76a36f39d9033618b4fb646faf92_png.png)
 
-![](https://i-blog.csdnimg.cn/blog_migrate/955afa3f8cae501e99183a2732a34142.png)
+![](./images/blog_migrate_955afa3f8cae501e99183a2732a34142_png.png)
 
 
 
@@ -80,4 +80,4 @@ language: 'Chinese/English'
  &emsp;attackers are more inclined to launch attacks, and the defenders’ strategy choices are related to the cost of the active defense system
 
  &emsp;攻击方更倾向于发起攻击，防御方的策略选择与主动防御系统的成本有关（这不是废话吗？？？？？）
- ![](https://i-blog.csdnimg.cn/blog_migrate/5f3acba9feb05f61d56286032e75afa0.png)
+ ![](./images/blog_migrate_5f3acba9feb05f61d56286032e75afa0_png.png)

@@ -33,7 +33,7 @@ class min{
 ```
 
 输出结果：
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4503ae30d4da8080d530dd946077517e.png)
+![](./images/blog_migrate_4503ae30d4da8080d530dd946077517e_png.png)
 
 
 2020年2月11日 初写

@@ -12,7 +12,7 @@ language: 'Chinese'
 # 一、使用
 ## 一.创建一个Mave项目
 
-![](https://i-blog.csdnimg.cn/blog_migrate/e47e4777a71a5a62dc75c9c633a583d2.png)![](https://i-blog.csdnimg.cn/blog_migrate/8a0d20d3dadbb85de332a99f3d54faf4.png)![](https://i-blog.csdnimg.cn/blog_migrate/df0ca57778f6c378b4c2b4b6428d390a.png)
+![](./images/blog_migrate_e47e4777a71a5a62dc75c9c633a583d2_png.png)![](./images/blog_migrate_8a0d20d3dadbb85de332a99f3d54faf4_png.png)![](./images/blog_migrate_df0ca57778f6c378b4c2b4b6428d390a_png.png)
 
 
 ## 二.添加在POM.XMl里添加依赖
@@ -47,7 +47,7 @@ language: 'Chinese'
 
 ## 三.编写主程序类
 
-![](https://i-blog.csdnimg.cn/blog_migrate/211bc13629775fbd1205ef00fff5a6ce.png)
+![](./images/blog_migrate_211bc13629775fbd1205ef00fff5a6ce_png.png)
 
 用`@SpringBootApplication`来标记是主程序的启动类
 
@@ -66,7 +66,7 @@ public class HelloWordMain {//主程序类
 ```
 ## 四、创建Controller子文件夹并编写处理请求
 
-![](https://i-blog.csdnimg.cn/blog_migrate/2ef448f8b9fa145b469e52ff8e73a09a.png)
+![](./images/blog_migrate_2ef448f8b9fa145b469e52ff8e73a09a_png.png)
 
 ```java
 import org.springframework.stereotype.Controller;
@@ -87,9 +87,9 @@ public class Hellocontroller {
 
 ## 五、启动并测试
 
-![](https://i-blog.csdnimg.cn/blog_migrate/7f20322ea2bbf3c1f354b7120ead6315.png)
+![](./images/blog_migrate_7f20322ea2bbf3c1f354b7120ead6315_png.png)
 
-![](https://i-blog.csdnimg.cn/blog_migrate/0f6eefcebb21314bd406bc11894f7839.png)
+![](./images/blog_migrate_0f6eefcebb21314bd406bc11894f7839_png.png)
 
 # 二、解析POM文件
 ## 一.Spring Boot的版本仲裁中心

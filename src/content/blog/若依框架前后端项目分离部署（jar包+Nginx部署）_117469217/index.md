@@ -23,14 +23,14 @@ language: 'Chinese'
 ### 2.1后台打包
 如果需要打包到Tomact，则将ruoyi/pom.xml中的packaging修改为war，这里使用的是jar包，所以不需要更改。
 
-![](https://i-blog.csdnimg.cn/blog_migrate/4ecf62f5f5942657123b1e483e662ea4.png)
+![](./images/blog_migrate_4ecf62f5f5942657123b1e483e662ea4_png.png)
 
 然后通过Maven进行打包即可。
 
 ### 2.2前端打包
 在控制台输入打包命令
 
-![](https://i-blog.csdnimg.cn/blog_migrate/b65745310c522aeb28e7209b41f53745.png)
+![](./images/blog_migrate_b65745310c522aeb28e7209b41f53745_png.png)
 
 ```java
 # 打包正式环境
@@ -41,7 +41,7 @@ npm run build:stage
 ```
 打完以后会产生一个名叫dist的文件夹
 
-![](https://i-blog.csdnimg.cn/blog_migrate/a311a9a15afd4897f58832f8cde8ae9a.png)
+![](./images/blog_migrate_a311a9a15afd4897f58832f8cde8ae9a_png.png)
 
 ## 3.部署
 第一步，启动数据库。
@@ -53,11 +53,11 @@ npm run build:stage
 
 第四步：配置Nginx，首先将刚刚打好的前端包（dist文件夹）放入到Nginx中的HTML文件夹里。
 
-![](https://i-blog.csdnimg.cn/blog_migrate/efc37baf8f5c0827ebaab07ff832c92e.png)
+![](./images/blog_migrate_efc37baf8f5c0827ebaab07ff832c92e_png.png)
 
 然后返回一层到conf下修改nginx配置文件
 
-![](https://i-blog.csdnimg.cn/blog_migrate/5c34a721bbf31a2c2f3fd5520834abec.png)
+![](./images/blog_migrate_5c34a721bbf31a2c2f3fd5520834abec_png.png)
 
 我的修改如下，复制的时候将注释删除：
 ```java

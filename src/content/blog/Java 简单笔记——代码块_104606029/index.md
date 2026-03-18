@@ -68,7 +68,7 @@ class sing{
 ```
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/37d5aef8028a2b73c13cfd2d96f40dbb.png)
+![](./images/blog_migrate_37d5aef8028a2b73c13cfd2d96f40dbb_png.png)
 
 ### 2.静态的代码块
 	1.里面可以有输出语句；
@@ -108,6 +108,6 @@ class sing{
 ```
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/59244a0335758b61fc1dcf07bfc313f5.png)
+![](./images/blog_migrate_59244a0335758b61fc1dcf07bfc313f5_png.png)
 
 2020年3月2日初写

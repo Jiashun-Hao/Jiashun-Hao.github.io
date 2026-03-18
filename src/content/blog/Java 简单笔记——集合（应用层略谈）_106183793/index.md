@@ -14,7 +14,7 @@ PS：之前以为集合相较于数组还有一个特点是可以存储不同类
 
 具体操作为使用根节父类Object类来定义，存储不同的包装类元素（虚拟方法调用）：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7524e3bbae8b072d6e403d0c3e24d159.png)
+![](./images/blog_migrate_7524e3bbae8b072d6e403d0c3e24d159_png.png)
 
 好了，继续说集合；
 
@@ -119,9 +119,9 @@ public class Hello {
 
 ### 2.List接口下的方法和实现类：
 #### 2.1实现类：
-* **ArrayList：** ArrayList是List的主要实现类，其底层使用数组存储方法存储对象；其特点是方便遍历；![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f4bf512f1c1555987df1be951c0e0fd9.png)
+* **ArrayList：** ArrayList是List的主要实现类，其底层使用数组存储方法存储对象；其特点是方便遍历；![](./images/blog_migrate_f4bf512f1c1555987df1be951c0e0fd9_png.png)
 * **LinkedList：** 使用的方法与ArrayList中一样，与之不同的是它的底层是使用链表存储；其特点是适用于频繁的删除和插入；
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ae4c2cf15e34dad796d2c611233d8a70.png)
+![](./images/blog_migrate_ae4c2cf15e34dad796d2c611233d8a70_png.png)
 * **Vector：** 该实现类主要用于实现线程的安全，插入删除较慢，所以现在基本不用这里也不做太多说明；
 <br>
 
@@ -178,9 +178,9 @@ public class ceshi {
 ### 3.Set接口下的方法和实现类：
 #### 3.1实现类：
 * **HashSet：** HashSet是Set接口的主要实现类；前面说到的Set存储的无序性是指在元素存储的位置是无序的，但并不是杂乱无章；元素的存储位置按照HashSet的计算（哈希）计算分配到特定的位置；稍后详细说明；
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eb5212d8cbab3c1b6bff610b2da061ba.png)
+![](./images/blog_migrate_eb5212d8cbab3c1b6bff610b2da061ba_png.png)
 * **LinkedHashSet：** LinkedHashSet是使用了一个链表来维护添加进集合的顺序，其顺序就是添加的顺序，他的添加性能低于HashSet（因为多了一个链表），但是遍历方便（因为多了一个链表）。
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6503ea339625bb69cde5be2ef178d973.png)
+![](./images/blog_migrate_6503ea339625bb69cde5be2ef178d973_png.png)
 * **Treeset：** Treeset有很多特点：
    	①向Treeset中添加的元素必须是同一类型（类）的；
    	②如果不设置，则添加进的顺序默认按照ASCII码进行从小到大排序；
@@ -191,13 +191,13 @@ public class ceshi {
 
 &nbsp;&nbsp;1）：Hashset具有不可重复性，存储无序性；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/92b32b14fa1d3861a519b2a3456c6644.png)<br>
+![](./images/blog_migrate_92b32b14fa1d3861a519b2a3456c6644_png.png)<br>
 
 &nbsp;&nbsp;
 
 2）：可以增加NULL；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/61c60476d05b88b7bf7ba499b8e911c6.png)![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a48036776b3b816e3838bb5456509f2a.png)<br>
+![](./images/blog_migrate_61c60476d05b88b7bf7ba499b8e911c6_png.png)![](./images/blog_migrate_a48036776b3b816e3838bb5456509f2a_png.png)<br>
 
 &nbsp;&nbsp;
 
@@ -243,7 +243,7 @@ class Person{
 ```
 此处没有重写**equals（）** 方法 和  **hashcode（）** 方法，所以输出结果存在重复性；（注意，自定义类输出的时候默认打印的是地址，原因在于没有重写toString方法）
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9428efe51207006d7d97ef635e0bb9e2.png)
+![](./images/blog_migrate_9428efe51207006d7d97ef635e0bb9e2_png.png)
 
 修改代码：
 ```java
@@ -295,7 +295,7 @@ class Person{
 ```
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b6b09cf7ccca07e9a535b319a8c8b0dc.png)
+![](./images/blog_migrate_b6b09cf7ccca07e9a535b319a8c8b0dc_png.png)
 
 ps：上面所写的hashCode（）方法为系统默认集成的，其实我们也可以自己手写，在这里写一个：
 ```java
@@ -321,11 +321,11 @@ public int hashCode() {
 
 原因也很简单，如果当前类不实现Comparable接口，运行时候会报错，错误类型为`ClassCastException`(两个类型间转换不兼容时引发的运行时异常)
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0a57d26c528c3f69d9353067b5ebe524.png)
+![](./images/blog_migrate_0a57d26c528c3f69d9353067b5ebe524_png.png)
 
 如果只实现了Comparable接口没有重写CompareTo方法，也会提示需要重写该方法；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ff072bcfb3d0b66e9b690dd59bf1c991.png)
+![](./images/blog_migrate_ff072bcfb3d0b66e9b690dd59bf1c991_png.png)
 
 所以，伪•完整的代码是这样：
 ```java
@@ -368,7 +368,7 @@ class Person implements Comparable{
 ```
 那么，这个排序是根据什么排序的？其实就是根据compareTo（）方法，上面重写的compareTo（）我没有添加任何判断，只是返回一个0，所以便有了这样的事——无论添加多少元素（不相同的元素），都只保留第一个。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/554a2be0f80f820099febef95b706845.png)
+![](./images/blog_migrate_554a2be0f80f820099febef95b706845_png.png)
 
 所以我们需要手写一个compareto（）方法；
 ```java
@@ -446,7 +446,7 @@ class Person implements Comparable{
 
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c969541d451fdd4a990cd3bfd224733c.png)
+![](./images/blog_migrate_c969541d451fdd4a990cd3bfd224733c_png.png)
 
 <br>
 **2.定制排序：**
@@ -623,7 +623,7 @@ public class ceshi {
 }
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/509293b3178f9ce55ce25f6e37ee2e26.png)
+![](./images/blog_migrate_509293b3178f9ce55ce25f6e37ee2e26_png.png)
 
 <br>
 
@@ -643,7 +643,7 @@ public class ceshi {
     }
 }
 ```
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5a8cc55114a57c1d99d181434dbb9de0.png)<br>
+![](./images/blog_migrate_5a8cc55114a57c1d99d181434dbb9de0_png.png)<br>
 
 ③遍历Entry(自定义)
 ```java
@@ -661,7 +661,7 @@ public class ceshi {
 }
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/210ec48b60f442fbb1aef19b3c769c18.png)
+![](./images/blog_migrate_210ec48b60f442fbb1aef19b3c769c18_png.png)
 
 <br>
 
@@ -682,7 +682,7 @@ public class ceshi {
 }
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/54b0c438f0556b3ca80f606d7468e6de.png)
+![](./images/blog_migrate_54b0c438f0556b3ca80f606d7468e6de_png.png)
 
 <br>
 

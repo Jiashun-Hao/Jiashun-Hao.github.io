@@ -17,12 +17,12 @@ language: 'Chinese'
 1.基本数据类型使用**数据流**来实现传输，而引用数据类型则可以是用**对象流**传输；
 
 2.使用**对象流**可以将对象存储到硬盘中，断电后不消失，所使用的机制称为**序列化机制**；
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/63ac08ed7c1a07e3c04e034f1560f71b.png#pic_center)
+![](./images/blog_migrate_63ac08ed7c1a07e3c04e034f1560f71b_png.png)
 3.==并不是所有的类都可以使用序列化机制，自定义类若想使用序列化则需要满足以下条件==：
 * 自定义类需实现**Serializable接口**或**Externalizable接口**
 * 类中所用到的属性也需要实现**Serializable接口**或**Externalizable接口**
 * **凡是实现Serializable接口的类必须声明一个版本的序列号serialVersionUID,默认情况下序列号会随生成，但是为了兼容版本的特性，最好自己声明；**
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/76aaa97dc523e6738ac9cf7b4417ad9e.png#pic_center)
+![](./images/blog_migrate_76aaa97dc523e6738ac9cf7b4417ad9e_png.png)
 * **ObjectOutputStream** 和 **ObjectInputStream**不能序列化被`static`和`transient `所修饰的成员变量
 
 <br>
@@ -111,7 +111,7 @@ public class Main implements Serializable{
 
 }
 ```
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/54b953f8168d3b58701e0fc8dce5f8fb.png#pic_center)
+![](./images/blog_migrate_54b953f8168d3b58701e0fc8dce5f8fb_png.png)
 
 （关于序列化的问题找个需要另外写一篇博客）
 <br>
@@ -122,11 +122,11 @@ public class Main implements Serializable{
 * long getFilePointer()：获取文件记录指针的当前位置
 * void seek(long pos)：将文件记录指针定位到 pos 位置
   
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ef5153abf1d78ab57ae6ebb966afeb8a.png#pic_center)
+![](./images/blog_migrate_ef5153abf1d78ab57ae6ebb966afeb8a_png.png)
 
 * 如果想使用该类，必须先使用该类的构造器创建对象
   
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/45393f6e97cc5695dff3a31c8e6b5aea.png#pic_center)
+![](./images/blog_migrate_45393f6e97cc5695dff3a31c8e6b5aea_png.png)
 
 **方法和作用：**
 * void seek​(long pos)  改变指针的位置，默认从0开始，数字代表指针前面字节的个数。
@@ -140,7 +140,7 @@ public class Main implements Serializable{
 
 1.实现覆盖效果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8e032ad3cccf7cb6876038c3a0a208b6.png#pic_center)
+![](./images/blog_migrate_8e032ad3cccf7cb6876038c3a0a208b6_png.png)
 ```java
  @Test
     public void  RandomAccessFile2() throws Exception{
@@ -149,13 +149,13 @@ public class Main implements Serializable{
         ran3.write("kk".getBytes());//getBytes()将字符串转换为字节数组
     }
 ```
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2e8825171c1921a9b8afa3747c24aa3b.png#pic_center)
+![](./images/blog_migrate_2e8825171c1921a9b8afa3747c24aa3b_png.png)
 
 <br>
 
 2.插入效果
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2e8825171c1921a9b8afa3747c24aa3b.png#pic_center)
+![](./images/blog_migrate_2e8825171c1921a9b8afa3747c24aa3b_png.png)
 ```java
 	@Test
        public void  RandomAccessFile2() throws Exception{
@@ -169,12 +169,12 @@ public class Main implements Serializable{
 
 }
 ```
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2be2191dee53dbabd023316b8f289c29.png#pic_center)
+![](./images/blog_migrate_2be2191dee53dbabd023316b8f289c29_png.png)
 <br>
 
 3.多行文本插入效果（保留换行符）
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0c60906208057057efdbecd4e6b4bc0a.png#pic_center)
+![](./images/blog_migrate_0c60906208057057efdbecd4e6b4bc0a_png.png)
 ```java
 	@Test
     //2.从文件任意位置读取、写入
@@ -195,7 +195,7 @@ public class Main implements Serializable{
         ran3.close();
     }
 ```
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8dde8e4b2f0ff9f0df7b2856603b1f6d.png#pic_center)
+![](./images/blog_migrate_8dde8e4b2f0ff9f0df7b2856603b1f6d_png.png)
 
 **PS:**
  **==1.使用StringBuffer的toString()方法，可以将StringBuffer转换成String==**

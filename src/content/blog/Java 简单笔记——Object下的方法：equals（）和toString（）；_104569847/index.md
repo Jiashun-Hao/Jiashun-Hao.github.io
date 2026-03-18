@@ -28,7 +28,7 @@ public class Main {
 ```
 结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0360463c0389a9de816c0ea7a7cedacf.png)
+![](./images/blog_migrate_0360463c0389a9de816c0ea7a7cedacf_png.png)
 
 2.如果引用的是date类、string类、包装类、file类，作用改为比较两个对象的实体内容；
 测试代码：
@@ -45,7 +45,7 @@ public class Main {
 ```
 结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/680d31339165909725d58096120151c7.png)
+![](./images/blog_migrate_680d31339165909725d58096120151c7_png.png)
 
 ### 2.实现概念
 1.为什么可以使用？
@@ -114,7 +114,7 @@ class Order {
 ```
 输出：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/02a59f9848f4839880d47bbcbe93343e.png)
+![](./images/blog_migrate_02a59f9848f4839880d47bbcbe93343e_png.png)
 
 # 二.toString方法；
 ## 1.特性和作用
@@ -130,7 +130,7 @@ public class Main{
 ```
 输出结果：两个一样；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5ee3b95a337ebb08c1dcd233c3900808.png)
+![](./images/blog_migrate_5ee3b95a337ebb08c1dcd233c3900808_png.png)
 
 2.输出的格式：
 ```java
@@ -148,7 +148,7 @@ public class Main{
     }
 }
 ```
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f1a06e81d39616f5f8087f3473f1b3f1.png)
+![](./images/blog_migrate_f1a06e81d39616f5f8087f3473f1b3f1_png.png)
 ### 2.其它；
 略；
 因为手动重写和equals（）方法基本一样；

@@ -41,7 +41,7 @@ Case 2:
 112233445566778899 + 998877665544332211 = 1111111111111111110
 
 ***
-![](https://i-blog.csdnimg.cn/blog_migrate/d4ff20b38068ad023c8ce926d7636370.png)
+![](./images/blog_migrate_d4ff20b38068ad023c8ce926d7636370_png.png)
 
  **解析：**
  这道题主要考察的是对大数基本的处理，如果使用Java来实现，思路有两种；
@@ -113,11 +113,11 @@ public class Main {
 **==特别注意的点！！==**
 注意我在这个代码中注释“注意！！！！”下方的输出格式，如果是以这样的格式输出，在杭电的oj上会报格式异常的错误；
 
-![](https://i-blog.csdnimg.cn/blog_migrate/8715cd086323f4d7c04575a4896e634f.png)
+![](./images/blog_migrate_8715cd086323f4d7c04575a4896e634f_png.png)
 
 其实不是我们做错了，而是因为。。。。。。。
 
- ![](https://i-blog.csdnimg.cn/blog_migrate/97d991f75976bdb72bb56c21a1c6f1fb.png)
+ ![](./images/blog_migrate_97d991f75976bdb72bb56c21a1c6f1fb_png.png)
  
  [原文出自这里](https://www.cnblogs.com/yuyixingkong/p/3919899.html)
 <br>

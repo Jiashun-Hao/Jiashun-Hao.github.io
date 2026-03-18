@@ -124,7 +124,7 @@ class Node{
 	
 测试结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bdb1113263c041d982ebd815015afa04.png)
+![](./images/blog_migrate_bdb1113263c041d982ebd815015afa04_png.png)
 
 <br>
 # 2.反转链表
@@ -234,7 +234,7 @@ class Node{
 ```
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/59909372a6bf3a6df0d89ee267708714.png)
+![](./images/blog_migrate_59909372a6bf3a6df0d89ee267708714_png.png)
 
 <br>
 
@@ -346,7 +346,7 @@ class Node{
 ```
 测试结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3a6819936de0491bcaf5439d671931df.png)
+![](./images/blog_migrate_3a6819936de0491bcaf5439d671931df_png.png)
 
 <br>
 
@@ -474,7 +474,7 @@ class Node {
 ```
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cfbb251ca4258535ee613504b85970b5.png)
+![](./images/blog_migrate_cfbb251ca4258535ee613504b85970b5_png.png)
 
 第二种：非递归
 
@@ -658,6 +658,6 @@ class Node {
     }
 }
 ```
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7a73de600506764a1d6a44655acff4b0.png)
+![](./images/blog_migrate_7a73de600506764a1d6a44655acff4b0_png.png)
 
 特别鸣谢：[橙子小姐姐](https://me.csdn.net/weixin_42988781)

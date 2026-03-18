@@ -525,12 +525,12 @@ public class Test {
     }
 }
 ```
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b8cbf1bbb5d272baf753821520b44e20.png#pic_center)
+![](./images/blog_migrate_b8cbf1bbb5d272baf753821520b44e20_png.png)
 <br>
 
 ## 4.动态代理与AOP
 **概念：**
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/884b0a789c29ad63d264644a3db89357.png#pic_center)
+![](./images/blog_migrate_884b0a789c29ad63d264644a3db89357_png.png)
 
 **练习：**
 ```java
@@ -614,4 +614,4 @@ public class TestAOP {
     }
 }
 ```
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6e302371fe5c9118585f38155fb67819.png#pic_center)
+![](./images/blog_migrate_6e302371fe5c9118585f38155fb67819_png.png)

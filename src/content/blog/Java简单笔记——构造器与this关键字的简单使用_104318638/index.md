@@ -50,7 +50,7 @@ class Person{
 ```
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4090126af7cd13e8e851999469cc0e21.png)
+![](./images/blog_migrate_4090126af7cd13e8e851999469cc0e21_png.png)
 
 
 # 2.this关键字
@@ -92,7 +92,7 @@ class  Zoom
 ```
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7ef17c7c53e43ea35ef683ac4964e9e3.png)
+![](./images/blog_migrate_7ef17c7c53e43ea35ef683ac4964e9e3_png.png)
 
 然后，再在重名的地方添加this方法查看效果；
 ```java
@@ -103,7 +103,7 @@ public Zoom(String name,int age){
 ```
 结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5d623ddfb8ea5d5efe4c79fb22406926.png)
+![](./images/blog_migrate_5d623ddfb8ea5d5efe4c79fb22406926_png.png)
 
 很明显，赋值成功了，这样就说明了this的第一个用法——==用来指明该变量名为该类下的属性==。当然，在名字不重复的情况下，this是默认省略的。
 
@@ -139,7 +139,7 @@ class  Zoom
 
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c32ef8494572f8d271ebf469640e728e.png)
+![](./images/blog_migrate_c32ef8494572f8d271ebf469640e728e_png.png)
 
 这里将输出的结果作一下分析，并体会this（具体注意用法）
 
@@ -160,7 +160,7 @@ public Zoom(int id)
 ```
 输出会报错
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/99aa9e721aec5a705ab279259d36e950.png)
+![](./images/blog_migrate_99aa9e721aec5a705ab279259d36e950_png.png)
 
 这个原因也不难理解，构造器的参数不符合调用的参数，所以说，这个方法仅仅可以做调用和改值，并不能完全取代赋值；
 

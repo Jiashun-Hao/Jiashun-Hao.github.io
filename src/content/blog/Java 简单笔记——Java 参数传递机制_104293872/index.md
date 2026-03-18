@@ -64,7 +64,7 @@ public class Main {
 ```
 输出结果：a与b并没有交换；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9afac0b75c4b725985c7ec239154df0e.png)
+![](./images/blog_migrate_9afac0b75c4b725985c7ec239154df0e_png.png)
 
 解释：首先，每一个方法所声明的==成员变量==都是在栈空间内存放，互相并不影响；当执行主方法中的`int a=5;iint b=10;`的时候，在栈空间内存放a=5和b=10。在执行swap中i和j接收a和b的值的时候，程序自动在栈空间内新开辟两个空间，用来保存a和b的副本，也就是i=a=5和j=b=10；当改变i和j的值，a与b并不改变；
 例如，在swap中加入输出i和j的语句，就会发现i和j其实已经互换；
@@ -90,11 +90,11 @@ public class Main {
 ```
 运行结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/88d572e1329f6f8f853c3b66c4b2f8b9.png)
+![](./images/blog_migrate_88d572e1329f6f8f853c3b66c4b2f8b9_png.png)
 
 模拟内存图：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bf48d9a076cb289e366a9c03ad8b660c.png)
+![](./images/blog_migrate_bf48d9a076cb289e366a9c03ad8b660c_png.png)
 
 **2.引用数据类型代码解析：**
 以下代码为实现a与b的交换:
@@ -123,12 +123,12 @@ public class Main {
 ```
 输出结果：a与b发生了交换；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eb14a042221a9e9e2d6b94bd2c94d41b.png)
+![](./images/blog_migrate_eb14a042221a9e9e2d6b94bd2c94d41b_png.png)
 
 解释：在交换引用类型数据中的数据时，所创建引用的对象名（类名，这里为`TT
 `）在**栈空间**内存放，但是引用的对象（类）的==局部变量==和值在**堆空间**内存放（凡是“new”出来的都在**堆空间**）内存放，**栈空间**的对象名指向**堆空间**存放的数据。当进行值传递时，其实是将`TT`的首地址复制给系统自动创建的`Dis`类型的`S`，也就是说，现在的`s`和`TT`共同指向并操作同一处存在于堆空间的区域，所有，Swap发生的互换也就可以理解了。
 
 模拟内存图：
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d6c0083644086e355c89e6743dc1c795.png)
+![](./images/blog_migrate_d6c0083644086e355c89e6743dc1c795_png.png)
 完毕！
 2020年2月13日初写；

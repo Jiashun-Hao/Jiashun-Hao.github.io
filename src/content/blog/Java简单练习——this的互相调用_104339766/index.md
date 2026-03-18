@@ -79,7 +79,7 @@ public class Girl {
 ```
 **4.结果**
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1c90e5a36b532a7f3f2492ed22b95664.png)
+![](./images/blog_migrate_1c90e5a36b532a7f3f2492ed22b95664_png.png)
 
 **5.分析输出结果是怎么来的**
 

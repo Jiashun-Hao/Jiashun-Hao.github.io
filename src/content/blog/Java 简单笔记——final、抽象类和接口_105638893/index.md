@@ -14,20 +14,20 @@ language: 'Chinese'
 ## 作用：
 ### 1、final修饰类：该类不能再被继承，不得再有子类；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/72ef8a4a826c7ee84f92f1e384668b2c.png)
+![](./images/blog_migrate_72ef8a4a826c7ee84f92f1e384668b2c_png.png)
 
 #### 2、final修饰方法：该方法不能被重写；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/598fa7d588a4e54f60cc2e8276393185.png)
+![](./images/blog_migrate_598fa7d588a4e54f60cc2e8276393185_png.png)
 
 #### 3、final修饰属性：此属性变为常量（一般大写）； 
 * 此常量没有默认值，可以显示的赋值；
 * 可以用于代码块和构造器；
 * 用static与final同时修饰一个常量时，该常量为“全局常量”；
   
-      ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cb31ffd9c3a0a8726abd68332b1798a1.png)
+      ![](./images/blog_migrate_cb31ffd9c3a0a8726abd68332b1798a1_png.png)
   
-      ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3c9f677fa1971e45b823bbb057c8e1ae.png)
+      ![](./images/blog_migrate_3c9f677fa1971e45b823bbb057c8e1ae_png.png)
       
 # 2.abstract修饰符（抽象）
 ## 作用
@@ -35,7 +35,7 @@ language: 'Chinese'
  * 没有具体的实例，只是为了提供一些方法和属性给子类使用
  * 不可以被实例化
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f856e35dc6fddb38040e1d8d8c0d1fe4.png)
+![](./images/blog_migrate_f856e35dc6fddb38040e1d8d8c0d1fe4_png.png)
 
  * 有构造器并且可以被定义（类都有构造器）
   ```java
@@ -59,7 +59,7 @@ language: 'Chinese'
 		}
 ```
 
-输出结果：![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0932bafc7adf8934d0ff63439cb6cad5.png)
+输出结果：![](./images/blog_migrate_0932bafc7adf8934d0ff63439cb6cad5_png.png)
 
 #### 2.修饰方法 ：成为**抽象方法**：
 * 给子类预留方法，子类根据自己的情况继承后重写；

@@ -49,7 +49,7 @@ red
 pink
  
 ***
-![](https://i-blog.csdnimg.cn/blog_migrate/4f633bae530e80d0567594b0995f5617.png)
+![](./images/blog_migrate_4f633bae530e80d0567594b0995f5617_png.png)
 
 解析：
 这道题的要求其实很简单，给定一个数据集的个数，寻找在这个数据集中出现最多的元素（气球的颜色）
@@ -212,7 +212,7 @@ class Node1 implements Comparable{
 }
 ```
 输出结果：
-![](https://i-blog.csdnimg.cn/blog_migrate/1ab39631f5154aadd4d3420f375e9af7.png)
+![](./images/blog_migrate_1ab39631f5154aadd4d3420f375e9af7_png.png)
 
 最后说一句：还是杭电厉害。
 

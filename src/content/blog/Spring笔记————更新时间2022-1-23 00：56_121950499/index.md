@@ -18,7 +18,7 @@ language: 'Chinese'
 # IOC
 ## 1.IOC接口
 
-![](https://i-blog.csdnimg.cn/blog_migrate/c0492479537c416eb5a714ceb133268d.png)
+![](./images/blog_migrate_c0492479537c416eb5a714ceb133268d_png.png)
 
 说明：
 FileSystemXmlApplicationContext：路径为盘符路径
@@ -26,13 +26,13 @@ ClassPathXmlApplicationContext：路径为文件路径
 
 ## 2.IOC操作 Bean
 
-![](https://i-blog.csdnimg.cn/blog_migrate/81326d6dfdd6c8f7b954881dffb436ab.png)
+![](./images/blog_migrate_81326d6dfdd6c8f7b954881dffb436ab_png.png)
 
-![](https://i-blog.csdnimg.cn/blog_migrate/aea9036c9eb180e1294e50f0fb58d521.png)
+![](./images/blog_migrate_aea9036c9eb180e1294e50f0fb58d521_png.png)
 
 ### 2.1 基于XML方式创建对象
 
-![](https://i-blog.csdnimg.cn/blog_migrate/26cbfbcf173aa8a55facf148b9b32eda.png)
+![](./images/blog_migrate_26cbfbcf173aa8a55facf148b9b32eda_png.png)
 
 ### 2.2 ：注入依赖DI：基本属性注入
 #### 1：第一种方法：set方法注入
@@ -88,7 +88,7 @@ public class Main {
 
 第一步：在xml文件中的beans中添加`xmlns:p="http://www.springframework.org/schema/p"`
 
-![](https://i-blog.csdnimg.cn/blog_migrate/883daaba4b041ac1ad43bfe79fab9e9d.png)
+![](./images/blog_migrate_883daaba4b041ac1ad43bfe79fab9e9d_png.png)
 
 第二步：配置bean
 ```xml
@@ -175,7 +175,7 @@ public class Main {
 ### 2.4 ：外部Bean注入
 第一步：创建两个不同的实现类
 
-![](https://i-blog.csdnimg.cn/blog_migrate/73e0ee5104a89d58ea10fe2d128c4eb4.png)
+![](./images/blog_migrate_73e0ee5104a89d58ea10fe2d128c4eb4_png.png)
 
 ==我们要做的是在Service中调用Dao里面的方法==
 也就是
@@ -229,7 +229,7 @@ public class Main {
 ```
 结果：
 
-![](https://i-blog.csdnimg.cn/blog_migrate/8e0c8fcee90e7ea78fd1b59709f5119f.png)
+![](./images/blog_migrate_8e0c8fcee90e7ea78fd1b59709f5119f_png.png)
 
 ### 2.5 ：内部Bean注入
 ==举例部门与员工之间的一对多关系==
@@ -369,7 +369,7 @@ public class Employee {
         <property name="number" value="150XXXX2631"></property>
     </bean>
 ```
-![](https://i-blog.csdnimg.cn/blog_migrate/d6b2c04d3a8fef56fc5f61b0bc007524.png)
+![](./images/blog_migrate_d6b2c04d3a8fef56fc5f61b0bc007524_png.png)
 
 ### 2.7 ：集合注入
 ```java
@@ -541,7 +541,7 @@ public class student {
 ### 2.8 ：普通Bean和工厂Bean（FactoryBean）
 普通bean：配置文件中限制了Bean的类型
 
-![](https://i-blog.csdnimg.cn/blog_migrate/8cbcff3961e92d15656ebe37930a09cb.png)
+![](./images/blog_migrate_8cbcff3961e92d15656ebe37930a09cb_png.png)
 
 工厂bean：返回的Bean的类型可以不是配置文件中的类型；
 操作：
@@ -674,7 +674,7 @@ public class MebeanPost implements BeanPostProcessor {
     <bean id="MebeanPost" class="Demo1.MebeanPost"></bean>
 </beans>
 ```
-![](https://i-blog.csdnimg.cn/blog_migrate/60e1d138e4678161293017d3e57ee53b.png)
+![](./images/blog_migrate_60e1d138e4678161293017d3e57ee53b_png.png)
 
 ### 2.11 ：自动装配
 ```xml
@@ -688,7 +688,7 @@ public class MebeanPost implements BeanPostProcessor {
 #### 1：一般的数据库连接
 引入德鲁伊连接池的jar包
 
-![](https://i-blog.csdnimg.cn/blog_migrate/a47d18c3e84e8032be006d0281f8db9a.png)
+![](./images/blog_migrate_a47d18c3e84e8032be006d0281f8db9a_png.png)
 
 配置，xml文件
 ```xml

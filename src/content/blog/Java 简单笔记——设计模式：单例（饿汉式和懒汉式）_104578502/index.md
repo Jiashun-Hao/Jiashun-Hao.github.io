@@ -49,7 +49,7 @@ class sing{
 ```
 输出结果：可以看出，两个对象指向同一片内存区域，也就是同一个对象；
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4bb09b066f15ebfdf913e11b3abc39d9.png)
+![](./images/blog_migrate_4bb09b066f15ebfdf913e11b3abc39d9_png.png)
 
 ## 3.代码的实现（懒汉式）
 ```java
@@ -79,7 +79,7 @@ class sing{
 ```
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5cb47d2492aa9f8a92a3ff1c5b40626b.png)
+![](./images/blog_migrate_5cb47d2492aa9f8a92a3ff1c5b40626b_png.png)
 
 ## 4.（饿汉式）与（懒汉式）的区别：
 其实这个很有意思，因为这两种方法的实现过程真的“人如其名”，其特点就在于我注释中写的//import的代码；

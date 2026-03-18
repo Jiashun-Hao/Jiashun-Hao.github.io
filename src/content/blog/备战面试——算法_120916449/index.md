@@ -159,7 +159,7 @@ public class Main {
 }
 ```
 # 7.master公式（递归时间复杂度）
-![](https://i-blog.csdnimg.cn/blog_migrate/5916c59b6ca4d2509da934b4e59628b5.png)
+![](./images/blog_migrate_5916c59b6ca4d2509da934b4e59628b5_png.png)
 
 # 8.归并排序（二分）
 ```java

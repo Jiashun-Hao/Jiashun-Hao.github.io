@@ -46,13 +46,13 @@ class Student extends Class{
 ```
 当我为类`Student`所实例化的`a`调用属性和方法的时候，可以看到，`a`可以调用`Class` 类中所有的属性和方法：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/625ce62ee2a8bf39db4814f79da2eadc.png)
+![](./images/blog_migrate_625ce62ee2a8bf39db4814f79da2eadc_png.png)
 
 将其一一赋值，调用方法打印，得到以下的结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cdf74c6fcc26dbfa6fc6c0ac977885f2.png)
+![](./images/blog_migrate_cdf74c6fcc26dbfa6fc6c0ac977885f2_png.png)
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/897b119ce628553f28b91b32203edbfe.png)
+![](./images/blog_migrate_897b119ce628553f28b91b32203edbfe_png.png)
 
 ### 3.作用及注意事项：
 1.继承的主要作用有优化代码，减少代码冗余，提高代码的利用性。他的思想也很简单，当有多个类（>=2个类）中含有相同的属性或方法的时候，将这些属性和方法提出来创建一个新的类，其它的类可以通过**继承**使用该类中的属性或方法，并且互不影响；
@@ -98,7 +98,7 @@ class Student extends Class{
 ```
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/005b5b5ecac9677f266efc04b5e0bf8a.png)
+![](./images/blog_migrate_005b5b5ecac9677f266efc04b5e0bf8a_png.png)
 
 可以看到，第6行的方法调用并没有调用父类中的方法，而是使用了子类中重构的方法；
 
@@ -110,9 +110,9 @@ class Student extends Class{
 
 3.==重写时方法和属性前面的修饰符可以修改，但是作用范围只能从小变大，例如父类中被protected所修饰，则子类中只能使用protected或更大范围的public；==
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/571cd21a965ab31617c3374d394ba3e4.png)
+![](./images/blog_migrate_571cd21a965ab31617c3374d394ba3e4_png.png)
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/065afd2dc58601c3a993627678591784.png)
+![](./images/blog_migrate_065afd2dc58601c3a993627678591784_png.png)
 
 ### 3.重写与重构：
 这是一个纠结了我很多天的问题，重写和重构有什么区别？查了很多资料，也问了很多老师，但都得不到一个准确的答案，我将这些整理汇总起来得出一个可能会被喷但是我想你们也不知道从那喷起的答案：**重构==重写** ，起码在很多时候他们是相等的，如果非要说有什么区别，就是在于前面的修饰符。在《Java从入门到精通 第5版》一书中，我找到了下面这样一句话：
@@ -163,7 +163,7 @@ class Student extends Class{
 ```
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/acbf0f32a2153135d09e58ccd84cb2c8.png)
+![](./images/blog_migrate_acbf0f32a2153135d09e58ccd84cb2c8_png.png)
 
 ### 2.注意事项
 在构造器中，如果不显示的调用this(形参列表)或super(形参列表)，则构造器默认调用<font color = red>父类空参的构造器</font>，也就是说，每个构造器都有一个默认的``super()`` 语句。这时候出现了一个问题，最终父类所调用的是谁的空参构造器？

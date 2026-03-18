@@ -11,7 +11,7 @@ language: 'Chinese'
 
 # 1.存储引擎
 
-![](https://i-blog.csdnimg.cn/blog_migrate/eb692cae27362d478219dadcf0e44ff8.png#pic_center)
+![](./images/blog_migrate_eb692cae27362d478219dadcf0e44ff8_png.png)
 
 # 2.事务
 **1. 事务是一个操作序列，这些操作要么全部执行，要么都不执行。**

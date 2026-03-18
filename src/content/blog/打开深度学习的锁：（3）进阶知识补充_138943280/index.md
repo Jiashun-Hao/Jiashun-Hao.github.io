@@ -109,7 +109,7 @@ $$\tanh'(x) = 1 - \tanh^2(x)$$
 - 无法很好地拟合训练数据
 - 训练误差和测试误差都很高
   
-![](https://i-blog.csdnimg.cn/blog_migrate/67908dbd58d98ee34c547ce56c5d1b07.png)
+![](./images/blog_migrate_67908dbd58d98ee34c547ce56c5d1b07_png.png)
 
 ## Variance（方差）
 方差是指模型对训练数据中==随机噪声的敏感程度==。
@@ -120,7 +120,7 @@ $$\tanh'(x) = 1 - \tanh^2(x)$$
 - 在训练数据上表现很好，但在测试数据上表现较差
 - 训练误差低，测试误差高
 
-![](https://i-blog.csdnimg.cn/blog_migrate/5944b43f42e41fff6885fc61b0894e97.png)
+![](./images/blog_migrate_5944b43f42e41fff6885fc61b0894e97_png.png)
 
 
 ## Bias-Variance Tradeoff（偏差-方差权衡）
@@ -195,11 +195,11 @@ $$\text{d}\omega^{[\ell]} = \frac{d J}{d \omega^{[\ell]}} + \frac{\lambda}{m} \t
 
 <font size=5 >因为可以减少对**个别特征**的过度依赖。==泛化能力不足往往与模型对个别特征的过度依赖有关== </font>
 
-![](https://i-blog.csdnimg.cn/blog_migrate/d9db5383432439fb7224db99a9ac9b60.png)
+![](./images/blog_migrate_d9db5383432439fb7224db99a9ac9b60_png.png)
 
 此外，降低权重还有另外作用，<font size=5 color=red>减小非重要特征的影响力--权重被趋近于0。**减小网络复杂度** </font>
 
-![](https://i-blog.csdnimg.cn/blog_migrate/2f6422effe38194e3c900722a90bcb5a.png)
+![](./images/blog_migrate_2f6422effe38194e3c900722a90bcb5a_png.png)
 
 对第一层来说，减小的是输入的特征的权重，**优化的是输入样本的特征**。
 
@@ -207,9 +207,9 @@ $$\text{d}\omega^{[\ell]} = \frac{d J}{d \omega^{[\ell]}} + \frac{\lambda}{m} \t
 
 L1正则化前：
 
-![](https://i-blog.csdnimg.cn/blog_migrate/c8876057ad4f25e6b264bd4e3c04bdb2.png)L1正则化后：
+![](./images/blog_migrate_c8876057ad4f25e6b264bd4e3c04bdb2_png.png)L1正则化后：
 
-![](https://i-blog.csdnimg.cn/blog_migrate/a94bbdfa9ede8919f3817f210a630556.png)
+![](./images/blog_migrate_a94bbdfa9ede8919f3817f210a630556_png.png)
 
 ## 3. L2正则化（Ridge正则化）：作用于损失函数和权重
 $$J(w, b) = \frac{1}{m} \sum_{i=1}^m L(\hat y^{i},y^{i})+ \frac{\lambda}{2m}\sum_{j=1}^n w_j^2$$
@@ -298,7 +298,7 @@ dA2 = dA2 / keep_prob
 
 此外， Dropout正则化的设置比较灵活，对于重要的层，比如最后的==输出层==，我们也可以不用 Dropout，把 keep_prob 设置为1。
 
-![](https://i-blog.csdnimg.cn/blog_migrate/f0875394b6148bbe7c8eac1ab4e06b4b.png)
+![](./images/blog_migrate_f0875394b6148bbe7c8eac1ab4e06b4b_png.png)
 
 ## 5. 其它正则化：
 ### 1.歪门邪道--数据扩增（Data Augmentation）
@@ -309,7 +309,7 @@ dA2 = dA2 / keep_prob
 ### 2.早停法（Early Stopping）：基于验证集
 简单来说，就是在测试寻找超参数（迭代次数、学习率等）的时候，找一个对于验证集来说损失最低的$W$和$b$, 即使这个$W$和$b$不是对于训练集的损失最低。
 
-![](https://i-blog.csdnimg.cn/blog_migrate/87b24c9e622c960cc5a0267a440be26d.png)
+![](./images/blog_migrate_87b24c9e622c960cc5a0267a440be26d_png.png)
 
 # 五、设置优化问
 除了正则化以外，一些对于设置的优化方式，也可以帮助建立更好的模型，主要有以下几点。
@@ -317,7 +317,7 @@ dA2 = dA2 / keep_prob
 
 目的：可以将数据聚合到以0为原点，的方差标准化为 1。
 
-![](https://i-blog.csdnimg.cn/blog_migrate/db3cf2a1dc2da648785833cf510c1a66.png)
+![](./images/blog_migrate_db3cf2a1dc2da648785833cf510c1a66_png.png)
 **公式：**
 
 第一步，获得输入的均值：
@@ -335,7 +335,7 @@ $$x' = \frac{x - \mu}{\sigma}$$
 
 ==通过输入Normalizing化，可以让特征分布的更均匀，损失函数图形更像一个碗，更容易梯度下降。==
 
-![](https://i-blog.csdnimg.cn/blog_migrate/0009cf9495314f2986981a0dc7ffddcc.png)
+![](./images/blog_migrate_0009cf9495314f2986981a0dc7ffddcc_png.png)
 
 ## 2. 防止梯度爆炸/梯度消失
 
@@ -343,7 +343,7 @@ $$x' = \frac{x - \mu}{\sigma}$$
 
 ==在后续涉及到 W 乘法操作中可能会导致 **W 过大或者过小**，继而导致 **Z 过大或者过小**。==
 
-![](https://i-blog.csdnimg.cn/blog_migrate/d92c9b914b65b1654ce0974b63697916.png)
+![](./images/blog_migrate_d92c9b914b65b1654ce0974b63697916_png.png)
 
 所以我们需要优化W的初始化，即对==不同的层用不同的W初始化函数==
 
@@ -381,7 +381,7 @@ $$x' = \frac{x - \mu}{\sigma}$$
 $$f'(x) \approx \frac{f(x + h) - f(x - h)}{2h}$$
 $$ 函数f（x）在x的点导数\approx \frac{f(x + 一个微小的偏量) - f(x -一个微小的偏量)}{2 * 一个微小的偏量}$$
 
-![](https://i-blog.csdnimg.cn/blog_migrate/7df386c6622bfa16528fb74f712c7c7c.png)
+![](./images/blog_migrate_7df386c6622bfa16528fb74f712c7c7c_png.png)
 
 不过，这个方法有一个必要的前提条件，
 
@@ -424,7 +424,7 @@ $$\text{relative error} = \frac{\left\| dθ - \text{grad}_{\text{analytic}} \rig
 
 结合二者的优点，提出了小批量梯度下降，即使用`1 < M < 训练样本总数` 的 数据去进行梯度下降，综合==收敛方向稳定== 和 ==计算代价低，可以更快地进行迭代== 的优点
 
-![](https://i-blog.csdnimg.cn/blog_migrate/831b8f135eebad66623db90aeaad0533.png)
+![](./images/blog_migrate_831b8f135eebad66623db90aeaad0533_png.png)
 
 使用小批量梯度下降，建议遵守下面的规范：
 
@@ -508,7 +508,7 @@ if m % mini_batch_size != 0:
 加权指数平均（WEMA）的核心思想就是在考虑==所有历史数据==的基础上，通过赋予较新的数据点和旧数据点不同的权重，<font size=5 color=red>来计算局部平均值</font>
 
 
-![](https://i-blog.csdnimg.cn/blog_migrate/682c114a5c398d38390ae87ec2c117a7.png)
+![](./images/blog_migrate_682c114a5c398d38390ae87ec2c117a7_png.png)
 
 ## 1. 数学公式
 $$

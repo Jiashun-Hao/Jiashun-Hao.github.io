@@ -146,7 +146,7 @@ public class Hello {
 ```
 运行结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/703560cb5b950d28109a9fac13f46445.png)
+![](./images/blog_migrate_703560cb5b950d28109a9fac13f46445_png.png)
 
 #### 特点：
 1.可以使用这样的方法（throws）将错误逐个向上抛出；
@@ -159,7 +159,7 @@ public class Hello {
 ### 3.“抛”的第二种方法：手动触发
 为什么不写第一种？因为如果不对异常进行处理，Java程序会自动抛出**异常类对象**；相信你也一定见过类似的，比如：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/580be740608e00488a400b23fda5497f.png)
+![](./images/blog_migrate_580be740608e00488a400b23fda5497f_png.png)
 
 为了完善软件的生态，我们有时候需要限制一下用户的操作，==当用户执行不符合我们软件设计的操作时==，就应该向用户发送一个错误，Java中提供了一种用户可以自定义的“异常提示”
 
@@ -186,7 +186,7 @@ public class Hello {
 ```
 运行结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a40f690478ac2c3adcd1ebb3e016ad58.png)
+![](./images/blog_migrate_a40f690478ac2c3adcd1ebb3e016ad58_png.png)
 
 自定义异常一般用于当用户输入某些不适合软件的数据时，程序终止运行并返回一个异常，相较于`return`所返回的内容，‘异常’不存在变量类型的限制，开发者可以更方便的处理和完善；
 
@@ -206,7 +206,7 @@ Java中提供的异常类很多，大家可以去api自行查找；
 
 1.首先Java的异常类是一个类，如果我们不知道该怎么写，那就先创建一个类，让他 **继承** Java自带的异常类
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/22c50fef8db081b4781449932e3c4345.png)
+![](./images/blog_migrate_22c50fef8db081b4781449932e3c4345_png.png)
 
 2.打开原有的异常类，查看里面的格式：
 
@@ -216,7 +216,7 @@ Java中提供的异常类很多，大家可以去api自行查找；
 	3.Ctrl + Enter；（继续第二步）
 	4.也可以直接快捷：Ctrl+鼠标左键；
 	
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8d032c81e5d24425e966e9718ef1c961.png)
+![](./images/blog_migrate_8d032c81e5d24425e966e9718ef1c961_png.png)
 很明显的我们可以看到Java自带异常类的格式，于是乎我们可以直接将异常类创建的方法归纳如下：
 
 
@@ -259,7 +259,7 @@ public class Hello {
 ```
 输出结果：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c8c50787464aa520922010cbbce9455e.png)
+![](./images/blog_migrate_c8c50787464aa520922010cbbce9455e_png.png)
 
 
 

@@ -42,7 +42,7 @@ Case 2:
 7 1 6
 
 ***
-![](https://i-blog.csdnimg.cn/blog_migrate/4d71f7d75d8e10f085b19a937d50d66a.png)
+![](./images/blog_migrate_4d71f7d75d8e10f085b19a937d50d66a_png.png)
 
 思路：
 这道题看着挺难，其实也没什么玄机；主要是搞清楚一个概念即可：
