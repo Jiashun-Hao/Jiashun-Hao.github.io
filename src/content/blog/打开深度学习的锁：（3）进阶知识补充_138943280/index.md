@@ -259,9 +259,9 @@ regularization =(1/m)*(lambd/2)*(np.sum(np.square(W1))+np.sum(np.square(W2))+np.
 
 Dropout 的核心思想更直接，就是在==每次训练迭代中==，随机将一些神经元的激活值 $a$ 设置为零，==每次训练设置的神经元都不同==。
 
-<font size=5  color=red>Dropout 丢弃的不是神经元，丢弃的是当前个别神经元对于样本的预测，
+<font size=5  color=red>Dropout 丢弃的不是神经元，丢弃的是当前个别神经元对于样本的预测，</font>
 
-<font size=5  color=red>或者说丢弃的是**当前层**某一个神经元对于原始输入**样本的预测**，每次训练迭代中丢的都不一样。
+<font size=5  color=red>或者说丢弃的是**当前层**某一个神经元对于原始输入**样本的预测**，每次训练迭代中丢的都不一样。</font>
 
 这个过程涉及到公式不明朗（在我看来是这样...）所以在此直接记录完成的代码。
 
