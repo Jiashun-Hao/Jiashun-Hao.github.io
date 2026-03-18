@@ -1,18 +1,16 @@
 ---
 title: "Java 匿名对象类"
-publishDate: 2024-10-15
-source: "https://blog.csdn.net/HJS1453100406/article/details/104262980"
+publishDate: 2020-02-11
+description: '笔记'
 tags:
-  - '未分类'
-description: '匿名对象类：创建的类的对象没有名字；'
+  - Java
 language: 'Chinese'
 ---
-
-匿名对象类：创建的类的对象没有名字；  
-作用：当只需要调用一次的时候可以使用；  
+匿名对象类：创建的类的对象没有名字；
+作用：当只需要调用一次的时候可以使用；
 代码：
 
-```
+```java
 public class Main {
     public static void main(String[] args)
     {
@@ -33,7 +31,8 @@ class min{
 }
 ```
 
-输出结果：  
-![在这里插入图片描述](images/blog_migrate_4503ae30d4da8080d530dd946077517e_png.png)
+输出结果：
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4503ae30d4da8080d530dd946077517e.png)
+
 
 2020年2月11日 初写
