@@ -1,5 +1,5 @@
 ---
-title: "打开深度学习的锁：（0）？"
+title: "打开深度学习的锁（0）"
 publishDate: 2024-12-06
 tags:
   - 'Python'
