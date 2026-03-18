@@ -1,13 +1,13 @@
 ---
-title:LeetCode--无重复字符的最长子串(详细解析)"
+title: LeetCode--无重复字符的最长子串（详细解析）"
 publishDate: 2021-10-26
 description: 'OJ题解'
 tags:
   - Java
 language: 'Chinese'
 ---
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/974556d3dbe9943389a1015ab0338408.png)
 
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/974556d3dbe9943389a1015ab0338408.png)
 思路:
 1.桶排序的思想，用字符对应的数组来确定字符第一次出现和第二次出现的位置，相差之和便是字串的长度
 2.选出最长的字串长度输出即可。
