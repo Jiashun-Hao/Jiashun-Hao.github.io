@@ -11,13 +11,13 @@ language: 'Chinese/English'
 
 # I: Read abstract (阅读摘要)
 ## 0：Proper noun interpretation（专有名词解释）
-**：Tradition Game Theory（传统博弈）：**
+**1：Tradition Game Theory（传统博弈）：**
 	&emsp;Under certain conditions ad following certain rules, one or several people or teams whit **absolute rational thinking**, from their allowed choice of behavior or strategy to choose and implement， and from the corresponding results or benefits.
 
 &emsp;在一定条件下，遵循一定的规则，一个或几个拥有**绝对理性**思维的人或者团队，从各自允许的选择的行为或策略进行选择并加以实施，并从中各自取得相应结果或收益的过程。
 
 
-**②：Evolutionary Game Theory（演化博弈）：**
+**2：Evolutionary Game Theory（演化博弈）：**
 &emsp; In evolutionary game theory, instead of modeling human beings as particularly rational players, humans generally reach game equilibrium through multiple trials and errors (dynamic). Evolutionary game theory does not require players to be completely rational (bounded rationality), nor does it require complete information conditions
 
 &emsp;演化博弈论不在将人类模型化为特别理性的博弈者，而是认为人类通常是通过多次试错的方法达到博弈均衡的（动态），演化博弈理论并不要求参与人是完全理性的（有限理性），也不要求完全信息条件。
