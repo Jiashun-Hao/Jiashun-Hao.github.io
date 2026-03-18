@@ -1,7 +1,7 @@
 ---
 title: "DeepLearning-NLP"
 publishDate: 2024-12-12
-description: 'AI'
+description: 'DeepLearning'
 tags:
   - Deepl Learning
   - NLP
