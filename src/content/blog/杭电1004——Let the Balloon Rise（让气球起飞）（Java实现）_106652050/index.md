@@ -1,60 +1,58 @@
 ---
 title: "杭电1004——Let the Balloon Rise（让气球起飞）（Java实现）"
-publishDate: 2021-08-01
-source: "https://blog.csdn.net/HJS1453100406/article/details/106652050"
+publishDate: 2020-06-09
 tags:
-  - '未分类'
-description: 'Let the Balloon Rise'
-language: 'Chinese'
+  - 'OJ题解'
+description: 'JAVA'
+language: 'English\Chinese'
 ---
 
-Let the Balloon Rise
-  
- Time Limit: 2000/1000 MS (Java/Others) Memory Limit: 65536/32768 K (Java/Others) Total Submission(s): 178885 Accepted Submission(s): 71512
+<center>  Let the Balloon Rise</center>
+<br>
+Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)
+Total Submission(s): 178885    Accepted Submission(s): 71512
 
 ---
 
-Problem Description  
- Contest time again! How excited it is to see balloons floating around. But to tell you a secret, the judges’ favorite time is guessing the most popular problem. When the contest is over, they will count the balloons of each color and find the result.
+Problem Description
+Contest time again! How excited it is to see balloons floating around. But to tell you a secret, the judges' favorite time is guessing the most popular problem. When the contest is over, they will count the balloons of each color and find the result.
 
 This year, they decide to leave this lovely job to you.
-
+ 
 ---
-
-Input  
- Input contains multiple test cases. Each test case starts with a number N (0 < N <= 1000) – the total number of balloons distributed. The next N lines contain one color each. The color of a balloon is a string of up to 15 lower-case letters.
+Input
+Input contains multiple test cases. Each test case starts with a number N (0 < N <= 1000) -- the total number of balloons distributed. The next N lines contain one color each. The color of a balloon is a string of up to 15 lower-case letters.
 
 A test case with N = 0 terminates the input and this test case is not to be processed.
-
+ 
 ---
-
-Output  
- For each case, print the color of balloon for the most popular problem on a single line. It is guaranteed that there is a unique solution for each test case.
-
+Output
+For each case, print the color of balloon for the most popular problem on a single line. It is guaranteed that there is a unique solution for each test case.
+ 
 ---
+Sample Input
+5
+green
+red
+blue
+red
+red
+3
+pink
+orange
+pink
+0
+ 
 
-Sample Input  
- 5  
- green  
- red  
- blue  
- red  
- red  
- 3  
- pink  
- orange  
- pink  
- 0
-
-Sample Output  
- red  
- pink
-
+Sample Output
+red
+pink
+ 
 ---
+![](https://i-blog.csdnimg.cn/blog_migrate/4f633bae530e80d0567594b0995f5617.png)
 
-![在这里插入图片描述](images/blog_migrate_4f633bae530e80d0567594b0995f5617_png.png)  
- 解析：  
- 这道题的要求其实很简单，给定一个数据集的个数，寻找在这个数据集中出现最多的元素（气球的颜色）
+解析：
+这道题的要求其实很简单，给定一个数据集的个数，寻找在这个数据集中出现最多的元素（气球的颜色）
 
 一开始的思路是使用数组，但是卡在了类型的问题上（毕竟不是PHP），最后想到了使用**自定义类**来声明一个**自定义类型的数组**（C/C++使用的是结构体）
 
@@ -62,15 +60,12 @@ Sample Output
 
 注意的几个点：
 
-```
-1.因为后续会使用到快排的函数 Arrays.sort(),所以需要做一些必要的操作
-	①在自定义类中，重写toString方法：该方法决定输出；
-	②该类实现Comparable接口
-	③实现接口后，重写compareTo方法：该方法决定排序的根基（Arrays.sort()）
-	④写明set方法，后续会用到
-```
-
-```
+	1.因为后续会使用到快排的函数 Arrays.sort(),所以需要做一些必要的操作
+		①在自定义类中，重写toString方法：该方法决定输出；
+		②该类实现Comparable接口
+		③实现接口后，重写compareTo方法：该方法决定排序的根基（Arrays.sort()）
+		④写明set方法，后续会用到
+```java
 class Node1 implements Comparable{
     int no=0;
     String name=null;
@@ -106,17 +101,14 @@ class Node1 implements Comparable{
     }
 }
 ```
-
-**第二步：定义一个自定义类型的数组**  
- 注意的几个点：
-
-```
-1.由于是自定义类型所声明的数组，所以不单单数组整体要实例化，数组中每个单位也要实例化；
-2.如果没有实例化数组个别单元，会空指针异常的错误（NullPointerException）
-3.如果进行自定义类定义的数组元素要进行某个属性的比较，一定要使用equals（）方法，不能用比较运算符；
-```
-
-```
+**第二步：定义一个自定义类型的数组**
+注意的几个点：
+	
+	1.由于是自定义类型所声明的数组，所以不单单数组整体要实例化，数组中每个单位也要实例化；
+	2.如果没有实例化数组个别单元，会空指针异常的错误（NullPointerException）
+	3.如果进行自定义类定义的数组元素要进行某个属性的比较，一定要使用equals（）方法，不能用比较运算符；
+	
+```java
 public static void main(String [] args){
         Scanner sc=new Scanner(System.in);//键盘交互输入
 
@@ -148,8 +140,7 @@ public static void main(String [] args){
 ```
 
 完整代码：
-
-```
+```java
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -220,9 +211,11 @@ class Node1 implements Comparable{
 
 }
 ```
+输出结果：
+![](https://i-blog.csdnimg.cn/blog_migrate/1ab39631f5154aadd4d3420f375e9af7.png)
 
-输出结果：  
- ![在这里插入图片描述](images/blog_migrate_1ab39631f5154aadd4d3420f375e9af7_png.png)  
- 最后说一句：还是杭电厉害。
+最后说一句：还是杭电厉害。
 
 特别鸣谢：[橙子小姐姐](https://me.csdn.net/weixin_42988781)
+
+
