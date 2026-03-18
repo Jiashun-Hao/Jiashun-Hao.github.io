@@ -8,10 +8,10 @@ language: 'Chinese'
 ---
 
 First ，这是一篇很水的博客，我写给自己，不推荐看；
-### 题目
+#题目
 输入圆，比大小；
 
-### 代码
+##代码
 ```java
 public class Main {
     public static void main(String[] args) {
