@@ -145,7 +145,7 @@ class Person{
     }
 }
 ```
-#### 1.静态内部类创建对象
+### 1.静态内部类创建对象
 格式：
 外部类类名.内部类类名 对象 = new 外部类类名.内部类类名（）；
 ```java
@@ -234,10 +234,3 @@ class Person{
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/97e8333c23e7e57260b07802668afbe5.png)
 
 图片来源：[点这里](https://www.nowcoder.com/questionTerminal/3fd7690375a644a0aa0fdbfe43ec7b8d?orderByHotValue=1&page=1&onlyReference=false)
-
-
-
-
-
-
-

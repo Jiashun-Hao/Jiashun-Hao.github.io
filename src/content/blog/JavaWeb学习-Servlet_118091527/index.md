@@ -340,6 +340,3 @@ public class Servlet01 extends HttpServlet {
     }
 }
 ```
-
-
-

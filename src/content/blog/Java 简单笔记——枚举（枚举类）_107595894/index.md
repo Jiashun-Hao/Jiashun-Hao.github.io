@@ -26,7 +26,7 @@ language: 'Chinese'
 	5、创建枚举类的对象；
 
 步骤有些麻烦，无妨，定义一个含有“四季”及其属性的枚举类然后让我们一一列举；
-### 1、私有化构造器
+## 1、私有化构造器
 ```java
 class Season{
     private Season(String Name,String Desc){  
@@ -244,7 +244,7 @@ enum Season1{//2.使用enum 代替 class
 
 # 四、枚举类常用的方法
 枚举类有一些方法，说两个常用的：
-### 1.values（数组转换）
+## 1.values（数组转换）
 `values`的作用是将枚举类中的对象按照数组的形式返回；
 
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dacd707741f066a29d11cb28ffbdc07d.png)

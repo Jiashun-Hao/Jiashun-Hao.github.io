@@ -217,5 +217,3 @@ class Node1 implements Comparable{
 最后说一句：还是杭电厉害。
 
 特别鸣谢：[橙子小姐姐](https://me.csdn.net/weixin_42988781)
-
-

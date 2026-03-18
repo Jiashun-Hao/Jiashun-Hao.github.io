@@ -14,7 +14,7 @@ language: 'Chinese'
 **原理：** 是在创建流对象的时候，会创建一个内置默认大小的缓冲区数组（大小为：8192（8kb）），等缓冲区满了以后在写入文件，减少系统IO次数，从而提高读写效率；
 **详细图解：**[图解缓冲流](https://www.cnblogs.com/pjhaymy/p/13339501.html).
 <br>
-### 1.字节缓冲流的使用
+## 1.字节缓冲流的使用
 ```java
 import org.junit.jupiter.api.Test;
 import java.io.*;
@@ -152,7 +152,7 @@ public void BufferedFileReader(){
 
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d2c475dc5a9573c966085e4ce61f63e4.png#pic_center)
 <br>
-### 1.解码使用
+## 1.解码使用
 ```java
 import org.junit.jupiter.api.Test;
 import java.io.*;

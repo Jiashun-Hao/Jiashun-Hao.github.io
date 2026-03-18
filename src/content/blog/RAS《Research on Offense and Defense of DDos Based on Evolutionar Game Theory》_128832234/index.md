@@ -80,7 +80,3 @@ language: 'Chinese/English'
 
  &emsp;攻击方更倾向于发起攻击，防御方的策略选择与主动防御系统的成本有关（这不是废话吗？？？？？）
  ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5f3acba9feb05f61d56286032e75afa0.png)
-
- 
-
-

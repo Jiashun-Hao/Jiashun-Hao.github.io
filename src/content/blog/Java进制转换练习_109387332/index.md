@@ -6,6 +6,7 @@ tags:
   - Java
 language: 'Chinese'
 ---
+
 # 二进制转十六进制
 ```java
 import java.math.BigInteger;

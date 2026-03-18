@@ -179,9 +179,3 @@ Spring的底层注解@**Import**，给容器中导入一个组件；导入的组
 以前我们需要自己配置的东西，自动配置类都帮我们；
 
 J2EE的整体整合解决方案和自动配置都在spring-boot-autoconfigure-1.5.9.RELEASE.jar；
-
-
-
-
-
-

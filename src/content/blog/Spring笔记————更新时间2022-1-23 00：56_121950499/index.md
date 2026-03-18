@@ -685,7 +685,7 @@ public class MebeanPost implements BeanPostProcessor {
  <bean id="" class="" autowire="byType"></bean>
 ```
 ### 2.12 ：引入外部配置文件，举例数据库链接
-##### 1：一般的数据库连接
+#### 1：一般的数据库连接
 引入德鲁伊连接池的jar包
 
 ![](https://i-blog.csdnimg.cn/blog_migrate/a47d18c3e84e8032be006d0281f8db9a.png)
@@ -802,5 +802,3 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 	
 	
 ```
-
-

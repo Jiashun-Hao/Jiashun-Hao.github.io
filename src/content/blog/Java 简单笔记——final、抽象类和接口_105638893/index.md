@@ -11,8 +11,8 @@ language: 'Chinese'
 有点多啊。。。。罢了，直接写重点；
 
 # 1.final修饰符（最终的）
-### 作用：
-#### 1、final修饰类：该类不能再被继承，不得再有子类；
+## 作用：
+### 1、final修饰类：该类不能再被继承，不得再有子类；
 
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/72ef8a4a826c7ee84f92f1e384668b2c.png)
 
@@ -30,8 +30,8 @@ language: 'Chinese'
       ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3c9f677fa1971e45b823bbb057c8e1ae.png)
       
 # 2.abstract修饰符（抽象）
-### 作用
-#### 1.修饰类 ：成为**抽象类**：
+## 作用
+### 1.修饰类 ：成为**抽象类**：
  * 没有具体的实例，只是为了提供一些方法和属性给子类使用
  * 不可以被实例化
 
@@ -144,4 +144,3 @@ class Cmputer implements USB{//Computer实现USB
 **总结**：
 接口主要用来定义规范，解除耦合关系（互相作用又互相影响）；
 接口是一种不需要考虑层次关系的特殊的抽象方法；
-

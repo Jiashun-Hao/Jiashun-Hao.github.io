@@ -12,7 +12,7 @@ language: 'Chinese'
 以下均为`java.lang.object`下的方法；
 
 # 一.equals（）方法；
-### 1.特性和作用
+## 1.特性和作用
 1.equals（）默认的是用来比较两个引用类型的地址值是否相等，并且只能处理引用数据类型；
 测试代码：
 ```java
@@ -117,7 +117,7 @@ class Order {
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/02a59f9848f4839880d47bbcbe93343e.png)
 
 # 二.toString方法；
-### 1.特性和作用
+## 1.特性和作用
 1.当我们打印对象的时候，如果没有明显调用其它方法并且没有重写toString（），则默认调用Object中的toString（）方法，作用为输出对象在堆空间中的首地址；
 ```java
 public class Main{
