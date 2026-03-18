@@ -1,32 +1,27 @@
 ---
-title: "Java 简单笔记——设计模式：模板设计模式"
-publishDate: 2024-11-10
-source: "https://blog.csdn.net/HJS1453100406/article/details/105252853"
+title: "Java 简单笔记 -- 设计模式：模板设计模式"
+publishDate: 2020-04-01
+description: '笔记'
 tags:
-  - '未分类'
-description: '由“抽象”派生出来的一种设计模式'
+  - Java
 language: 'Chinese'
 ---
 
-## 模板设计模式
+# 模板设计模式
+  由“抽象”派生出来的一种设计模式
 
-由“抽象”派生出来的一种设计模式
-
-#### 主要作用：
-
+### 主要作用：
 将主类（伪·根父类）利用abstract关键字设置为抽象的模式，将一些已经确定要的实现方法放入主类中，其它的暴露出去交给子类根据情况自己设计；
 
 简单来说，就是将父类设置为抽象类，但是保留所有子类都会执行共同操作（方法）。同时也为多个形态不同的子类提供一个（或多个）用于在子类中重写方法的“模板”；
 
-#### 引入题目：
-
+### 引入题目：
 **设计一个抽象的父类，使得无论子类方法中进行什么操作都要返回该操作的运行时间（微秒）；**
 
 这里举例说明，就将“无论什么操作”定义为寻找50以内2的倍数；
 
 代码：
-
-```
+```java
 public class Main {
     public static void main(String[] args) {
         Person xm=new Person();
@@ -58,5 +53,7 @@ class Person extends Time{//子类自己的“无论什么操作”
 }
 ```
 
-输出结果：  
-![在这里插入图片描述](images/blog_migrate_f974ab58f7715faf5576ed8a7d586b7a_png.png)
+输出结果：
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f974ab58f7715faf5576ed8a7d586b7a.png)
+
