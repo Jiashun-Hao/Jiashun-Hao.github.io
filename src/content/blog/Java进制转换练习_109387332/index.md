@@ -1,16 +1,13 @@
 ---
-title: "Java进制转换练习"
-publishDate: 2023-07-05
-source: "https://blog.csdn.net/HJS1453100406/article/details/109387332"
+title: Java进制转换练习"
+publishDate: 2020-10-30
+description: '笔记'
 tags:
-  - '未分类'
-description: 'import java.math.BigInteger;'
-language: 'English'
+  - Java
+language: 'Chinese'
 ---
-
-## 二进制转十六进制
-
-```
+# 二进制转十六进制
+```java
 import java.math.BigInteger;
 import java.util.Scanner;
 public class TestString {
