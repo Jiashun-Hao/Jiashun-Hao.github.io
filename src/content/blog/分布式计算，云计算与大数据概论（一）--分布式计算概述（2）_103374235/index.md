@@ -1,10 +1,9 @@
 ---
-title: "分布式计算，云计算与大数据概论（一）--分布式计算概述（2）"
-publishDate: 2022-06-29
-source: "https://blog.csdn.net/HJS1453100406/article/details/103374235"
+title: 分布式计算，云计算与大数据概论（一）--分布式计算概述（2）"
+publishDate: 2019-12-05
 tags:
-  - '未分类'
-description: '“分布式系统（distributed system）是建立在网络之上的软件系统。正是因为软件的特性，所以分布式系统具有高度的内聚性和透明性。因此，网络和分布式系统之间的区别更多的在于高层软件（特别是操...'
+  - '课程笔记'
+description: '“分布式计算/计算机科学”'
 language: 'Chinese'
 ---
 
