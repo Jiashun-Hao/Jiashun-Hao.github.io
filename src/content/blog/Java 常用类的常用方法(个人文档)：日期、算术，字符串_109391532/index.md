@@ -1,16 +1,14 @@
 ---
-title: "Java 常用类的常用方法(个人文档)：日期、算术，字符串"
-publishDate: 2025-06-14
-source: "https://blog.csdn.net/HJS1453100406/article/details/109391532"
+title: "Java 常用类的常用方法"
+publishDate: 2020-10-30
+description: '笔记'
 tags:
-  - '未分类'
-description: 'import java.text.;'
+  - Java
 language: 'Chinese'
 ---
 
-## 日期
-
-```
+# 日期
+```java
 		import java.text.*;
 		import java.util.*;
 		//时间
@@ -53,10 +51,8 @@ language: 'Chinese'
         System.out.println(c.get(Calendar.DATE));//获取当前日
         System.out.println(c.getTimeInMillis());//返回毫秒数
 ```
-
-## 算术
-
-```
+# 算术
+```java
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.text.*;
@@ -66,10 +62,8 @@ import java.text.*;
         System.out.println(bi);
         System.out.println(bg);
 ```
-
-## 字符串
-
-```
+# 字符串
+```java
  		StringBuilder sbl=new StringBuilder("123456");
         sbl.insert(3,"abc");//指定位置插入字符串
         System.out.println(sbl.reverse());//反转字符串
