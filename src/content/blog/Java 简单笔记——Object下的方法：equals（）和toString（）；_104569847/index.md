@@ -1,10 +1,9 @@
 ---
-title: "Java 简单笔记——Object下的方法：equals（）和toString（）；"
-publishDate: 2024-08-17
-source: "https://blog.csdn.net/HJS1453100406/article/details/104569847"
+title: "Java 简单笔记 -- Object下的方法：equals（）和toString（）"
+publishDate: 2020-02-29 
+description: '笔记'
 tags:
-  - '未分类'
-description: '以下均为java.lang.object下的方法；'
+  - Java
 language: 'Chinese'
 ---
 
@@ -12,14 +11,11 @@ language: 'Chinese'
 
 以下均为`java.lang.object`下的方法；
 
-## 一.equals（）方法；
-
-#### 1.特性和作用
-
-1.equals（）默认的是用来比较两个引用类型的地址值是否相等，并且只能处理引用数据类型；  
+# 一.equals（）方法；
+### 1.特性和作用
+1.equals（）默认的是用来比较两个引用类型的地址值是否相等，并且只能处理引用数据类型；
 测试代码：
-
-```
+```java
 public class Main {
     public static void main(String[] args) {
       Main a=new Main();
@@ -30,13 +26,13 @@ public class Main {
     }
 }
 ```
+结果：
 
-结果：  
-![在这里插入图片描述](images/blog_migrate_0360463c0389a9de816c0ea7a7cedacf_png.png)  
-2.如果引用的是date类、string类、包装类、file类，作用改为比较两个对象的实体内容；  
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0360463c0389a9de816c0ea7a7cedacf.png)
+
+2.如果引用的是date类、string类、包装类、file类，作用改为比较两个对象的实体内容；
 测试代码：
-
-```
+```java
 public class Main {
     public static void main(String[] args) {
       String a=new String("AA");
@@ -47,19 +43,17 @@ public class Main {
     }
 }
 ```
+结果：
 
-结果：  
-![在这里插入图片描述](images/blog_migrate_680d31339165909725d58096120151c7_png.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/680d31339165909725d58096120151c7.png)
 
-#### 2.实现概念
-
-1.为什么可以使用？  
-原因很简单，因为这个方法是在根类Object类中，而Object类又是所有类的父类，根据继承的特性，则可以直接通过`对象.方法`使用  
-2.为什么date类、string类、包装类、file类实现的是实体内容的比较？  
-因为在Java 中这些类中的equals（）方法被自动重写，比较结果由地址转变为实体内容：  
+### 2.实现概念
+1.为什么可以使用？
+原因很简单，因为这个方法是在根类Object类中，而Object类又是所有类的父类，根据继承的特性，则可以直接通过`对象.方法`使用
+2.为什么date类、string类、包装类、file类实现的是实体内容的比较？
+因为在Java 中这些类中的equals（）方法被自动重写，比较结果由地址转变为实体内容：
 源代码如下：
-
-```
+```java
 Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -69,12 +63,9 @@ Override
                 Objects.equals(OrderName, order.OrderName);//
     }
 ```
-
-#### 3.练习
-
+### 3.练习
 我们手动的重写一个equals（）方法，使他们比较实体内容；
-
-```
+```java
 public class Main{
     public static void main(String[] args){
         Order a=new Order(34,"hhhhhh");
@@ -121,17 +112,14 @@ class Order {
     }
 }
 ```
+输出：
 
-输出：  
-![在这里插入图片描述](images/blog_migrate_02a59f9848f4839880d47bbcbe93343e_png.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/02a59f9848f4839880d47bbcbe93343e.png)
 
-## 二.toString方法；
-
-#### 1.特性和作用
-
+# 二.toString方法；
+### 1.特性和作用
 1.当我们打印对象的时候，如果没有明显调用其它方法并且没有重写toString（），则默认调用Object中的toString（）方法，作用为输出对象在堆空间中的首地址；
-
-```
+```java
 public class Main{
     public static void main(String[] args) {
         Main a=new Main();
@@ -140,20 +128,18 @@ public class Main{
     }
 }
 ```
+输出结果：两个一样；
 
-输出结果：两个一样；  
-![在这里插入图片描述](images/blog_migrate_5ee3b95a337ebb08c1dcd233c3900808_png.png)  
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5ee3b95a337ebb08c1dcd233c3900808.png)
+
 2.输出的格式：
-
-```
+```java
 public String toString(){
     return getClass().getName()+"@"+Integer.toHexString((hashCode()));
 }//打印对象所在的类，以及对象所在的实体空间；
 ```
-
 3.如果引用的是date类、string类、包装类、file类，作用输出对象属性的信息；
-
-```
+```java
 public class Main{
     public static void main(String[] args) {
         String a=new String("AA");
@@ -162,12 +148,9 @@ public class Main{
     }
 }
 ```
-
-![在这里插入图片描述](images/blog_migrate_f1a06e81d39616f5f8087f3473f1b3f1_png.png)
-
-#### 2.其它；
-
-略；  
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f1a06e81d39616f5f8087f3473f1b3f1.png)
+### 2.其它；
+略；
 因为手动重写和equals（）方法基本一样；
 
 2020年2月29日初写；
