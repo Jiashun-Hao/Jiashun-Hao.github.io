@@ -8,7 +8,7 @@ language: 'Chinese'
 ---
 
 # 面向对象
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/16995a142818db6c830f89aada004d96.jpeg#pic_center)
+![](./images/blog_migrate_16995a142818db6c830f89aada004d96_jpeg.jpeg)
 <br/>
 
 **面向对象的三条主线：**
