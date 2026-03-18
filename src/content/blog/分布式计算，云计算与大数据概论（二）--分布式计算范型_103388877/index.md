@@ -1,10 +1,9 @@
 ---
-title: "分布式计算，云计算与大数据概论（二）--分布式计算范型"
-publishDate: 2020-04-19
-source: "https://blog.csdn.net/HJS1453100406/article/details/103388877"
+title: 分布式计算，云计算与大数据概论（二）--分布式计算范型"
+publishDate: 2020-04-21
 tags:
-  - '未分类'
-description: '现在开始讨论分布式计算的范型，也就是几个主流的分布式计算的应用。'
+  - '课程笔记'
+description: '“分布式计算/计算机科学”'
 language: 'Chinese'
 ---
 
