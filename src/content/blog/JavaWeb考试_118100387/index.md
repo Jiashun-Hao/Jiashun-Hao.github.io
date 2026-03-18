@@ -1,25 +1,17 @@
 ---
 title: "JavaWeb考试"
-publishDate: 2022-08-22
-source: "https://blog.csdn.net/HJS1453100406/article/details/118100387"
+publishDate: 2021-06-29
+description: '考试练习'
 tags:
-  - '未分类'
-description: '- 2.Servlet'
-language: 'English'
+  - Java/HTML/XML
+language: 'Chinese'
 ---
 
-#### 文章目录
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
-- [1.学生类](#1_5)
-- [2.Servlet](#2Servlet_55)
-- [3.XML](#3XML_84)
-- [4.JSP](#4JSP_95)
+# 1.学生类
 
----
-
-## 1.学生类
-
-```
+```java
 public class Student {
     public Student(int ID, String name, int age, String major) {
         this.ID = ID;
@@ -65,11 +57,10 @@ public class Student {
     int age;
     String Major;
 }
-```
-
-## 2.Servlet
 
 ```
+# 2.Servlet
+```java
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -97,9 +88,8 @@ public class LServlet extends HttpServlet {
 }
 ```
 
-## 3.XML
-
-```
+# 3.XML
+```xml
 	<servlet>
         <servlet-name>LServlet</servlet-name>
         <servlet-class>com.example.kaoshi.LServlet</servlet-class>
@@ -109,10 +99,8 @@ public class LServlet extends HttpServlet {
         <url-pattern>/Hello</url-pattern>
     </servlet-mapping>
 ```
-
-## 4.JSP
-
-```
+# 4.JSP
+```HTML
 <html>
 <head>
     <title>Title</title>
@@ -151,4 +139,5 @@ public class LServlet extends HttpServlet {
     </table>
 </body>
 </html>
+
 ```
