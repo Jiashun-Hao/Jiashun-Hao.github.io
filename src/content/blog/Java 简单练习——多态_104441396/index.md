@@ -1,20 +1,19 @@
 ---
-title: "Java 简单练习——多态"
-publishDate: 2024-06-18
-source: "https://blog.csdn.net/HJS1453100406/article/details/104441396"
+title: "Java 简单笔记 -- 多态"
+publishDate: 2020-02-22
+description: '笔记'
 tags:
-  - '未分类'
-description: '1.写两个类，一个输入长方形的信息，一个输入圆的信息'
+  - Java
 language: 'Chinese'
 ---
 
-题目要求：  
-1.写两个类，一个输入长方形的信息，一个输入圆的信息  
-2.写一个类，作为为测试类，既可以测试长方形，也可以测试圆形；  
+题目要求：
+1.写两个类，一个输入长方形的信息，一个输入圆的信息
+2.写一个类，作为为测试类，既可以测试长方形，也可以测试圆形；
 3.写一个方法，判断两个图形的面积是否相等：相等输出true，不相等输出false；
 
-思路：  
-1.写一个公共的父类用于计算，写两个子类分别输入长方形和圆形的信息，根据多态性质——“可以将子类对象赋给父类的应用”来实现题目要求；  
+思路：
+1.写一个公共的父类用于计算，写两个子类分别输入长方形和圆形的信息，根据多态性质——“可以将子类对象赋给父类的应用”来实现题目要求；
 2.最后写一个测试类，用来输出面积和判断相等；
 
 ---
@@ -22,8 +21,7 @@ language: 'Chinese'
 代码：
 
 1.父类：Main
-
-```
+```java
 public class Main {
     protected double Height;//默认为长方形，给出长和宽
     protected double Whith;//
@@ -51,10 +49,8 @@ public class Main {
     }
 }
 ```
-
 2.子类：Main1（长方形）
-
-```
+```java
 public class Main1 extends Main{
     private double Whith;
     private double Height;
@@ -85,10 +81,8 @@ public class Main1 extends Main{
     }
 }
 ```
-
 3.子类：Main2（圆形）
-
-```
+```java
 public class Main2 extends Main {
     private double Radius;
 
@@ -109,10 +103,8 @@ public class Main2 extends Main {
     }
 }
 ```
-
 4.**测试类**
-
-```
+```java
 public class ceshi {
     public static void main(String[] args){
      ceshi t=new ceshi();
