@@ -5,6 +5,7 @@ tags:
   - 'Python'
   - '深度学习'
   - '人工智能'
+description: 'DeepLearning'
 language: 'Chinese'
 ---
 # 打开深度学习的锁
