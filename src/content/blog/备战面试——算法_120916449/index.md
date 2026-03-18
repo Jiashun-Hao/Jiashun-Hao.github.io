@@ -1,30 +1,17 @@
 ---
 title: "备战面试——算法"
-publishDate: 2024-04-20
-source: "https://blog.csdn.net/HJS1453100406/article/details/120916449"
+publishDate: 2021-10-21
 tags:
+  - Java
   - '算法'
   - '面试'
   - '排序算法'
-description: '- 3.提取一个数最右边的1'
+description: '面试笔记'
 language: 'Chinese'
 ---
 
-#### 第一天
-
-- [1.选择排序](#1_1)
-- [2.冒泡排序](#2_24)
-- [3.提取一个数最右边的1](#31_53)
-- [4.插入排序](#4_58)
-- [5.对数器](#5_87)
-- [6.提取数组中间数](#6_132)
-- [7.master公式（递归时间复杂度）](#7master_149)
-- [8.归并排序（二分）](#8_152)
-- [9.快速排序](#9_200)
-
-## 1.选择排序
-
-```
+# 1.选择排序
+```java
 public class Main {
     public static void main(String[] args) {
       int []arr={1,5,3,4,2};
@@ -46,10 +33,8 @@ public class Main {
     }
 }
 ```
-
-## 2.冒泡排序
-
-```
+# 2.冒泡排序
+```java
 public class Main {
     public static void main(String[] args) {
       int []arr={1,5,3,4,2};
@@ -77,16 +62,13 @@ public class Main {
     }
 }
 ```
-
-## 3.提取一个数最右边的1
-
-```
+# 3.提取一个数最右边的1
+```java
 int rightOne = eor & (~eor+1);//提取一个数最右边的1
 ```
 
-## 4.插入排序
-
-```
+# 4.插入排序
+```java
 public class Main {
     public static void main(String[] args) {
       int []arr={1,5,9,5,6,4,7,8,5,3};
@@ -114,9 +96,8 @@ public class Main {
 }
 ```
 
-## 5.对数器
-
-```
+# 5.对数器
+```java
 import java.util.Arrays;
 
 public class Main {
@@ -160,10 +141,8 @@ public class Main {
     }
 }
 ```
-
-## 6.提取数组中间数
-
-```
+# 6.提取数组中间数
+```java
 public class Main {
     public static void main(String[] args) {
         int arr[]={1,2,3,4,5,6,7,8,9,10,11,12};
@@ -179,14 +158,11 @@ public class Main {
     }
 }
 ```
+# 7.master公式（递归时间复杂度）
+![](https://i-blog.csdnimg.cn/blog_migrate/5916c59b6ca4d2509da934b4e59628b5.png)
 
-## 7.master公式（递归时间复杂度）
-
-![在这里插入图片描述](images/blog_migrate_5916c59b6ca4d2509da934b4e59628b5_png.png)
-
-## 8.归并排序（二分）
-
-```
+# 8.归并排序（二分）
+```java
 public class Main {
     public static void main(String[] args) {
         int arr[]={6,5,6,15,8,63,12,102,4,5,1,0,1,23,2,1,69};
@@ -233,10 +209,8 @@ public class Main {
     }
 }
 ```
-
-## 9.快速排序
-
-```
+# 9.快速排序
+```java
 public class Main {
     public static void main(String[] args) {
         int arr[]={6,5,6,15,8,63,12,102,4,5,1,0,1,23,2,1,69};
