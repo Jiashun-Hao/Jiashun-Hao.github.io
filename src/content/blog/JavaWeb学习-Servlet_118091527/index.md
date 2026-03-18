@@ -1,38 +1,23 @@
 ---
 title: "JavaWeb学习-Servlet"
-publishDate: 2022-10-10
-source: "https://blog.csdn.net/HJS1453100406/article/details/118091527"
+publishDate: 2021-06-21
+description: '笔记'
 tags:
-  - '未分类'
-description: '写在前面的话：为什么突然要写一篇这个？因为明天考试要考这个'
+  - Java/HTML/XML
 language: 'Chinese'
 ---
 
-写在前面的话：为什么突然要写一篇这个？因为明天考试要考这个
+<font color=#999AAA >写在前面的话：为什么突然要写一篇这个？因为明天考试要考这个
+</font>
 
-#### Servlet
+# Servlet
 
-- [一、创建Servlet](#Servlet_10)
-- - [1.编写一个类实现Servlet接口](#1Servlet_12)
-  - [2.到Web.xml文件中配置访问地址](#2Webxml_48)
-  - [3.到运行servlet](#3servlet_73)
-- [二、处理请求](#_84)
-- - [1.基本请求](#1_85)
-  - [2.POST与GET区分请求](#2POSTGET_103)
-- [三、常用Servlet开发原则](#Servlet_193)
-- - [1.直接继承子类HttpServlet](#1HttpServlet_194)
-- [四、后台获取前端请求参数](#_213)
-- [五、请求转发](#_280)
-- [六、返回给前端数据](#_323)
-- - [1.直接回传给页面](#1_324)
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
----
+# 一、创建Servlet
 
-## 一、创建Servlet
-
-### 1.编写一个类实现Servlet接口
-
-```
+## 1.编写一个类实现Servlet接口
+```java
 public class HelloServlet implements Servlet {
 
 	//处理请求和相应的方法
@@ -53,6 +38,7 @@ public class HelloServlet implements Servlet {
         return null;
     }
 
+
 	
     @Override
     public String getServletInfo() {
@@ -66,10 +52,8 @@ public class HelloServlet implements Servlet {
     }
 }
 ```
-
-### 2.到Web.xml文件中配置访问地址
-
-```
+## 2.到Web.xml文件中配置访问地址
+```xml
 	<!--<servlet>标签给Tomcat配置Servlet程序-->
     <servlet>
         <!--<servlet-name>给程序起别名，一般是类名        -->
@@ -93,26 +77,21 @@ public class HelloServlet implements Servlet {
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
 ```
-
-### 3.到运行servlet
-
-```
+## 3.到运行servlet
+```java
 http://localhost:8080/Test_service_war_exploded/hello
 // http://  协议
 // localhost:8080  ip地址
 // Test_service_war_exploded  工程名
 // hello XML文件中‘hello’所对应的类
 ```
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
----
 
-## 二、处理请求
-
-### 1.基本请求
-
+# 二、处理请求
+## 1.基本请求
 创建一个HTML表单
-
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,17 +107,14 @@ http://localhost:8080/Test_service_war_exploded/hello
 </body>
 </html>
 ```
-
-### 2.POST与GET区分请求
-
-1. Get是不安全的，因为在传输过程，数据被放在请求的URL中；Post的所有操作对用户来说都是不可见的。  
- 2. Get传送的数据量较小，这主要是因为受URL长度限制；Post传送的数据量较大，一般被默认为不受限制。  
- 3. Get限制Form表单的数据集的值必须为ASCII字符；而Post支持整个ISO10646字符集。  
- 4. Get执行效率却比Post方法好。Get是form提交的默认方法。  
-   
- **1.区分GET与POST方法需要在Servlet的实现方法中设置**
-
-```
+## 2.POST与GET区分请求
+<font color=#999AAA >1. Get是不安全的，因为在传输过程，数据被放在请求的URL中；Post的所有操作对用户来说都是不可见的。
+   2. Get传送的数据量较小，这主要是因为受URL长度限制；Post传送的数据量较大，一般被默认为不受限制。
+   3. Get限制Form表单的数据集的值必须为ASCII字符；而Post支持整个ISO10646字符集。
+   4. Get执行效率却比Post方法好。Get是form提交的默认方法。   
+</font>
+**1.区分GET与POST方法需要在Servlet的实现方法中设置**
+```java
 public class HelloServlet implements Servlet {
 
     @Override
@@ -173,10 +149,8 @@ public class HelloServlet implements Servlet {
     }
 }
 ```
-
 **2.为了进一步区分GET与POST请求，将两种状态封装函数**
-
-```
+```java
 public class HelloServlet implements Servlet {
 
     @Override
@@ -221,16 +195,12 @@ public class HelloServlet implements Servlet {
     }
 }
 ```
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
----
-
-## 三、常用Servlet开发原则
-
-### 1.直接继承子类HttpServlet
-
-***PS：快速重写类的方法 鼠标点击类后CTRL+O***
-
-```
+# 三、常用Servlet开发原则
+## 1.直接继承子类HttpServlet
+==***PS：快速重写类的方法  鼠标点击类后CTRL+O***==
+```java
 public class HelloServlet2 extends HttpServlet {
 
 	//直接在方法里面做处理，不需要重写service方法
@@ -245,14 +215,11 @@ public class HelloServlet2 extends HttpServlet {
     }
 }
 ```
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
----
-
-## 四、后台获取前端请求参数
-
+# 四、后台获取前端请求参数
 前端代码：
-
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -276,10 +243,8 @@ public class HelloServlet2 extends HttpServlet {
 </body>
 </html>
 ```
-
 Servlet代码：
-
-```
+```java
 public class HelloServlet3 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -315,15 +280,13 @@ public class HelloServlet3 extends HttpServlet {
         System.out.println("专业："+ Arrays.asList(Major));
     }
 }
+
 ```
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
----
-
-## 五、请求转发
-
+# 五、请求转发
 **1.Servlet1**
-
-```
+```java
 public class Test_Servlet1 extends HttpServlet {
 
     @Override
@@ -344,10 +307,8 @@ public class Test_Servlet1 extends HttpServlet {
     }
 }
 ```
-
-**2.Servlet2**
-
-```
+ **2.Servlet2**
+```java
 public class Test_Servlet2 extends HttpServlet {
 
     @Override
@@ -364,14 +325,11 @@ public class Test_Servlet2 extends HttpServlet {
     }
 }
 ```
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
----
-
-## 六、返回给前端数据
-
-### 1.直接回传给页面
-
-```
+# 六、返回给前端数据
+## 1.直接回传给页面
+```java
 public class Servlet01 extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -382,3 +340,6 @@ public class Servlet01 extends HttpServlet {
     }
 }
 ```
+
+
+
