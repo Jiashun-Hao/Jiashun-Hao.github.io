@@ -451,11 +451,11 @@ $$
 ### 3：两个二维数组的乘积 
 两个二维数组的np.dot(a, b)，<font size="5" color=red>**执行的是矩阵乘法（点乘）**</font>
 
-<font size="5" color=red>两个二维数组相称，则必须满足**左数组的列数（第二参）** == **右数组的行数（第一参）**，即$A$ 为 J X ==K== ，$B$ 必须 ==K== X F。
+<font size="5" color=red>两个二维数组相称，则必须满足**左数组的列数（第二参）** == **右数组的行数（第一参）**，即$A$ 为 J X ==K== ，$B$ 必须 ==K== X F。 </font>
 
 
 
-<font size="5" color=red> 形状：$A$ 为  ==J== X `K`，$B$ 为 `K` X ==F==，$C$ 结构一定是 ==J X F==
+<font size="5" color=red> 形状：$A$ 为  ==J== X `K`，$B$ 为 `K` X ==F==，$C$ 结构一定是 ==J X F==  </font>
 
 内容：$C$里面的每一个内容<font size="5" color=red>$C_{jf}$</font>  == <font size="5" color=red>$A$的第 $j$ 行所有元素 </font> 对应相乘 <font size="5" color=red>$B$的第 $f$ 列所有元素 </font> <font size="5" >==再求和==</font> 
 
