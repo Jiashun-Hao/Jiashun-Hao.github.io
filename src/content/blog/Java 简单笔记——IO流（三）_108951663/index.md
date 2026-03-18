@@ -1,42 +1,35 @@
 ---
-title: "Java 简单笔记——IO流（三）"
-publishDate: 2025-12-03
-source: "https://blog.csdn.net/HJS1453100406/article/details/108951663"
+title: "Java 简单笔记 -- IO流(三)"
+publishDate: 2020-10-10
+description: '笔记'
 tags:
-  - '未分类'
-description: '为了后面这两个重要的流，再单独开一篇。'
+  - Java
 language: 'Chinese'
 ---
 
 为了后面这两个重要的流，再单独开一篇。
 
-#### IO流（三）
+# IO流（三）
 
-- [一、对象流](#_2)
-- [二、RandomAccessFile类](#RandomAccessFile_107)
+# 一、对象流
+**作用：** 传输对象（引用数据类型）
+**特点：** 
+1.基本数据类型使用**数据流**来实现传输，而引用数据类型则可以是用**对象流**传输；
 
-## 一、对象流
+2.使用**对象流**可以将对象存储到硬盘中，断电后不消失，所使用的机制称为**序列化机制**；
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/63ac08ed7c1a07e3c04e034f1560f71b.png#pic_center)
+3.==并不是所有的类都可以使用序列化机制，自定义类若想使用序列化则需要满足以下条件==：
+* 自定义类需实现**Serializable接口**或**Externalizable接口**
+* 类中所用到的属性也需要实现**Serializable接口**或**Externalizable接口**
+* **凡是实现Serializable接口的类必须声明一个版本的序列号serialVersionUID,默认情况下序列号会随生成，但是为了兼容版本的特性，最好自己声明；**
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/76aaa97dc523e6738ac9cf7b4417ad9e.png#pic_center)
+* **ObjectOutputStream** 和 **ObjectInputStream**不能序列化被`static`和`transient `所修饰的成员变量
 
-**作用：** 传输对象（引用数据类型）  
- **特点：**  
- 1.基本数据类型使用**数据流**来实现传输，而引用数据类型则可以是用**对象流**传输；
+<br>
 
-2.使用**对象流**可以将对象存储到硬盘中，断电后不消失，所使用的机制称为**序列化机制**；  
- ![在这里插入图片描述](images/blog_migrate_63ac08ed7c1a07e3c04e034f1560f71b_png.png)  
- 3.并不是所有的类都可以使用序列化机制，自定义类若想使用序列化则需要满足以下条件：
-
-- 自定义类需实现**Serializable接口**或**Externalizable接口**
-- 类中所用到的属性也需要实现**Serializable接口**或**Externalizable接口**
-- **凡是实现Serializable接口的类必须声明一个版本的序列号serialVersionUID,默认情况下序列号会随生成，但是为了兼容版本的特性，最好自己声明；**  
-   ![在这里插入图片描述](images/blog_migrate_76aaa97dc523e6738ac9cf7b4417ad9e_png.png)
-- **ObjectOutputStream** 和 **ObjectInputStream**不能序列化被`static`和`transient`所修饰的成员变量
-
-  
-
-**分类：** 输入对象流（`ObjectInputStream`）\ 输出对象流（`ObjectOutputStream`）  
- **使用：**
-
-```
+**分类：** 输入对象流（`ObjectInputStream`）\ 输出对象流（`ObjectOutputStream`）
+**使用：**
+```java
 import org.junit.jupiter.api.Test;
 
 import java.io.*;
@@ -45,6 +38,7 @@ public class Main implements Serializable{
     //1.对象的序列化过程：对象转化为二进制流写入到硬盘中
     @Test
     public void Object()  throws Exception {
+
 
         Preson p1=new Preson("小明",23);
         Preson p2=new Preson("小红",24);
@@ -66,6 +60,7 @@ public class Main implements Serializable{
         private static final long serialVersionUID = 1L;
         String name;
         Integer age;
+
 
         public Preson(String name, Integer age){
             this.name=name;
@@ -116,37 +111,33 @@ public class Main implements Serializable{
 
 }
 ```
-
-![在这里插入图片描述](images/blog_migrate_54b953f8168d3b58701e0fc8dce5f8fb_png.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/54b953f8168d3b58701e0fc8dce5f8fb.png#pic_center)
 
 （关于序列化的问题找个需要另外写一篇博客）
+<br>
 
-## 二、RandomAccessFile类
-
-**作用：** RandomAccessFile类是一个特殊的流，既实现输入，也可以实现输出，并且支持 “随机访问（在一段数据中指定的位置访问）” 的特点；  
- **特点：** RandomAccessFile类有两个特殊的方法：
-
-- long getFilePointer()：获取文件记录指针的当前位置
-- void seek(long pos)：将文件记录指针定位到 pos 位置  
-   ![在这里插入图片描述](images/blog_migrate_ef5153abf1d78ab57ae6ebb966afeb8a_png.png)
-- 如果想使用该类，必须先使用该类的构造器创建对象  
-   ![在这里插入图片描述](images/blog_migrate_45393f6e97cc5695dff3a31c8e6b5aea_png.png)
+# 二、RandomAccessFile类
+**作用：** RandomAccessFile类是一个特殊的流，既实现输入，也可以实现输出，并且支持 “随机访问（在一段数据中指定的位置访问）” 的特点；
+**特点：** RandomAccessFile类有两个特殊的方法：
+* long getFilePointer()：获取文件记录指针的当前位置
+* void seek(long pos)：将文件记录指针定位到 pos 位置
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ef5153abf1d78ab57ae6ebb966afeb8a.png#pic_center)
+* 如果想使用该类，必须先使用该类的构造器创建对象
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/45393f6e97cc5695dff3a31c8e6b5aea.png#pic_center)
 
 **方法和作用：**
-
-- void seek​(long pos) 改变指针的位置，默认从0开始，数字代表指针前面字节的个数。
-- long getFilePointer() 返回此文件中的当前偏移量。
-- void write​(int b) 将指定的字节写入此文件。
-- void write​(byte[] b) 从当前文件指针开始，将指定字节数组中的 b.length字节写入此文件。
-- void write​(byte[] b, int off, int len) 将从偏移量 off开始的指定字节数组中的 len个字节写入此文件。
-- String readLine() 从此文件中读取一行文本。
+* void seek​(long pos)  改变指针的位置，默认从0开始，数字代表指针前面字节的个数。
+* long getFilePointer() 返回此文件中的当前偏移量。  
+* void write​(int b) 将指定的字节写入此文件。  
+* void write​(byte[] b) 从当前文件指针开始，将指定字节数组中的 b.length字节写入此文件。  
+* void write​(byte[] b, int off, int len) 将从偏移量 off开始的指定字节数组中的 len个字节写入此文件。  
+* String readLine() 从此文件中读取一行文本。  
 
 **使用：**
 
-1.实现覆盖效果：  
- ![在这里插入图片描述](images/blog_migrate_8e032ad3cccf7cb6876038c3a0a208b6_png.png)
-
-```
+1.实现覆盖效果：
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8e032ad3cccf7cb6876038c3a0a208b6.png#pic_center)
+```java
  @Test
     public void  RandomAccessFile2() throws Exception{
         RandomAccessFile ran3=new RandomAccessFile(new File("Text4.txt"),"rw");
@@ -154,16 +145,14 @@ public class Main implements Serializable{
         ran3.write("kk".getBytes());//getBytes()将字符串转换为字节数组
     }
 ```
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2e8825171c1921a9b8afa3747c24aa3b.png#pic_center)
 
-![在这里插入图片描述](images/blog_migrate_2e8825171c1921a9b8afa3747c24aa3b_png.png)
-
-  
+<br>
 
 2.插入效果
 
-![在这里插入图片描述](images/blog_migrate_2e8825171c1921a9b8afa3747c24aa3b_png.png)
-
-```
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2e8825171c1921a9b8afa3747c24aa3b.png#pic_center)
+```java
 	@Test
        public void  RandomAccessFile2() throws Exception{
        RandomAccessFile ran3=new RandomAccessFile(new File("Text4.txt"),"rw");
@@ -176,13 +165,12 @@ public class Main implements Serializable{
 
 }
 ```
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2be2191dee53dbabd023316b8f289c29.png#pic_center)
+<br>
 
-![在这里插入图片描述](images/blog_migrate_2be2191dee53dbabd023316b8f289c29_png.png)
-
-3.多行文本插入效果（保留换行符）  
- ![在这里插入图片描述](images/blog_migrate_0c60906208057057efdbecd4e6b4bc0a_png.png)
-
-```
+3.多行文本插入效果（保留换行符）
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0c60906208057057efdbecd4e6b4bc0a.png#pic_center)
+```java
 	@Test
     //2.从文件任意位置读取、写入
     public void  RandomAccessFile2() throws Exception{
@@ -202,8 +190,15 @@ public class Main implements Serializable{
         ran3.close();
     }
 ```
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8dde8e4b2f0ff9f0df7b2856603b1f6d.png#pic_center)
 
-![在这里插入图片描述](images/blog_migrate_8dde8e4b2f0ff9f0df7b2856603b1f6d_png.png)
+**PS:**
+ **==1.使用StringBuffer的toString()方法，可以将StringBuffer转换成String==**
 
-**PS:**  
- **1.使用StringBuffer的toString()方法，可以将StringBuffer转换成String**
+
+
+
+
+
+
+
