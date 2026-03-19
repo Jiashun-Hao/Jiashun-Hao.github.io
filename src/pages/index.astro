@@ -13,9 +13,11 @@ import avatar from '@/assets/avatar.png'
 import favicon from '@/assets/icons/favicon.svg'
 import config from '@/site-config'
 
-const languages = ['Html', 'JavaScript', 'CSS', 'Go', 'Java']
-const frontend = ['TypeScript', 'Vite', 'Webpack', 'Vue', 'React', 'Angular', 'TailwindCSS', 'Less', 'Sass']
-const backend = ['Spring', 'Docker', 'Nginx']
+const languages = ['Java', 'Python', 'JavaScript']
+const frontend = ['Vue', 'HTML', 'CSS', 'Vite']
+const backend = ['Spring Boot', 'MyBatis', 'Docker', 'Nginx']
+const ai = ['Deep Learning', 'Machine Learning', 'PyTorch', 'TensorFlow']
+const spokenLanguages = ['Chinese', 'Korean', 'English']
 
 const MAX_POSTS = 10
 const allPosts = await getBlogCollection()
@@ -148,6 +150,8 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         <SkillLayout title='Languages' skills={languages} />
         <SkillLayout title='Frontend' skills={frontend} />
         <SkillLayout title='Backend' skills={backend} />
+        <SkillLayout title='AI' skills={ai} />
+        <SkillLayout title='SpokenLangs' skills={spokenLanguages} />
       </Section>
 
       <div class="flex justify-center items-center mt-4">
