@@ -38,3 +38,8 @@ bun new
 ## 许可证
 
 本项目基于 Apache 2.0 许可证。
+
+
+## Blog Link
+
+https://Jiashun-Hao.github.io
