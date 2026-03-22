@@ -1,4 +1,4 @@
-# JohnieXu's Blog
+# Jiashun's Blog
 
 [English](./README.md) | [简体中文](./README-zh-CN.md)
 
