@@ -4,7 +4,7 @@ import { getBlogCollection, sortMDByDate } from 'astro-pure/server'
 import PageLayout from '@/layouts/BaseLayout.astro'
 import ProjectShowcase from '@/components/home/ProjectShowcase.astro'
 import { education, projects, publications, skillGroups } from '@/data/portfolio'
-import avatar from '@/assets/avatar.png'
+import jiashunPhoto from '@/assets/jiashun.png'
 
 const latestPosts = sortMDByDate(await getBlogCollection()).slice(0, 4)
 const dateLabel = (date: Date | undefined) =>
@@ -35,28 +35,28 @@ const dateLabel = (date: Date | undefined) =>
         </div>
       </div>
 
-      <div class='hero-art intro-stagger' aria-label='Decorative software workspace illustration'>
-        <div class='hero-art-halo'></div>
-        <div class='hero-orbit orbit-one'></div>
-        <div class='hero-orbit orbit-two'></div>
-        <div class='hero-workspace'>
-          <div class='workspace-topbar'><span class='workspace-dots'><i></i><i></i><i></i></span><span>workspace / jiashun</span><span class='workspace-status'>● online</span></div>
-          <div class='workspace-body'>
-            <div class='workspace-sidebar'><div class='side-logo'>J.</div><span class='side-icon side-selected'>⌘</span><span class='side-icon'>▦</span><span class='side-icon'>⌁</span><span class='side-icon'>☷</span><span class='side-bottom'>⚙</span></div>
-            <div class='workspace-main'>
-              <div class='workspace-greeting'>A little bit about me <span>↗</span></div>
-              <div class='workspace-profile'><Image src={avatar} alt='Jiashun Hao' width={64} height={64} loading='eager' /><div><strong>Jiashun Hao</strong><span>Software Engineer</span></div><span class='profile-sparkle'>✳</span></div>
-              <div class='workspace-divider'></div>
-              <div class='workspace-label'>CURRENTLY EXPLORING</div>
-              <div class='workspace-interest'><span class='interest-icon'>✧</span><span>Artificial Intelligence</span><span class='interest-arrow'>↗</span></div>
-              <div class='workspace-interest'><span class='interest-icon blue'>⌘</span><span>Backend Engineering</span><span class='interest-arrow'>↗</span></div>
-              <div class='workspace-mini-chart'><div class='chart-title'>Always learning <span>+ ideas</span></div><div class='chart-bars'><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-            </div>
-          </div>
-        </div>
-        <div class='float-tag float-tag-top'><span class='tag-symbol'>✦</span> Keep exploring</div>
-        <div class='float-tag float-tag-bottom'><span class='tag-symbol color-blue'>●</span> Building something new</div>
-        <span class='ambient-spark spark-a'>✳</span><span class='ambient-spark spark-b'>+</span><span class='ambient-spark spark-c'>✧</span>
+      <div class='hero-art intro-stagger' aria-label='Portrait of Jiashun'>
+        <div class='hero-art-halo' aria-hidden='true'></div>
+        <div class='hero-orbit orbit-one' aria-hidden='true'></div>
+        <div class='hero-orbit orbit-two' aria-hidden='true'></div>
+        <figure class='hero-photo-frame'>
+          <Image
+            src={jiashunPhoto}
+            alt='Jiashun smiling on a beach at sunset'
+            class='hero-photo-image'
+            width={1120}
+            height={747}
+            format='webp'
+            quality={86}
+            loading='eager'
+            decoding='async'
+          />
+        </figure>
+        <div class='float-tag float-tag-top' aria-hidden='true'><span class='tag-symbol'>✦</span> Keep exploring</div>
+        <div class='float-tag float-tag-bottom' aria-hidden='true'><span class='tag-symbol color-blue'>●</span> Building something new</div>
+        <span class='ambient-spark spark-a' aria-hidden='true'>✳</span>
+        <span class='ambient-spark spark-b' aria-hidden='true'>+</span>
+        <span class='ambient-spark spark-c' aria-hidden='true'>✧</span>
       </div>
       <a class='scroll-cue' href='#selected-work' aria-label='Scroll to selected work'><span class='scroll-cue-line'></span> SCROLL TO EXPLORE</a>
     </section>
