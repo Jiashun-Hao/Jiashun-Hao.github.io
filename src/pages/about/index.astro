@@ -2,6 +2,8 @@
 import { Image } from 'astro:assets'
 import PageLayout from '@/layouts/BaseLayout.astro'
 import avatar from '@/assets/avatar.png'
+import ContactMethods from '@/components/shell/ContactMethods.astro'
+import { contact } from '@/data/contact'
 import { education, publications, skillGroups } from '@/data/portfolio'
 ---
 
@@ -36,6 +38,13 @@ import { education, publications, skillGroups } from '@/data/portfolio'
       <p class='text-muted-foreground'>A selection of technologies I've used or explored, rather than a claim of expertise in every tool.</p>
       <div class='skills-panel about-tool-list'>{skillGroups.map((group,index) => <div class='skill-row'><span class='skill-row-index'>0{index + 1}</span><h3>{group.title}</h3><div class='skill-chips'>{group.items.map((item) => <span class='skill-chip'>{item}</span>)}</div></div>)}</div>
     </section>
-    <section class='contact-section reveal' aria-labelledby='about-contact-title'><div class='contact-glow' aria-hidden='true'></div><span class='section-index'>KEEP IN TOUCH</span><h2 id='about-contact-title'>Good ideas start with a <em>conversation.</em></h2><p>If you'd like to connect, collaborate, or simply say hello, GitHub is a good place to find me.</p><a class='btn-primary' href='https://github.com/Jiashun-Hao' target='_blank' rel='noopener noreferrer'>Connect on GitHub ↗</a></section>
+    <section id='contact' class='contact-section reveal' aria-labelledby='about-contact-title'>
+      <div class='contact-glow' aria-hidden='true'></div>
+      <span class='section-index'>KEEP IN TOUCH</span>
+      <h2 id='about-contact-title'>Good ideas start with a <em>conversation.</em></h2>
+      <p>If you'd like to connect, collaborate, or simply say hello, you can reach me here.</p>
+      <a class='btn-primary contact-email-cta' href={`mailto:${contact.email}`}>Send me an email <span aria-hidden='true'>↗</span></a>
+      <ContactMethods />
+    </section>
   </main>
 </PageLayout>

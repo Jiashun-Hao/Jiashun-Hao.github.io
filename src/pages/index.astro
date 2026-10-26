@@ -3,6 +3,8 @@ import { Image } from 'astro:assets'
 import { getBlogCollection, sortMDByDate } from 'astro-pure/server'
 import PageLayout from '@/layouts/BaseLayout.astro'
 import ProjectShowcase from '@/components/home/ProjectShowcase.astro'
+import ContactMethods from '@/components/shell/ContactMethods.astro'
+import { contact } from '@/data/contact'
 import { education, projects, publications, skillGroups } from '@/data/portfolio'
 import jiashunPhoto from '@/assets/jiashun.png'
 
@@ -90,6 +92,14 @@ const dateLabel = (date: Date | undefined) =>
       <div class='research-note'><span class='research-symbol'>✳</span><div><strong>Research & publications</strong><p>{publications[0].venue} {publications[0].year} and earlier conference work.</p></div><a href={publications[0].href} target='_blank' rel='noopener noreferrer' aria-label='View publication'>↗</a></div>
     </section>
 
-    <section class='contact-section reveal' aria-labelledby='contact-title'><div class='contact-glow' aria-hidden='true'></div><span class='section-index'>05 / SAY HELLO</span><h2 id='contact-title'>Let's make something <em>meaningful.</em></h2><p>I'm always curious about ideas, collaborations, and interesting engineering challenges.</p><a class='btn-primary' href='https://github.com/Jiashun-Hao' target='_blank' rel='noopener noreferrer'>Find me on GitHub <span aria-hidden='true'>↗</span></a><span class='contact-decoration' aria-hidden='true'>✳</span></section>
+    <section id='contact' class='contact-section reveal' aria-labelledby='contact-title'>
+      <div class='contact-glow' aria-hidden='true'></div>
+      <span class='section-index'>05 / SAY HELLO</span>
+      <h2 id='contact-title'>Let's make something <em>meaningful.</em></h2>
+      <p>Have an idea, a question, or an opportunity to collaborate? I'd love to hear from you.</p>
+      <a class='btn-primary contact-email-cta' href={`mailto:${contact.email}`}>Send me an email <span aria-hidden='true'>↗</span></a>
+      <ContactMethods />
+      <span class='contact-decoration' aria-hidden='true'>✳</span>
+    </section>
   </main>
 </PageLayout>

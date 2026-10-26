@@ -1,0 +1,57 @@
+---
+import { contact } from '@/data/contact'
+---
+<div class='contact-methods' aria-label='Contact details'>
+  <a class='contact-method' href={`mailto:${contact.email}`} aria-label={`Email ${contact.email}`}>
+    <span class='contact-method-icon contact-icon-email' aria-hidden='true'>
+      <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='5' width='18' height='14' rx='3'/><path d='m4 7 8 6 8-6'/></svg>
+    </span>
+    <span class='contact-method-copy'><span class='contact-method-name'>EMAIL</span><strong class='contact-method-value'>{contact.email}</strong></span>
+    <span class='contact-method-arrow' aria-hidden='true'>↗</span>
+  </a>
+  <a class='contact-method' href={contact.linkedin} target='_blank' rel='noopener noreferrer' aria-label='Visit Jiashun on LinkedIn'>
+    <span class='contact-method-icon contact-icon-linkedin' aria-hidden='true'><span class='contact-brand-in'>in</span></span>
+    <span class='contact-method-copy'><span class='contact-method-name'>LINKEDIN</span><strong class='contact-method-value'>Jiashun Hao</strong></span>
+    <span class='contact-method-arrow' aria-hidden='true'>↗</span>
+  </a>
+  <a class='contact-method' href={contact.csdn} target='_blank' rel='noopener noreferrer' aria-label='Visit Jiashun on CSDN'>
+    <span class='contact-method-icon contact-icon-csdn' aria-hidden='true'><span class='contact-brand-csdn'>C</span></span>
+    <span class='contact-method-copy'><span class='contact-method-name'>CSDN</span><strong class='contact-method-value'>HJS1453100406</strong></span>
+    <span class='contact-method-arrow' aria-hidden='true'>↗</span>
+  </a>
+  <button class='contact-method contact-method-button' type='button' data-copy-wechat={contact.wechat} aria-label={`Copy WeChat ID ${contact.wechat}`} title='Copy WeChat ID'>
+    <span class='contact-method-icon contact-icon-wechat' aria-hidden='true'>
+      <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'><path d='M15.6 17.8c-.95.43-2.05.65-3.26.65-4.55 0-8.25-2.92-8.25-6.52S7.79 5.4 12.34 5.4c4.56 0 8.25 2.92 8.25 6.53 0 1.84-.96 3.5-2.51 4.68l.5 2.44-2.98-1.27Z'/><path d='M9 11.5h.01M15 11.5h.01' stroke-width='2.8'/></svg>
+    </span>
+    <span class='contact-method-copy'><span class='contact-method-name'>WECHAT</span><strong class='contact-method-value'>{contact.wechat}</strong><span class='contact-copy-hint' data-copy-status aria-live='polite'>Click to copy ID</span></span>
+    <span class='contact-method-arrow' aria-hidden='true'>⧉</span>
+  </button>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-copy-wechat]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const wechat = button.dataset.copyWechat
+      const status = button.querySelector<HTMLElement>('[data-copy-status]')
+      if (!wechat) return
+      try {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(wechat)
+        } else {
+          const field = document.createElement('textarea')
+          field.value = wechat
+          field.style.position = 'fixed'
+          field.style.opacity = '0'
+          document.body.appendChild(field)
+          field.select()
+          const copied = document.execCommand('copy')
+          field.remove()
+          if (!copied) throw new Error('Copy unavailable')
+        }
+        if (status) status.textContent = 'Copied to clipboard ✓'
+      } catch {
+        if (status) status.textContent = 'Select the ID above to copy'
+      }
+    })
+  })
+</script>

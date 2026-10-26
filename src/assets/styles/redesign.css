@@ -324,3 +324,41 @@ body.site-body { margin: 0; min-height: 100vh; background: hsl(var(--background)
 .blog-index-page aside h2 { color: var(--design-ink); }
 @media(max-width:520px) { .blog-hero { padding: 19px 0 28px; }.blog-hero h1 { font-size: 45px; letter-spacing: -2px; } }
 .article-highlight-wash { position: absolute; pointer-events: none; z-index: -1; left: 0; right: 0; top: 0; height: 470px; opacity: .09; }
+
+/* Contact methods — bright, readable, and consistent with the light-first design. */
+.contact-email-cta { position: relative; z-index: 1; }
+.contact-decoration { pointer-events: none; }
+.contact-methods { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; margin-top: 34px; }
+.contact-method { display: flex; align-items: center; gap: 15px; min-width: 0; min-height: 91px; padding: 18px 19px; border: 1px solid rgba(211,223,244,.93); border-radius: 16px; background: rgba(255,255,255,.77); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: var(--design-ink) !important; box-shadow: 0 6px 20px rgba(48,88,146,.04); text-align: left; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.contact-method:hover { transform: translateY(-4px); border-color: #aebff0; box-shadow: 0 15px 30px rgba(49,91,160,.12); }
+.contact-method-button { appearance: none; font: inherit; width: 100%; cursor: pointer; }
+.contact-method-icon { width: 45px; height: 45px; flex: 0 0 45px; border-radius: 13px; display: grid; place-items: center; color: #496fd1; background: #eaf0ff; }
+.contact-method-icon svg { display: block; width: 23px; height: 23px; }
+.contact-icon-linkedin { background: #e5f0ff; color: #296bb7; }
+.contact-icon-csdn { background: #fff0ec; color: #d95d42; }
+.contact-icon-wechat { background: #e9f7ee; color: #249a69; }
+.contact-brand-in { font-family: Arial, sans-serif; font-weight: 800; font-size: 21px; letter-spacing: -2px; padding-right: 2px; }
+.contact-brand-csdn { font-family: Georgia, serif; font-weight: 800; font-size: 27px; }
+.contact-method-copy { flex: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; min-width: 0; }
+.contact-method-name { font-size: 10px; font-weight: 800; letter-spacing: 1.4px; color: #8194b5; }
+.contact-method-value { display: block; max-width: 100%; font-size: clamp(12px,1.15vw,15px); font-weight: 720; letter-spacing: -.24px; color: var(--design-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.contact-copy-hint { font-size: 10px; color: #8496b3; }
+.contact-method-arrow { margin-left: auto; color: #8fa9d7; font-size: 18px; font-weight: 700; align-self: center; transition: transform .25s, color .25s; }
+.contact-method:hover .contact-method-arrow { transform: translate(2px,-2px); color: #527be5; }
+.dark .contact-method { background: rgba(29,43,66,.88); border-color: #44577a; box-shadow: 0 6px 20px rgba(0,0,0,.06); }
+.dark .contact-method:hover { border-color: #7293ca; box-shadow: 0 15px 30px rgba(0,0,0,.12); }
+.dark .contact-icon-email { color: #a8c0ff; background: #293f65; }
+.dark .contact-icon-linkedin { color: #8bb9f4; background: #293f65; }
+.dark .contact-icon-csdn { color: #ffaf91; background: #503b3e; }
+.dark .contact-icon-wechat { color: #8ce0b1; background: #29463e; }
+.dark .contact-method-name, .dark .contact-copy-hint { color: #a7b9d4; }
+.footer-email { display: inline-block; margin-top: 11px; font-size: 12px; font-weight: 650; color: var(--design-blue) !important; }
+.footer-email:hover { text-decoration: underline; }
+@media (max-width: 767px) {
+  .contact-methods { grid-template-columns: 1fr; gap: 11px; margin-top: 26px; }
+  .contact-method { min-height: 78px; padding: 13px 14px; gap: 12px; }
+  .contact-method-value { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .contact-method:hover { transform: none; }
+}
