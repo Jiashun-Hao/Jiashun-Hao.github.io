@@ -7,7 +7,8 @@ import { education, projects, publications, skillGroups } from '@/data/portfolio
 import avatar from '@/assets/avatar.png'
 
 const latestPosts = sortMDByDate(await getBlogCollection()).slice(0, 4)
-const dateLabel = (date: Date) => new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' }).format(date)
+const dateLabel = (date: Date | undefined) =>
+  date ? new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' }).format(date) : 'Undated'
 ---
 
 <PageLayout meta={{ title: 'Home', description: 'Jiashun Hao — Software engineer. Exploring software, intelligent systems, and the ideas in between.' }}>
