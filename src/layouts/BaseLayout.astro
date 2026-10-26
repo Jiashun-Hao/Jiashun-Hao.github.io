@@ -1,58 +1,52 @@
 ---
-import { Footer, Header, ThemeProvider } from 'astro-pure/components/basic'
+import { ThemeProvider } from 'astro-pure/components/basic'
 import type { SiteMeta } from 'astro-pure/types'
 import BaseHead from '@/components/BaseHead.astro'
+import SiteHeader from '@/components/shell/SiteHeader.astro'
+import SiteFooter from '@/components/shell/SiteFooter.astro'
 import config from '@/site-config'
-
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseLayout /> component.
 import '@/assets/styles/app.css'
+import '@/assets/styles/redesign.css'
 
-interface Props {
-  meta: SiteMeta
-  highlightColor?: string
-}
-
-const {
-  meta: { articleDate, description = config.description, ogImage, title },
-  highlightColor,
-  ...props
-} = Astro.props
+interface Props { meta: SiteMeta; highlightColor?: string }
+const { meta: { articleDate, description = config.description, ogImage, title }, highlightColor, ...props } = Astro.props
 ---
-
 <html lang={config.locale.lang}>
   <head>
     <BaseHead {articleDate} {description} {ogImage} {title} />
+    <script is:inline>
+      // Light is the default even when the device prefers dark. Visitors can opt in to dark mode.
+      try { if (!localStorage.getItem('theme')) localStorage.setItem('theme', 'light') } catch (e) { /* storage disabled */ }
+      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('has-motion')
+    </script>
     <ThemeProvider />
   </head>
-
-  <body class='flex justify-center bg-background text-foreground' {...props}>
-    {
-      highlightColor && (
-        <div
-          id='highlight-gradient'
-          class='pointer-events-none absolute start-0 top-0 z-0 h-screen w-full opacity-25'
-          style={`background-image:linear-gradient(${highlightColor},transparent)`}
-        />
-      )
-    }
-    <div class='w-full max-w-[70rem] px-4 sm:px-7 lg:px-10'>
-      <Header />
+  <body class='site-body bg-background text-foreground' {...props}>
+    <div class='site-backdrop' aria-hidden='true'></div>
+    {highlightColor && <div class='article-highlight-wash' style={`background: linear-gradient(${highlightColor}, transparent)`} aria-hidden='true'></div>}
+    <div class='site-container'>
+      <SiteHeader />
       <slot />
-      <Footer />
+      <SiteFooter />
     </div>
-
-    {/* Set highlight color */}
     <style define:vars={{ highlightColor }}>
-      :global(.highlight) {
-        color: var(--highlightColor, hsl(var(--primary) / var(--un-text-opacity))) !important;
-      }
-      :global(.highlight-bg) {
-        background-color: var(
-          --highlightColor,
-          hsl(var(--primary) / var(--un-text-opacity))
-        ) !important;
-      }
+      :global(.highlight) { color: var(--highlightColor, hsl(var(--primary))) !important; }
+      :global(.highlight-bg) { background-color: var(--highlightColor, hsl(var(--primary))) !important; }
     </style>
+    <script>
+      // Reveal sections only when the browser has scroll observation support.
+      const sections = document.querySelectorAll<HTMLElement>('.reveal')
+      if (document.documentElement.classList.contains('has-motion')) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible')
+              obs.unobserve(entry.target)
+            }
+          })
+        }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' })
+        sections.forEach((section) => observer.observe(section))
+      }
+    </script>
   </body>
 </html>

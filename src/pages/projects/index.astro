@@ -1,80 +1,20 @@
 ---
-import { Image } from 'astro:assets'
-
-import { Button, Icon } from 'astro-pure/user'
-import PageLayout from '@/layouts/CommonPage.astro'
-import ProjectSection from '@/components/projects/ProjectSection.astro'
-import config from '@/site-config'
-
-const headings = [
-  { depth: 2, slug: 'library', text: 'Library' },
-  { depth: 2, slug: 'programs', text: 'Programs' },
-  { depth: 2, slug: 'others', text: 'Others' },
-]
+import PageLayout from '@/layouts/BaseLayout.astro'
+import ProjectShowcase from '@/components/home/ProjectShowcase.astro'
+import { projects, publications } from '@/data/portfolio'
 ---
 
-<PageLayout title='Projects' {headings} info={{ slug: '/projects', hideComment: true }}>
-  <p>Github Activities:</p>
-  <p>
-    <Image
-      src='https://ghchart.rshah.org/659eb9/Jiashun-Hao'
-      alt='github activities'
-      inferSize
-      loading='lazy'
-    />
-  </p>
-  <p>
-    If you think it would be useful or interesting to collaborate on a project, feel free to contact
-    me to discuss.
-  </p>
-
-  <h2 id='programs'>Programs</h2>
-  <ProjectSection
-    projects={[
-      {
-        name: 'Graph-Preprocessing',
-        description: 'Code vulnerability detection using GNNs on program graphs (AST, CFG, PDG, CPG).',
-        links: [
-          { type: 'github', href: 'https://github.com/Jiashun-Hao/Graph_Preprocessing' }
-        ]
-      },
-      {
-        name: 'Korean-Agent',
-        description: 'A Python-based Korean language agent.',
-        links: [
-          { type: 'github', href: 'https://github.com/Jiashun-Hao/Korean-Agent' }
-        ]
-      },
-      {
-        name: 'Camera-tracking-microphone',
-        description: 'An automatic camera tracking program based on microphone presets.',
-        links: [
-          { type: 'github', href: 'https://github.com/Jiashun-Hao/Camera-tracking-microphone' }
-        ]
-      }
-    ]}
-  />
-
-  <h2 id='library'>Library</h2>
-  <p>Coming soon.</p>
-
-  <h2 id='others'>Others</h2>
-  <p>Coming soon.</p>
+<PageLayout meta={{ title: 'Projects', description: 'Selected public projects from Jiashun Hao: language tools, device automation, and graph research.' }}>
+  <main class='inner-page' id='top'>
+    <div class='inner-hero reveal'>
+      <span class='section-index'><span class='section-index-line'></span> PORTFOLIO / SELECTED WORK</span>
+      <h1>Built with <em>curiosity.</em></h1>
+      <p>A collection of public projects at the intersection of practical software, automation, and research. Each one represents a problem I wanted to understand a little better.</p>
+      <a class='btn-secondary' href='https://github.com/Jiashun-Hao' target='_blank' rel='noopener noreferrer'>Explore my GitHub <span aria-hidden='true'>↗</span></a>
+    </div>
+    <section class='reveal' aria-label='Project gallery'>
+      <div class='project-grid inner-project-grid'>{projects.map((project, index) => <ProjectShowcase {project} {index} />)}</div>
+    </section>
+    <div class='inner-note reveal'><div><strong>Research, writing, and beyond</strong><p>For my academic work, see my conference publications. For more experiments, browse the repositories on GitHub.</p></div><a class='text-link' href={publications[0].href} target='_blank' rel='noopener noreferrer'>View publication ↗</a></div>
+  </main>
 </PageLayout>
-
-<script
-  is:inline
-  type='module'
-  data-astro-rerun
-  define:vars={{ npmCDN: config.npmCDN, walineServer: config.integ.waline.server }}
->
-  const loadPageviewCount = async () => {
-    const pageview = await import(`${npmCDN}/@waline/client@v3/dist/pageview.js`)
-    pageview.pageviewCount({
-      serverURL: walineServer,
-      path: window.location.pathname
-    })
-  }
-
-  await loadPageviewCount()
-</script>

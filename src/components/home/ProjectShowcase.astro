@@ -1,0 +1,44 @@
+---
+import type { projects } from '@/data/portfolio'
+
+type Project = (typeof projects)[number]
+interface Props { project: Project; index?: number }
+const { project, index = 0 } = Astro.props
+---
+<a class:list={['showcase-card', `showcase-${project.visual}`]} href={project.href} target='_blank' rel='noopener noreferrer' aria-label={`View ${project.title} on GitHub`} style={`--card-delay: ${index * 90}ms`}>
+  <div class='showcase-visual' aria-hidden='true'>
+    {project.visual === 'agent' && (
+      <div class='visual-terminal'>
+        <div class='terminal-toolbar'><i></i><i></i><i></i><span>language-agent / session</span></div>
+        <div class='terminal-line terminal-prompt'><span>➜</span> python agent.py</div>
+        <div class='terminal-speech'><span class='speech-dot'></span> Language practice, made interactive.</div>
+        <div class='terminal-output'><span class='cursor'></span> Ready to explore<span class='typing-dots'>...</span></div>
+        <div class='terminal-float'>你好 <span>→</span> 안녕하세요</div>
+      </div>
+    )}
+    {project.visual === 'camera' && (
+      <div class='visual-camera'>
+        <div class='camera-guide guide-x'></div><div class='camera-guide guide-y'></div>
+        <div class='camera-lens'><div class='lens-ring'><div class='lens-center'></div></div></div>
+        <span class='camera-corner c-tl'></span><span class='camera-corner c-tr'></span><span class='camera-corner c-bl'></span><span class='camera-corner c-br'></span>
+        <div class='tracking-caption'><span class='tracking-pulse'></span> CAMERA TRACKING <span>● PRESET 01</span></div>
+      </div>
+    )}
+    {project.visual === 'graph' && (
+      <div class='visual-graph'>
+        <svg viewBox='0 0 360 170' fill='none' role='presentation'>
+          <g stroke='currentColor' stroke-width='1.4' opacity='.45'><path d='M48 84 112 38 178 83 249 44 320 86M112 38 118 127 178 83 244 130 320 86M48 84l70 43m60-44 66 47m5-86-5 86'/></g>
+          <g fill='currentColor'><circle cx='48' cy='84' r='7'/><circle cx='112' cy='38' r='8'/><circle cx='118' cy='127' r='7'/><circle cx='178' cy='83' r='10'/><circle cx='249' cy='44' r='8'/><circle cx='244' cy='130' r='8'/><circle cx='320' cy='86' r='7'/></g>
+          <circle cx='178' cy='83' r='23' stroke='currentColor' stroke-dasharray='4 7' opacity='.45'/>
+        </svg>
+        <span class='graph-label graph-label-a'>AST</span><span class='graph-label graph-label-b'>CFG</span><span class='graph-label graph-label-c'>PDG</span>
+      </div>
+    )}
+  </div>
+  <div class='showcase-content'>
+    <div class='showcase-kicker'><span>{project.category}</span><span>{project.number} / 03</span></div>
+    <div class='showcase-heading'><h3>{project.title}</h3><span class='project-arrow' aria-hidden='true'>↗</span></div>
+    <p>{project.description}</p>
+    <div class='showcase-tags'>{project.stack.map((item) => <span>{item}</span>)}</div>
+  </div>
+</a>

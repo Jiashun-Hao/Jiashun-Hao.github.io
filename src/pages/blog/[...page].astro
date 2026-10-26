@@ -51,9 +51,11 @@ const paginationProps = {
 
 <PageLayout {meta}>
   <Button title='Back' href='/' style='back' />
-  <main class='mt-6 lg:mt-10'>
-    <div id='content-header' class='animate'>
-      <h1 class='mb-6 mt-6 text-3xl font-medium sm:mt-10'>Blog</h1>
+  <main class='mt-6 lg:mt-10 blog-index-page'>
+    <div id='content-header' class='animate blog-hero'>
+      <span class='section-index'><span class='section-index-line'></span> THE NOTEBOOK</span>
+      <h1>Thoughts in <em>progress.</em></h1>
+      <p>Code, notes, and things learned along the way. A collection that grows with me.</p>
     </div>
     {
       page.data.length === 0 ? (
@@ -71,7 +73,7 @@ const paginationProps = {
               </a>
             </div>
             {/* posts */}
-            <ul class='flex flex-col gap-y-4 text-start'>
+            <ul class='blog-posts-grid flex flex-col gap-y-4 text-start'>
               {page.data.map((post) => (
                 <PostPreview {post} detailed />
               ))}
